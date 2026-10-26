@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://buildcalc-pro.pages.dev/sitemap.xml
