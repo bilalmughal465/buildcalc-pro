@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sod Calculator: Free Estimate (2026)</title>
+<meta name="description" content="Free sod calculator. Sod sold by the square foot. Enter lawn area to get square feet needed. Waste and cost included, prices are editable estimates.">
+<link rel="canonical" href="https://buildcalc-pro.pages.dev/sod-calculator">
+<meta property="og:title" content="Sod Calculator: Free Estimate (2026)"><meta property="og:description" content="Free sod calculator. Sod sold by the square foot. Enter lawn area to get square feet needed. Waste and cost included, prices are editable estimates."><meta property="og:type" content="website"><meta property="og:url" content="https://buildcalc-pro.pages.dev/sod-calculator">
+<meta name="theme-color" content="#1c2226">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6542834138060275" crossorigin="anonymous"></script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ffd60a'/%3E%3Cpath d='M6 24V8h6l4 8 4-8h6v16' fill='none' stroke='%231c2226' stroke-width='3'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#f2f2ef;--ink:#1c2226;--mut:#59636a;--line:#d3d4cf;--acc:#1f5fbf;--tape:#ffd60a}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+header{background:var(--ink);border-bottom:5px solid var(--tape)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;min-height:52px}
+header a{color:#fff;text-decoration:none;font-weight:800;font-size:19px}
+header span{color:#b9c1c6;font-size:14px}
+main{padding:14px 0 36px}
+a{color:var(--acc)}
+h1{font-size:30px;line-height:1.15;margin:10px 0 6px}
+h2{font-size:21px;line-height:1.25;margin:28px 0 8px}
+.bc{font-size:14px;color:var(--mut)}
+.intro{margin:0 0 14px;color:var(--mut)}
+.tool{background:#fff;border:2px solid var(--ink);border-radius:6px;padding:14px}
+.seg{display:flex;border:2px solid var(--ink);border-radius:6px;overflow:hidden;margin-bottom:12px}
+.seg button{flex:1;padding:10px;border:0;background:#fff;font:inherit;font-weight:600;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+.gl{font-weight:700;font-size:15px;margin:12px 0 6px;color:var(--mut)}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.f label{display:block;font-size:15px;font-weight:600;margin-bottom:3px}
+.f .u{color:var(--mut);font-weight:400}
+.in{display:flex;align-items:center;border:2px solid #9aa3a8;border-radius:6px;background:#fff}
+.in:focus-within{border-color:var(--acc)}
+.in i{padding-left:10px;font-style:normal;color:var(--mut)}
+.in input{width:100%;min-width:0;border:0;background:none;padding:11px 10px;font:inherit;font-size:18px;color:var(--ink);outline:0}
+.res{margin-top:16px}
+.gt{font-size:16px;margin:16px 0 6px}
+.big{background:var(--tape);border-radius:6px;padding:12px 14px}
+.big .num{font-size:44px;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
+.big .u{font-size:18px;font-weight:700}
+.big .lb{display:block;font-size:14px}
+.row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;border-bottom:1px solid var(--line)}
+.row b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.empty{background:#fff4f2;border:1px solid #e8b4ab;padding:10px;border-radius:6px;margin:0}
+.acts{display:flex;gap:8px;margin-top:14px}
+.acts button{flex:1;padding:10px;border:2px solid var(--ink);background:#fff;border-radius:6px;font:inherit;font-weight:600;cursor:pointer}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.dg{margin:18px 0 0;text-align:center}.dg svg{max-width:320px;width:100%;height:auto}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;background:#fff}
+th,td{border:1px solid var(--line);padding:8px;text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{background:#e7e7e2}
+details{background:#fff;border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}
+details p{margin:8px 0 0}
+.rel{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.rel a{display:block;background:#fff;border:1px solid var(--line);border-radius:6px;padding:12px;text-decoration:none;font-weight:600}
+.meta{font-size:14px;color:var(--mut);margin-top:26px}
+.ad{min-height:280px;margin:20px 0}
+footer{border-top:1px solid var(--line);padding:18px 0 30px;font-size:14px;color:var(--mut)}
+footer a{margin-right:14px}
+@media(min-width:600px){h1{font-size:36px}}
+
+.chatbtn{position:fixed;right:16px;bottom:16px;z-index:50;background:#1c2226;color:#ffd60a;border:0;border-radius:999px;padding:12px 18px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.chatpanel{position:fixed;right:16px;bottom:70px;z-index:50;width:340px;max-width:calc(100vw - 32px);background:#fff;border:2px solid #1c2226;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.25);overflow:hidden}
+.chathead{background:#1c2226;color:#fff;padding:12px 14px;font-weight:700}.chathead span{display:block;font-weight:400;font-size:12px;opacity:.85}
+.chatbody{padding:12px}.chatquick button{display:block;width:100%;text-align:left;background:#f2f2ef;color:#1c2226;border:1px solid #d3d4cf;margin:4px 0;padding:8px 10px;border-radius:6px;cursor:pointer}
+.chatlog{max-height:220px;overflow-y:auto;margin:10px 0}.chatmsg{margin:8px 0;font-size:15px}
+.chatbody input{width:calc(100% - 70px);padding:10px;border:2px solid #9aa3a8;border-radius:6px}
+@media print{header,footer,.acts,.chatbtn,.chatpanel,section:not(.tool){display:none!important}main section.tool{display:block!important}}
+</style>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Sod Calculator","url":"https://buildcalc-pro.pages.dev/sod-calculator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much sod do I need?","acceptedAnswer":{"@type":"Answer","text":"Example: 10 ft \u00d7 10 ft = 100 sq ft. Quantity: 110 sq ft, about $55 at $0.5 per sq ft."}},{"@type":"Question","name":"How much waste should I add?","acceptedAnswer":{"@type":"Answer","text":"Add 10% for straight areas and 15% for areas with many cuts, corners and openings."}},{"@type":"Question","name":"Are the prices accurate?","acceptedAnswer":{"@type":"Answer","text":"Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://buildcalc-pro.pages.dev/"},{"@type":"ListItem","position":2,"name":"Sod Calculator","item":"https://buildcalc-pro.pages.dev/sod-calculator"}]}]}</script>
+</head>
+<body>
+<header><div class="wrap"><a href="/">BuildCalc</a><span>Free calculators</span></div></header>
+<main><div class="wrap"><nav class="bc" aria-label="Breadcrumb"><a href="/">Home</a> / Garden</nav>
+<h1>Sod Calculator</h1>
+<p class="intro">Enter your size to get sod quantity, plus an estimated cost. Waste is included and prices are editable.</p>
+<section class="tool" aria-label="Calculator">
+<div class="seg" role="group" aria-label="Units"><button type="button" data-u="imp" aria-pressed="true">Feet / inches</button><button type="button" data-u="met" aria-pressed="false">Metres / cm</button></div>
+<div class="gl">Size</div><div class="fields"><div class="f"><label for="length">Length <span class="u" data-dim="len">ft</span></label><div class="in"><input id="length" type="number" inputmode="decimal" step="any" min="0.01" value="10"></div></div><div class="f"><label for="width">Width <span class="u" data-dim="len">ft</span></label><div class="in"><input id="width" type="number" inputmode="decimal" step="any" min="0.01" value="10"></div></div></div><div class="gl">Waste and price (optional)</div><div class="fields"><div class="f"><label for="waste">Extra for waste (%)</label><div class="in"><input id="waste" type="number" inputmode="decimal" step="any" min="0" value="10"></div></div><div class="f"><label for="priceUnit">Price per sq ft</label><div class="in"><i>$</i><input id="priceUnit" type="number" inputmode="decimal" step="any" min="0" value="0.5"></div></div></div><div id="res" class="res" aria-live="polite"><h2 class="gt">Material needed</h2><div class="big"><span class="num">110</span> <span class="u">sq ft</span><span class="lb">Buy this many</span></div><div class="row"><span>Area</span><b>100 sq ft</b></div><h2 class="gt">Estimated cost</h2><div class="row"><span>Material cost</span><b>$55 </b></div></div>
+<div class="acts"><button type="button" id="copy">Copy result</button><button type="button" id="share">Copy link</button><button type="button" id="print">Print result</button><button type="button" id="download">Download result</button><button type="button" id="shareWA">Share on WhatsApp</button><button type="button" id="shareFB">Share on Facebook</button></div>
+</section>
+
+<div class="dg"><svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="30" width="240" height="120" fill="#fff" stroke="#1c2226" stroke-width="2"/><text x="160" y="95" text-anchor="middle" font-size="16" fill="#1c2226">Sod</text></svg></div>
+<section><h2>How to calculate sod</h2><p>Sod sold by the square foot. Enter lawn area to get square feet needed.</p><p><b>Formula:</b> quantity = area × 1 × (1 + waste %) = 100 × 1 × 1.10 = 110 sq ft.</p><h2>Worked example</h2><p>Example: 10 ft × 10 ft = 100 sq ft. Quantity: 110 sq ft, about $55 at $0.5 per sq ft.</p><h2>Tips</h2><p>Measure the full area, then subtract large openings if you want an exact count. Order a little extra for cuts and breakage, and confirm quantities with your supplier before you buy.</p></section><section><h2>Related calculators</h2><ul class="rel"><li><a href="/artificial-turf-calculator">Artificial Turf Calculator</a></li><li><a href="/garden-edging-calculator">Garden Edging Calculator</a></li><li><a href="/landscape-fabric-calculator">Landscape Fabric Calculator</a></li></ul></section><section><h2>Frequently asked questions</h2><details><summary>How much sod do I need?</summary><p>Example: 10 ft × 10 ft = 100 sq ft. Quantity: 110 sq ft, about $55 at $0.5 per sq ft.</p></details><details><summary>How much waste should I add?</summary><p>Add 10% for straight areas and 15% for areas with many cuts, corners and openings.</p></details><details><summary>Are the prices accurate?</summary><p>Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower.</p></details></section><p class="meta">Last updated 2026-10-27. Formulas checked by Bilal Mughal.</p>
+<script type="application/json" id="cfg">{"slug":"sod-calculator","category":"Garden","categoryName":"Garden","title":"Sod Calculator: Free Estimate (2026)","h1":"Sod Calculator","metaDesc":"Free sod calculator. Sod sold by the square foot. Enter lawn area to get square feet needed. Waste and cost included, prices are editable estimates.","intro":"Enter your size to get sod quantity, plus an estimated cost. Waste is included and prices are editable.","updated":"2026-10-27","dims":{"len":{"imp":{"f":1,"label":"ft"},"met":{"f":3.28084,"label":"m"}},"thk":{"imp":{"f":1,"label":"in"},"met":{"f":0.393701,"label":"cm"}}},"fields":[{"id":"length","label":"Length","dim":"len","default":10,"min":0.01,"group":"Size"},{"id":"width","label":"Width","dim":"len","default":10,"min":0.01,"group":"Size"},{"id":"waste","label":"Extra for waste (%)","default":10,"min":0,"group":"Waste and price (optional)"},{"id":"priceUnit","label":"Price per sq ft","prefix":"$","default":0.5,"min":0,"group":"Waste and price (optional)"}],"calc":[{"id":"area","expr":"length * width"},{"id":"qty","expr":"Math.ceil(+(area * 1 * (1 + waste / 100)).toFixed(6))"},{"id":"cost","expr":"qty * priceUnit"}],"groups":[{"title":"Material needed","results":[{"id":"qty","label":"Buy this many","unit":"sq ft","dec":0,"primary":true},{"id":"area","label":"Area","unit":"sq ft","dec":0}]},{"title":"Estimated cost","results":[{"id":"cost","label":"Material cost","prefix":"$","dec":0}]}],"emptyMsg":"Enter values greater than zero.","diagram":"<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"30\" width=\"240\" height=\"120\" fill=\"#fff\" stroke=\"#1c2226\" stroke-width=\"2\"/><text x=\"160\" y=\"95\" text-anchor=\"middle\" font-size=\"16\" fill=\"#1c2226\">Sod</text></svg>","article":"<section><h2>How to calculate sod</h2><p>Sod sold by the square foot. Enter lawn area to get square feet needed.</p><p><b>Formula:</b> quantity = area \u00d7 1 \u00d7 (1 + waste %) = 100 \u00d7 1 \u00d7 1.10 = 110 sq ft.</p><h2>Worked example</h2><p>Example: 10 ft \u00d7 10 ft = 100 sq ft. Quantity: 110 sq ft, about $55 at $0.5 per sq ft.</p><h2>Tips</h2><p>Measure the full area, then subtract large openings if you want an exact count. Order a little extra for cuts and breakage, and confirm quantities with your supplier before you buy.</p></section>","faq":[{"q":"How much sod do I need?","a":"Example: 10 ft \u00d7 10 ft = 100 sq ft. Quantity: 110 sq ft, about $55 at $0.5 per sq ft."},{"q":"How much waste should I add?","a":"Add 10% for straight areas and 15% for areas with many cuts, corners and openings."},{"q":"Are the prices accurate?","a":"Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower."}],"related":["artificial-turf-calculator","garden-edging-calculator","landscape-fabric-calculator"],"table":null}</script>
+<script>
+(function(){
+function run(cfg, v, u) {
+  var env = {};
+  cfg.fields.forEach(function (f) {
+    var x = parseFloat(v[f.id]);
+    env[f.id] = f.dim ? x * cfg.dims[f.dim][u].f : x;
+  });
+  cfg.calc.forEach(function (s) {
+    var k = Object.keys(env);
+    env[s.id] = Function.apply(null, k.concat('return ' + s.expr)).apply(null, k.map(function (n) { return env[n]; }));
+  });
+  return env;
+}
+function resultsHTML(cfg, e) {
+  var f = function (n, d) { return Number(n).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d }); };
+  var h = '';
+  cfg.groups.forEach(function (g) {
+    h += '<h2 class="gt">' + g.title + '</h2>';
+    g.results.forEach(function (r) {
+      var val = (r.prefix || '') + f(e[r.id], r.dec || 0);
+      h += r.primary
+        ? '<div class="big"><span class="num">' + val + '</span> <span class="u">' + r.unit + '</span><span class="lb">' + r.label + '</span></div>'
+        : '<div class="row"><span>' + r.label + '</span><b>' + val + (r.unit ? ' ' + r.unit : '') + '</b></div>';
+    });
+  });
+  return h;
+}
+var cfg=JSON.parse(document.getElementById('cfg').textContent),unit='imp',$=function(i){return document.getElementById(i)};
+function renderTable(){var t=cfg.table;var w=document.getElementById('tableWrap');if(!t||!w)return;var h='<div class="tw"><table><thead><tr>';t.columns.forEach(function(c){h+='<th>'+c+'</th>'});h+='</tr></thead><tbody>';t.rows.forEach(function(r){h+='<tr>';r.forEach(function(v){h+='<td>'+v+'</td>'});h+='</tr>'});h+='</tbody></table></div>';w.innerHTML=h}
+function vals(){var v={};cfg.fields.forEach(function(f){v[f.id]=$(f.id).value});return v}
+function ok(v){return cfg.fields.every(function(f){var x=parseFloat(v[f.id]);return isFinite(x)&&x>=f.min})}
+function update(){var v=vals();if(!ok(v)){$('res').innerHTML='<p class="empty">'+cfg.emptyMsg+'</p>';return}
+$('res').innerHTML=resultsHTML(cfg,run(cfg,v,unit))}
+function labels(){document.querySelectorAll('[data-dim]').forEach(function(s){s.textContent=cfg.dims[s.dataset.dim][unit].label})}
+function setUnit(u,convert){if(u===unit)return;cfg.fields.forEach(function(f){if(!f.dim)return;var el=$(f.id),x=parseFloat(el.value);if(convert&&isFinite(x)){el.value=Math.round(x*cfg.dims[f.dim][unit].f/cfg.dims[f.dim][u].f*100)/100}});unit=u;document.querySelectorAll('.seg button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.u===u)});labels();update()}
+document.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){setUnit(b.dataset.u,true)})});
+cfg.fields.forEach(function(f){$(f.id).addEventListener('input',update)});
+function copy(t,btn){var d=btn.textContent;function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent=d},1500)}
+if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){})}else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');done()}catch(e){}a.remove()}}
+$('copy').addEventListener('click',function(){copy(cfg.h1+'\n'+$('res').innerText.replace(/\n+/g,'\n'),this)});
+$('share').addEventListener('click',function(){var p=new URLSearchParams(vals());p.set('u',unit);copy(location.origin+location.pathname+'?'+p.toString(),this)});
+$('print').addEventListener('click',function(){window.print()});
+$('download').addEventListener('click',function(){var blob=new Blob([cfg.h1+'\n'+$('res').innerText.replace(/\n+/g,'\n')],{type:'text/plain'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=cfg.slug+'-result.txt';a.click();URL.revokeObjectURL(a.href)});
+$('shareWA').addEventListener('click',function(){window.open('https://wa.me/?text='+encodeURIComponent(cfg.h1+' '+location.href),'_blank')});
+$('shareFB').addEventListener('click',function(){window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'_blank')});
+var q=new URLSearchParams(location.search);
+if(q.get('u')==='met'){setUnit('met',false)}
+cfg.fields.forEach(function(f){if(q.has(f.id)&&isFinite(parseFloat(q.get(f.id))))$(f.id).value=q.get(f.id)});
+if(q.toString())update();
+renderTable();update();
+})();
+</script>
+</div></main>
+<footer><div class="wrap"><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy-policy.html">Privacy</a><a href="/terms.html">Terms</a><p>Estimates only. Always confirm quantities with your supplier or a qualified professional.</p></div></footer>
+<script src="chatbot.js" defer></script></body>
+</html>
