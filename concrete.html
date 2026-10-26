@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Concrete Calculators - BuildCalc</title>
 <meta name="description" content="Free concrete calculators: slab and footing, with cubic yards, bags and cost.">
-<link rel="canonical" href="https://buildcalc-pro.pages.dev/concrete">
-<meta property="og:title" content="Concrete Calculators - BuildCalc"><meta property="og:description" content="Free concrete calculators: slab and footing, with cubic yards, bags and cost."><meta property="og:type" content="website"><meta property="og:url" content="https://buildcalc-pro.pages.dev/concrete">
+<link rel="canonical" href="https://buildcalc-pro.pages.dev/concrete.html">
+<meta property="og:title" content="Concrete Calculators - BuildCalc"><meta property="og:description" content="Free concrete calculators: slab and footing, with cubic yards, bags and cost."><meta property="og:type" content="website"><meta property="og:url" content="https://buildcalc-pro.pages.dev/concrete.html">
 <meta name="theme-color" content="#1c2226">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6542834138060275" crossorigin="anonymous"></script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ffd60a'/%3E%3Cpath d='M6 24V8h6l4 8 4-8h6v16' fill='none' stroke='%231c2226' stroke-width='3'/%3E%3C/svg%3E">
@@ -65,6 +65,14 @@ details p{margin:8px 0 0}
 footer{border-top:1px solid var(--line);padding:18px 0 30px;font-size:14px;color:var(--mut)}
 footer a{margin-right:14px}
 @media(min-width:600px){h1{font-size:36px}}
+
+.chatbtn{position:fixed;right:16px;bottom:16px;z-index:50;background:#1c2226;color:#ffd60a;border:0;border-radius:999px;padding:12px 18px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.chatpanel{position:fixed;right:16px;bottom:70px;z-index:50;width:340px;max-width:calc(100vw - 32px);background:#fff;border:2px solid #1c2226;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.25);overflow:hidden}
+.chathead{background:#1c2226;color:#fff;padding:12px 14px;font-weight:700}.chathead span{display:block;font-weight:400;font-size:12px;opacity:.85}
+.chatbody{padding:12px}.chatquick button{display:block;width:100%;text-align:left;background:#f2f2ef;color:#1c2226;border:1px solid #d3d4cf;margin:4px 0;padding:8px 10px;border-radius:6px;cursor:pointer}
+.chatlog{max-height:220px;overflow-y:auto;margin:10px 0}.chatmsg{margin:8px 0;font-size:15px}
+.chatbody input{width:calc(100% - 70px);padding:10px;border:2px solid #9aa3a8;border-radius:6px}
+@media print{header,footer,.acts,.chatbtn,.chatpanel,section:not(.tool){display:none!important}main section.tool{display:block!important}}
 </style>
 </head>
 <body>
@@ -72,11 +80,18 @@ footer a{margin-right:14px}
 <main><div class="wrap"><nav class="bc" aria-label="Breadcrumb"><a href="/">Home</a> / Concrete Calculators</nav>
 <h1>Concrete Calculators</h1>
 <p>Free concrete calculators. Every result shows its formula and a worked example.</p><ul class="rel">
-<li><a href="/concrete-slab-calculator">Concrete Slab Calculator - cubic yards, bags and cost</a></li>
-<li><a href="/concrete-footing-calculator">Concrete Footing Calculator - cubic yards, bags and cost</a></li>
+<li><a href="/concrete-slab-calculator">Concrete Slab Calculator</a></li>
+<li><a href="/concrete-footing-calculator">Concrete Footing Calculator</a></li>
+<li><a href="/concrete-patio-calculator">Concrete Patio Calculator</a></li>
+<li><a href="/concrete-walkway-calculator">Concrete Walkway Calculator</a></li>
+<li><a href="/concrete-driveway-calculator">Concrete Driveway Calculator</a></li>
+<li><a href="/concrete-basement-floor-calculator">Concrete Basement Floor Calculator</a></li>
+<li><a href="/concrete-pool-deck-calculator">Concrete Pool Deck Calculator</a></li>
+<li><a href="/concrete-foundation-wall-calculator">Concrete Foundation Wall Calculator</a></li>
+<li><a href="/concrete-sealer-calculator">Concrete Sealer Calculator</a></li>
 </ul>
-<p class="meta">Last updated 2026-10-26.</p>
+<p class="meta">Last updated 2026-10-27.</p>
 </div></main>
-<footer><div class="wrap"><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy-policy">Privacy</a><a href="/terms">Terms</a><p>Estimates only. Always confirm quantities with your supplier or a qualified professional.</p></div></footer>
-</body>
+<footer><div class="wrap"><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy-policy.html">Privacy</a><a href="/terms.html">Terms</a><p>Estimates only. Always confirm quantities with your supplier or a qualified professional.</p></div></footer>
+<script src="chatbot.js" defer></script></body>
 </html>

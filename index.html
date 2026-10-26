@@ -65,83 +65,93 @@ details p{margin:8px 0 0}
 footer{border-top:1px solid var(--line);padding:18px 0 30px;font-size:14px;color:var(--mut)}
 footer a{margin-right:14px}
 @media(min-width:600px){h1{font-size:36px}}
+
+.chatbtn{position:fixed;right:16px;bottom:16px;z-index:50;background:#1c2226;color:#ffd60a;border:0;border-radius:999px;padding:12px 18px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.chatpanel{position:fixed;right:16px;bottom:70px;z-index:50;width:340px;max-width:calc(100vw - 32px);background:#fff;border:2px solid #1c2226;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.25);overflow:hidden}
+.chathead{background:#1c2226;color:#fff;padding:12px 14px;font-weight:700}.chathead span{display:block;font-weight:400;font-size:12px;opacity:.85}
+.chatbody{padding:12px}.chatquick button{display:block;width:100%;text-align:left;background:#f2f2ef;color:#1c2226;border:1px solid #d3d4cf;margin:4px 0;padding:8px 10px;border-radius:6px;cursor:pointer}
+.chatlog{max-height:220px;overflow-y:auto;margin:10px 0}.chatmsg{margin:8px 0;font-size:15px}
+.chatbody input{width:calc(100% - 70px);padding:10px;border:2px solid #9aa3a8;border-radius:6px}
+@media print{header,footer,.acts,.chatbtn,.chatpanel,section:not(.tool){display:none!important}main section.tool{display:block!important}}
 </style>
 </head>
 <body>
 <header><div class="wrap"><a href="/">BuildCalc</a><span>Free calculators</span></div></header>
 <main><div class="wrap">
 <h1>Free Calculators</h1>
-<p>Free calculators for home improvement and construction projects. Pick a category:</p>
+<p>Free calculators for home improvement and construction projects. Pick a category:</p><div class="tool" style="margin-bottom:16px"><label for="calcSearch"><b>Search calculators</b></label><div class="in"><input id="calcSearch" type="search" placeholder="Type a calculator name, for example brick, paint, tile..."></div><p class="meta" id="searchCount"></p></div>
 <h2>Concrete</h2>
 <ul class="rel">
-<li><a href="/concrete-slab-calculator">Concrete Slab Calculator - cubic yards, bags and cost</a></li>
-<li><a href="/concrete-footing-calculator">Concrete Footing Calculator - cubic yards, bags and cost</a></li>
+<li><a href="/concrete-slab-calculator.html">Concrete Slab Calculator - cubic yards, bags and cost</a></li>
+<li><a href="/concrete-footing-calculator.html">Concrete Footing Calculator - cubic yards, bags and cost</a></li>
 </ul>
 <h2>Gravel</h2>
 <ul class="rel">
-<li><a href="/gravel-driveway-calculator">Gravel Driveway Calculator - cubic yards, tons and cost</a></li>
+<li><a href="/gravel-driveway-calculator.html">Gravel Driveway Calculator - cubic yards, tons and cost</a></li>
 </ul>
 <h2>Garden</h2>
 <ul class="rel">
-<li><a href="/mulch-calculator">Mulch Calculator - cubic yards, bags and cost</a></li>
+<li><a href="/mulch-calculator.html">Mulch Calculator - cubic yards, bags and cost</a></li>
 </ul>
 <h2>Paint</h2>
 <ul class="rel">
-<li><a href="/paint-calculator">Paint Calculator - gallons needed for a room</a></li>
+<li><a href="/paint-calculator.html">Paint Calculator - gallons needed for a room</a></li>
 </ul>
 <h2>Flooring</h2>
 <ul class="rel">
-<li><a href="/tile-calculator">Tile Calculator - how many tiles do I need</a></li>
-<li><a href="/flooring-calculator">Laminate Flooring Calculator - boxes and cost</a></li>
+<li><a href="/tile-calculator.html">Tile Calculator - how many tiles do I need</a></li>
+<li><a href="/flooring-calculator.html">Laminate Flooring Calculator - boxes and cost</a></li>
 </ul>
 <h2>Walls</h2>
 <ul class="rel">
-<li><a href="/drywall-calculator">Drywall Calculator - sheets needed</a></li>
+<li><a href="/drywall-calculator.html">Drywall Calculator - sheets needed</a></li>
 </ul>
 <h2>Roofing</h2>
 <ul class="rel">
-<li><a href="/roofing-calculator">Roofing Calculator - squares, bundles and cost</a></li>
+<li><a href="/roofing-calculator.html">Roofing Calculator - squares, bundles and cost</a></li>
 </ul>
 <h2>Outdoor</h2>
 <ul class="rel">
-<li><a href="/deck-calculator">Deck Board Calculator - how many boards</a></li>
-<li><a href="/fence-calculator">Fence Calculator - panels, posts and concrete</a></li>
+<li><a href="/deck-calculator.html">Deck Board Calculator - how many boards</a></li>
+<li><a href="/fence-calculator.html">Fence Calculator - panels, posts and concrete</a></li>
 </ul>
 <h2>Masonry</h2>
 <ul class="rel">
-<li><a href="/brick-calculator">Brick Calculator - how many bricks do I need</a></li>
-<li><a href="/block-calculator">Concrete Block Calculator - blocks needed for a wall</a></li>
-<li><a href="/mortar-calculator">Mortar Calculator - bags for a brick wall</a></li>
+<li><a href="/brick-calculator.html">Brick Calculator - how many bricks do I need</a></li>
+<li><a href="/block-calculator.html">Concrete Block Calculator - blocks needed for a wall</a></li>
+<li><a href="/mortar-calculator.html">Mortar Calculator - bags for a brick wall</a></li>
 </ul>
 <h2>Ground &amp; Garden</h2>
 <ul class="rel">
-<li><a href="/sand-calculator">Sand Calculator - cubic yards and tons</a></li>
-<li><a href="/topsoil-calculator">Topsoil Calculator - cubic yards and bags</a></li>
-<li><a href="/lawn-seed-calculator">Grass Seed Calculator - pounds needed</a></li>
+<li><a href="/sand-calculator.html">Sand Calculator - cubic yards and tons</a></li>
+<li><a href="/topsoil-calculator.html">Topsoil Calculator - cubic yards and bags</a></li>
+<li><a href="/lawn-seed-calculator.html">Grass Seed Calculator - pounds needed</a></li>
 </ul>
 <h2>Outdoor &amp; Driveway</h2>
 <ul class="rel">
-<li><a href="/paver-calculator">Paver Calculator - pavers and base sand</a></li>
-<li><a href="/asphalt-calculator">Asphalt Calculator - tons needed for a driveway</a></li>
-<li><a href="/driveway-sealer-calculator">Driveway Sealer Calculator - gallons needed</a></li>
-<li><a href="/fence-stain-calculator">Fence Stain Calculator - gallons needed</a></li>
-<li><a href="/gutter-calculator">Gutter Calculator - length and downspouts</a></li>
-<li><a href="/pier-calculator">Concrete Pier Calculator - sonotube volume and bags</a></li>
-<li><a href="/firewood-calculator">Firewood Calculator - cords in a stack</a></li>
+<li><a href="/paver-calculator.html">Paver Calculator - pavers and base sand</a></li>
+<li><a href="/asphalt-calculator.html">Asphalt Calculator - tons needed for a driveway</a></li>
+<li><a href="/driveway-sealer-calculator.html">Driveway Sealer Calculator - gallons needed</a></li>
+<li><a href="/fence-stain-calculator.html">Fence Stain Calculator - gallons needed</a></li>
+<li><a href="/gutter-calculator.html">Gutter Calculator - length and downspouts</a></li>
+<li><a href="/pier-calculator.html">Concrete Pier Calculator - sonotube volume and bags</a></li>
+<li><a href="/firewood-calculator.html">Firewood Calculator - cords in a stack</a></li>
 </ul>
 <h2>Interior &amp; Framing</h2>
 <ul class="rel">
-<li><a href="/wallpaper-calculator">Wallpaper Calculator - rolls needed</a></li>
-<li><a href="/carpet-calculator">Carpet Calculator - square yards and cost</a></li>
-<li><a href="/insulation-calculator">Insulation Calculator - packs needed</a></li>
-<li><a href="/siding-calculator">Siding Calculator - squares and boxes</a></li>
-<li><a href="/stud-calculator">Wall Stud Calculator - studs and plates</a></li>
-<li><a href="/sheathing-calculator">Plywood Sheathing Calculator - sheets needed</a></li>
-<li><a href="/stair-calculator">Stair Calculator - steps, riser height and run</a></li>
+<li><a href="/wallpaper-calculator.html">Wallpaper Calculator - rolls needed</a></li>
+<li><a href="/carpet-calculator.html">Carpet Calculator - square yards and cost</a></li>
+<li><a href="/insulation-calculator.html">Insulation Calculator - packs needed</a></li>
+<li><a href="/siding-calculator.html">Siding Calculator - squares and boxes</a></li>
+<li><a href="/stud-calculator.html">Wall Stud Calculator - studs and plates</a></li>
+<li><a href="/sheathing-calculator.html">Plywood Sheathing Calculator - sheets needed</a></li>
+<li><a href="/stair-calculator.html">Stair Calculator - steps, riser height and run</a></li>
 </ul>
 <p>More calculators are added regularly.</p>
 <p class="meta">Last updated 2026-10-26.</p>
-</div></main>
-<footer><div class="wrap"><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy-policy">Privacy</a><a href="/terms">Terms</a><p>Estimates only. Always confirm quantities with your supplier or a qualified professional.</p></div></footer>
-</body>
+<h2>Browse by category</h2><ul class="rel"><li><a href="/concrete">Concrete Calculators</a></li><li><a href="/gravel">Gravel Calculators</a></li><li><a href="/paint">Paint Calculators</a></li><li><a href="/flooring">Flooring Calculators</a></li><li><a href="/roofing">Roofing Calculators</a></li><li><a href="/deck">Deck Calculators</a></li><li><a href="/fence">Fence Calculators</a></li><li><a href="/masonry">Masonry Calculators</a></li><li><a href="/garden">Garden Calculators</a></li><li><a href="/walls">Walls Calculators</a></li><li><a href="/tile">Tile Calculators</a></li></ul><h2>New calculators</h2><ul class="rel"><li><a href="/concrete-patio-calculator">Concrete Patio Calculator</a></li><li><a href="/concrete-walkway-calculator">Concrete Walkway Calculator</a></li><li><a href="/concrete-driveway-calculator">Concrete Driveway Calculator</a></li><li><a href="/concrete-basement-floor-calculator">Concrete Basement Floor Calculator</a></li><li><a href="/concrete-pool-deck-calculator">Concrete Pool Deck Calculator</a></li><li><a href="/concrete-foundation-wall-calculator">Concrete Foundation Wall Calculator</a></li><li><a href="/stone-veneer-calculator">Stone Veneer Calculator</a></li><li><a href="/chimney-calculator">Chimney Brick Calculator</a></li><li><a href="/fireplace-calculator">Fireplace Brick Calculator</a></li><li><a href="/retaining-wall-calculator">Retaining Wall Block Calculator</a></li><li><a href="/garden-wall-calculator">Garden Wall Block Calculator</a></li><li><a href="/stone-wall-calculator">Stone Wall Calculator</a></li><li><a href="/patio-block-calculator">Patio Block Calculator</a></li><li><a href="/stepping-stone-calculator">Stepping Stone Calculator</a></li><li><a href="/brick-paver-calculator">Brick Paver Calculator</a></li><li><a href="/gravel-path-calculator">Gravel Path Calculator</a></li><li><a href="/gravel-patio-calculator">Gravel Patio Calculator</a></li><li><a href="/pea-gravel-calculator">Pea Gravel Calculator</a></li><li><a href="/river-rock-calculator">River Rock Calculator</a></li><li><a href="/drainage-gravel-calculator">Drainage Gravel Calculator</a></li><li><a href="/garden-soil-calculator">Garden Soil Calculator</a></li><li><a href="/raised-bed-soil-calculator">Raised Bed Soil Calculator</a></li><li><a href="/compost-calculator">Compost Calculator</a></li><li><a href="/bark-mulch-calculator">Bark Mulch Calculator</a></li><li><a href="/wood-chips-calculator">Wood Chips Calculator</a></li><li><a href="/sod-calculator">Sod Calculator</a></li><li><a href="/artificial-turf-calculator">Artificial Turf Calculator</a></li><li><a href="/garden-edging-calculator">Garden Edging Calculator</a></li><li><a href="/landscape-fabric-calculator">Landscape Fabric Calculator</a></li><li><a href="/planter-soil-calculator">Planter Soil Calculator</a></li><li><a href="/deck-board-calculator">Deck Board Calculator</a></li><li><a href="/deck-stain-calculator">Deck Stain Calculator</a></li><li><a href="/fence-post-calculator">Fence Post Calculator</a></li><li><a href="/fence-picket-calculator">Fence Picket Calculator</a></li><li><a href="/fence-rail-calculator">Fence Rail Calculator</a></li><li><a href="/pergola-calculator">Pergola Calculator</a></li><li><a href="/shed-floor-calculator">Shed Floor Calculator</a></li><li><a href="/porch-calculator">Porch Calculator</a></li><li><a href="/stair-rail-calculator">Stair Rail Calculator</a></li><li><a href="/handrail-calculator">Handrail Calculator</a></li><li><a href="/deck-railing-calculator">Deck Railing Calculator</a></li><li><a href="/wood-fence-calculator">Wood Fence Panel Calculator</a></li><li><a href="/privacy-fence-calculator">Privacy Fence Panel Calculator</a></li><li><a href="/picket-fence-calculator">Picket Fence Panel Calculator</a></li><li><a href="/garden-trellis-calculator">Garden Trellis Calculator</a></li><li><a href="/exterior-paint-calculator">Exterior Paint Calculator</a></li><li><a href="/ceiling-paint-calculator">Ceiling Paint Calculator</a></li><li><a href="/primer-calculator">Primer Calculator</a></li><li><a href="/plaster-calculator">Plaster Calculator</a></li><li><a href="/stucco-calculator">Stucco Calculator</a></li><li><a href="/wall-panel-calculator">Wall Panel Calculator</a></li><li><a href="/wainscot-calculator">Wainscot Calculator</a></li><li><a href="/shiplap-calculator">Shiplap Calculator</a></li><li><a href="/beadboard-calculator">Beadboard Calculator</a></li><li><a href="/crown-moulding-calculator">Crown Moulding Calculator</a></li><li><a href="/baseboard-calculator">Baseboard Calculator</a></li><li><a href="/chair-rail-calculator">Chair Rail Calculator</a></li><li><a href="/drywall-tape-calculator">Drywall Tape Calculator</a></li><li><a href="/soundproofing-calculator">Soundproofing Calculator</a></li><li><a href="/acoustic-panel-calculator">Acoustic Panel Calculator</a></li><li><a href="/vinyl-plank-calculator">Vinyl Plank Flooring Calculator</a></li><li><a href="/hardwood-floor-calculator">Hardwood Floor Calculator</a></li><li><a href="/tile-grout-calculator">Tile Grout Calculator</a></li><li><a href="/tile-adhesive-calculator">Tile Adhesive Calculator</a></li><li><a href="/carpet-pad-calculator">Carpet Pad Calculator</a></li><li><a href="/underlayment-calculator">Underlayment Calculator</a></li><li><a href="/floor-leveler-calculator">Floor Leveler Calculator</a></li><li><a href="/epoxy-floor-calculator">Epoxy Floor Calculator</a></li><li><a href="/garage-floor-calculator">Garage Floor Coating Calculator</a></li><li><a href="/bathroom-tile-calculator">Bathroom Tile Calculator</a></li><li><a href="/shower-tile-calculator">Shower Tile Calculator</a></li><li><a href="/mosaic-tile-calculator">Mosaic Tile Calculator</a></li><li><a href="/backer-board-calculator">Backer Board Calculator</a></li><li><a href="/caulk-calculator">Caulk Calculator</a></li><li><a href="/sealant-calculator">Sealant Calculator</a></li><li><a href="/shingle-bundle-calculator">Shingle Bundle Calculator</a></li><li><a href="/ridge-cap-calculator">Ridge Cap Calculator</a></li><li><a href="/roof-underlayment-calculator">Roof Underlayment Calculator</a></li><li><a href="/metal-roof-calculator">Metal Roof Calculator</a></li><li><a href="/roof-coating-calculator">Roof Coating Calculator</a></li><li><a href="/downspout-calculator">Downspout Calculator</a></li><li><a href="/fascia-calculator">Fascia Calculator</a></li><li><a href="/soffit-calculator">Soffit Calculator</a></li><li><a href="/roof-vent-calculator">Roof Vent Calculator</a></li><li><a href="/gutter-guard-calculator">Gutter Guard Calculator</a></li><li><a href="/sprinkler-calculator">Sprinkler Head Calculator</a></li><li><a href="/outdoor-light-calculator">Outdoor Light Calculator</a></li><li><a href="/garden-path-light-calculator">Garden Path Light Calculator</a></li><li><a href="/fire-pit-calculator">Fire Pit Calculator</a></li><li><a href="/outdoor-kitchen-calculator">Outdoor Kitchen Calculator</a></li><li><a href="/parking-pad-calculator">Parking Pad Calculator</a></li><li><a href="/walkway-edging-calculator">Walkway Edging Calculator</a></li><li><a href="/lawn-fertilizer-calculator">Lawn Fertilizer Calculator</a></li><li><a href="/weed-barrier-calculator">Weed Barrier Calculator</a></li><li><a href="/garden-shed-calculator">Garden Shed Calculator</a></li><li><a href="/shower-pan-calculator">Shower Pan Calculator</a></li><li><a href="/tile-sealer-calculator">Tile Sealer Calculator</a></li><li><a href="/grout-sealer-calculator">Grout Sealer Calculator</a></li><li><a href="/concrete-sealer-calculator">Concrete Sealer Calculator</a></li><li><a href="/bathroom-floor-calculator">Bathroom Floor Calculator</a></li></ul></div></main>
+<footer><div class="wrap"><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy-policy.html">Privacy</a><a href="/terms.html">Terms</a><p>Estimates only. Always confirm quantities with your supplier or a qualified professional.</p></div></footer>
+<script src="chatbot.js" defer></script><script>
+(function(){var inp=document.getElementById('calcSearch');if(!inp)return;var items=document.querySelectorAll('ul.rel li');var cnt=document.getElementById('searchCount');function run(){var q=inp.value.trim().toLowerCase();var shown=0;items.forEach(function(li){var ok=!q||li.textContent.toLowerCase().indexOf(q)>-1;li.style.display=ok?'':'none';if(ok)shown++;});if(cnt)cnt.textContent=q?shown+' calculators found':'138 calculators, type to filter.';}inp.addEventListener('input',run);run();})();
+</script></body>
 </html>
