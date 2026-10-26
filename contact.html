@@ -61,6 +61,7 @@ details p{margin:8px 0 0}
 .rel a{display:block;background:#fff;border:1px solid var(--line);border-radius:6px;padding:12px;text-decoration:none;font-weight:600}
 .meta{font-size:14px;color:var(--mut);margin-top:26px}
 .ad{min-height:280px;margin:20px 0}
+.in textarea{width:100%;min-width:0;border:0;background:none;padding:11px 10px;font:inherit;font-size:18px;color:var(--ink);outline:0;resize:vertical;min-height:120px}
 footer{border-top:1px solid var(--line);padding:18px 0 30px;font-size:14px;color:var(--mut)}
 footer a{margin-right:14px}
 @media(min-width:600px){h1{font-size:36px}}
@@ -73,6 +74,26 @@ footer a{margin-right:14px}
 <p>Questions, corrections, or a calculator you would like us to add? Email us:</p>
 <p><b>armanzaheer808@gmail.com</b></p>
 <p>Please include the calculator name and the values you entered, so we can check the math quickly.</p>
+<p>Ya neeche form bhar dein. Submit karne par aapki email app khulegi, wahan se Send dabane par message humein mil jayega.</p>
+<form id="cf">
+<div class="f"><label for="cf-name">Name</label><div class="in"><input id="cf-name" type="text" required></div></div>
+<div class="f"><label for="cf-email">Email</label><div class="in"><input id="cf-email" type="email" required></div></div>
+<div class="f"><label for="cf-msg">Message</label><div class="in"><textarea id="cf-msg" required></textarea></div></div>
+<div class="acts"><button type="submit">Send message</button></div>
+<p id="cf-note"></p>
+</form>
+<script>
+document.getElementById('cf').addEventListener('submit', function(e){
+e.preventDefault();
+var n = document.getElementById('cf-name').value.trim();
+var em = document.getElementById('cf-email').value.trim();
+var m = document.getElementById('cf-msg').value.trim();
+var subject = 'BuildCalc contact from ' + n;
+var body = 'Name: ' + n + '\nEmail: ' + em + '\n\n' + m;
+window.location.href = 'mailto:armanzaheer808@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+document.getElementById('cf-note').textContent = 'Email app khul rahi hai, wahan se Send dabayein.';
+});
+</script>
 <p class="meta">Last updated 2026-10-26.</p>
 </div></main>
 <footer><div class="wrap"><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy-policy.html">Privacy</a><a href="/terms.html">Terms</a><p>Estimates only. Always confirm quantities with your supplier or a qualified professional.</p></div></footer>
