@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Months to Weeks Calculator - BuildCalc</title><meta name="description" content="Convert months to weeks approximately, since months vary in length.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/months-to-weeks-calculator.html">
+<meta property="og:title" content="Months to Weeks Calculator - BuildCalc">
+<meta property="og:description" content="Convert months to weeks approximately, since months vary in length.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/months-to-weeks-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Months to Weeks Calculator", "description": "Convert months to weeks approximately, since months vary in length.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is this only approximate?", "acceptedAnswer": {"@type": "Answer", "text": "Because months are not all the same length: February has 28 or 29 days, others have 30 or 31."}}, {"@type": "Question", "name": "Why 4.345 weeks per month?", "acceptedAnswer": {"@type": "Answer", "text": "It is the average: 365.25 days per year ÷ 12 months ÷ 7 days per week ≈ 4.345."}}, {"@type": "Question", "name": "Should I use this for contracts or deadlines?", "acceptedAnswer": {"@type": "Answer", "text": "No. For anything binding, count exact calendar dates instead of this rough estimate."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Time & Date</p><h1>Months to Weeks Calculator</h1><p class="mut">Convert months to weeks approximately, since months vary in length.</p>
+<div class="card"><label>Months<input id="a" type="number" value="6"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value); if(isNaN(a)){document.getElementById('out').textContent='Please enter months.'; return;} document.getElementById('out').textContent=a+' months ≈ '+(a*4.345).toFixed(2)+' weeks (rough estimate)';}
+['a'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Weeks ≈ months × 4.345. This comes from the average year (365.25 days) divided by 12 months and then by 7 days per week, giving about 30.44 days per month.</p><h2>How it works</h2><p>Enter a number of months. The calculator gives an approximate week count, clearly marked rough, because real months run 28 to 31 days. For exact planning between two dates, use the date-difference calculator instead.</p>
+<h2>FAQs</h2><p><b>Why is this only approximate?</b><br>Because months are not all the same length: February has 28 or 29 days, others have 30 or 31.</p><p><b>Why 4.345 weeks per month?</b><br>It is the average: 365.25 days per year ÷ 12 months ÷ 7 days per week ≈ 4.345.</p><p><b>Should I use this for contracts or deadlines?</b><br>No. For anything binding, count exact calendar dates instead of this rough estimate.</p>
+<h2>Related calculators</h2>
+<p><a href="add-days-to-date-calculator.html">Add Days to Date Calculator</a></p>
+<p><a href="age-calculator.html">Age Calculator</a></p>
+<p><a href="birthday-countdown-calculator.html">Birthday Countdown Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

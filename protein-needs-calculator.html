@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Protein Needs Calculator - BuildCalc</title><meta name="description" content="Estimate daily protein in grams from body weight and activity level.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/protein-needs-calculator.html">
+<meta property="og:title" content="Protein Needs Calculator - BuildCalc">
+<meta property="og:description" content="Estimate daily protein in grams from body weight and activity level.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/protein-needs-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Protein Needs Calculator", "description": "Estimate daily protein in grams from body weight and activity level.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is more protein always better?", "acceptedAnswer": {"@type": "Answer", "text": "No. Above the target, extra protein adds calories without extra benefit for most people."}}, {"@type": "Question", "name": "Does it change with a diet?", "acceptedAnswer": {"@type": "Answer", "text": "People losing weight often use the higher end to help keep muscle."}}, {"@type": "Question", "name": "What foods count?", "acceptedAnswer": {"@type": "Answer", "text": "Meat, fish, eggs, dairy, beans, lentils, tofu and similar protein foods."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Health &amp; Fitness</p><h1>Protein Needs Calculator</h1><p class="mut">Estimate daily protein in grams from body weight and activity level.</p>
+<div class="card"><label>Weight (kg)<input id="w" type="number" value="70"></label><label>Activity level<select id="act"><option value="0.8">Sedentary</option><option value="1.2">Lightly active</option><option value="1.6" selected>Regular training</option><option value="2.0">Heavy training</option></select></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const w=g('w'),p=g('act'); if(w<=0) return bad(); r='Estimated protein need: about '+Math.round(w*p)+' g per day ('+p+' g per kg of body weight).'; out.textContent=r;}
+document.getElementById('w').addEventListener('input',calc); document.getElementById('w').addEventListener('change',calc); document.getElementById('act').addEventListener('input',calc); document.getElementById('act').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Daily protein in grams equals body weight in kilograms multiplied by a factor from 0.8 for sedentary up to 2.0 for heavy training.</p><h2>How it works</h2><p>Pick the factor that matches training, multiply by body weight, and the result is a daily gram target. Split it across meals rather than eating it all at once.</p>
+<h2>FAQs</h2><p><b>Is more protein always better?</b><br>No. Above the target, extra protein adds calories without extra benefit for most people.</p><p><b>Does it change with a diet?</b><br>People losing weight often use the higher end to help keep muscle.</p><p><b>What foods count?</b><br>Meat, fish, eggs, dairy, beans, lentils, tofu and similar protein foods.</p>
+<p class="mut">General information only, not medical advice.</p>
+<h2>Related calculators</h2>
+<p><a href="bedtime-calculator.html">Bedtime From Wake Time Calculator</a></p>
+<p><a href="bmi-calculator.html">BMI Calculator</a></p>
+<p><a href="bmi-prime-calculator.html">BMI Prime Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

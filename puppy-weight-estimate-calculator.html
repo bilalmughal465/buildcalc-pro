@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Puppy Weight Estimate Calculator - BuildCalc</title><meta name="description" content="Roughly project an adult weight from a puppy's current weight and age.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/puppy-weight-estimate-calculator.html">
+<meta property="og:title" content="Puppy Weight Estimate Calculator - BuildCalc">
+<meta property="og:description" content="Roughly project an adult weight from a puppy&#x27;s current weight and age.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/puppy-weight-estimate-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Puppy Weight Estimate Calculator", "description": "Roughly project an adult weight from a puppy's current weight and age.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How accurate is it?", "acceptedAnswer": {"@type": "Answer", "text": "A rough guide only; breed growth charts are better when known."}}, {"@type": "Question", "name": "Does it work for all breeds?", "acceptedAnswer": {"@type": "Answer", "text": "Large breeds grow longer, small breeds finish sooner."}}, {"@type": "Question", "name": "When is it most useful?", "acceptedAnswer": {"@type": "Answer", "text": "For planning crate, carrier and food sizes, not for health decisions."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Pet</p><h1>Puppy Weight Estimate Calculator</h1><p class="mut">Roughly project an adult weight from a puppy's current weight and age.</p>
+<div class="card"><label>Puppy current weight (kg)<input id="w" type="number" value="5"></label><label>Puppy age (months)<input id="age" type="number" value="4"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const w=g('w'),a=g('age'); if(w<=0||a<=0||a>24) return bad(); const adult=w/(0.5+a/24); r='Rough adult weight estimate: about '+adult.toFixed(1)+' kg (from '+w+' kg at '+a+' months). Breed growth curves vary widely.'; out.textContent=r;}
+document.getElementById('w').addEventListener('input',calc); document.getElementById('w').addEventListener('change',calc); document.getElementById('age').addEventListener('input',calc); document.getElementById('age').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Adult weight is estimated as current weight divided by a growth fraction that reaches 1.0 at 24 months.</p><h2>How it works</h2><p>The fraction grows with age, so a young puppy's weight is scaled up more than an older puppy's. Mixed breeds and large breeds break this simple curve most, so treat it as a ballpark.</p>
+<h2>FAQs</h2><p><b>How accurate is it?</b><br>A rough guide only; breed growth charts are better when known.</p><p><b>Does it work for all breeds?</b><br>Large breeds grow longer, small breeds finish sooner.</p><p><b>When is it most useful?</b><br>For planning crate, carrier and food sizes, not for health decisions.</p>
+<p class="mut">General information only, not veterinary advice.</p>
+<h2>Related calculators</h2>
+<p><a href="aquarium-water-volume-calculator.html">Aquarium Water Volume Calculator</a></p>
+<p><a href="bird-cage-size-calculator.html">Bird Cage Size (Rough) Calculator</a></p>
+<p><a href="cat-age-human-years-calculator.html">Cat Age in Human Years Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

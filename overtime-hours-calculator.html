@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Overtime Hours Calculator - BuildCalc</title><meta name="description" content="Split total hours worked into regular hours and overtime hours.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/overtime-hours-calculator.html">
+<meta property="og:title" content="Overtime Hours Calculator - BuildCalc">
+<meta property="og:description" content="Split total hours worked into regular hours and overtime hours.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/overtime-hours-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Overtime Hours Calculator", "description": "Split total hours worked into regular hours and overtime hours.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What counts as overtime?", "acceptedAnswer": {"@type": "Answer", "text": "Any hours above the standard threshold you enter — commonly 40 per week, but it varies by contract and country."}}, {"@type": "Question", "name": "What if total hours are below standard?", "acceptedAnswer": {"@type": "Answer", "text": "Overtime is 0 and all hours are regular."}}, {"@type": "Question", "name": "Does this calculate overtime pay?", "acceptedAnswer": {"@type": "Answer", "text": "No. It gives hours only; multiply overtime hours by your overtime rate separately for pay."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Time & Date</p><h1>Overtime Hours Calculator</h1><p class="mut">Split total hours worked into regular hours and overtime hours.</p>
+<div class="card"><label>Total hours worked<input id="a" type="number" value="48"></label><label>Standard hours per week<input id="b" type="number" value="40"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value),b=parseFloat(document.getElementById('b').value); if(isNaN(a)||isNaN(b)){document.getElementById('out').textContent='Please enter both hour values.'; return;} const ot=Math.max(0,a-b),reg=a-ot; document.getElementById('out').textContent='Regular: '+reg.toFixed(2)+' hours, Overtime: '+ot.toFixed(2)+' hours';}
+['a','b'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Overtime = total hours minus standard hours, floored at zero. Regular hours = total hours minus overtime.</p><h2>How it works</h2><p>Enter total hours worked and the standard weekly hours for the job. The calculator splits the total into regular and overtime hours, so payroll can apply different rates to each part.</p>
+<h2>FAQs</h2><p><b>What counts as overtime?</b><br>Any hours above the standard threshold you enter — commonly 40 per week, but it varies by contract and country.</p><p><b>What if total hours are below standard?</b><br>Overtime is 0 and all hours are regular.</p><p><b>Does this calculate overtime pay?</b><br>No. It gives hours only; multiply overtime hours by your overtime rate separately for pay.</p>
+<h2>Related calculators</h2>
+<p><a href="add-days-to-date-calculator.html">Add Days to Date Calculator</a></p>
+<p><a href="age-calculator.html">Age Calculator</a></p>
+<p><a href="birthday-countdown-calculator.html">Birthday Countdown Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

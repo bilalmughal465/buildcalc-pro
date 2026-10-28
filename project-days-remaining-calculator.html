@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Days Remaining Calculator - BuildCalc</title><meta name="description" content="Count working-day style calendar days left until a project deadline.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/project-days-remaining-calculator.html">
+<meta property="og:title" content="Project Days Remaining Calculator - BuildCalc">
+<meta property="og:description" content="Count working-day style calendar days left until a project deadline.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/project-days-remaining-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Project Days Remaining Calculator", "description": "Count working-day style calendar days left until a project deadline.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are weekends included?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. This counts calendar days. Use the working-days calculator if only weekdays should count."}}, {"@type": "Question", "name": "Is today counted?", "acceptedAnswer": {"@type": "Answer", "text": "No. Today is day 0, so a deadline tomorrow is 1 day away."}}, {"@type": "Question", "name": "What if the deadline has passed?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator reports how many days ago it passed."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Time & Date</p><h1>Project Days Remaining Calculator</h1><p class="mut">Count working-day style calendar days left until a project deadline.</p>
+<div class="card"><label>Project deadline<input id="a" type="date" value="2026-12-31"></label><label>Today<input id="b" type="date" value="2026-10-28"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=document.getElementById('a').value,b=document.getElementById('b').value; if(!a||!b){document.getElementById('out').textContent='Please pick both dates.'; return;} const d=Math.round((new Date(a)-new Date(b))/86400000); document.getElementById('out').textContent=d<0?('Deadline passed '+(-d)+' days ago.'):d===0?'Deadline is today.':'Days remaining: '+d+' days';}
+['a','b'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Days remaining = deadline date minus today&#x27;s date, in whole calendar days.</p><h2>How it works</h2><p>Enter the project deadline and today&#x27;s date. The calculator reports whole days left, which is the simplest way to track a deadline; if you need working days only, use the working-days calculator for the same range.</p>
+<h2>FAQs</h2><p><b>Are weekends included?</b><br>Yes. This counts calendar days. Use the working-days calculator if only weekdays should count.</p><p><b>Is today counted?</b><br>No. Today is day 0, so a deadline tomorrow is 1 day away.</p><p><b>What if the deadline has passed?</b><br>The calculator reports how many days ago it passed.</p>
+<h2>Related calculators</h2>
+<p><a href="add-days-to-date-calculator.html">Add Days to Date Calculator</a></p>
+<p><a href="age-calculator.html">Age Calculator</a></p>
+<p><a href="birthday-countdown-calculator.html">Birthday Countdown Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

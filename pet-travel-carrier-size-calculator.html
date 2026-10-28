@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pet Travel Carrier Size Calculator - BuildCalc</title><meta name="description" content="Work out a minimum travel carrier size from a pet's length and height.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/pet-travel-carrier-size-calculator.html">
+<meta property="og:title" content="Pet Travel Carrier Size Calculator - BuildCalc">
+<meta property="og:description" content="Work out a minimum travel carrier size from a pet&#x27;s length and height.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/pet-travel-carrier-size-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Pet Travel Carrier Size Calculator", "description": "Work out a minimum travel carrier size from a pet's length and height.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should I buy much bigger?", "acceptedAnswer": {"@type": "Answer", "text": "No. Too much room lets the pet slide around in transit."}}, {"@type": "Question", "name": "Do airlines use these numbers?", "acceptedAnswer": {"@type": "Answer", "text": "Airlines have their own rules; this is a general sizing guide."}}, {"@type": "Question", "name": "How do I help my pet accept it?", "acceptedAnswer": {"@type": "Answer", "text": "Leave it open at home with bedding and treats well before travel."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Pet</p><h1>Pet Travel Carrier Size Calculator</h1><p class="mut">Work out a minimum travel carrier size from a pet's length and height.</p>
+<div class="card"><label>Pet length, nose to tail base (cm)<input id="len" type="number" value="60"></label><label>Pet height (cm)<input id="ht" type="number" value="45"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const l=g('len'),h=g('ht'); if(l<=0||h<=0) return bad(); r='Minimum carrier: about '+(l+10)+' cm long × '+(h+10)+' cm high (width about '+Math.round(h*0.7)+' cm or more). Your pet should stand, turn and lie down comfortably.'; out.textContent=r;}
+document.getElementById('len').addEventListener('input',calc); document.getElementById('len').addEventListener('change',calc); document.getElementById('ht').addEventListener('input',calc); document.getElementById('ht').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Carrier length is pet length plus about 10 cm; carrier height is pet height plus about 10 cm.</p><h2>How it works</h2><p>Extra room lets the pet stand, turn and lie down, which airlines and welfare guides require. Measure standing height including ears where relevant, and check your carrier or airline's exact rules before travel.</p>
+<h2>FAQs</h2><p><b>Should I buy much bigger?</b><br>No. Too much room lets the pet slide around in transit.</p><p><b>Do airlines use these numbers?</b><br>Airlines have their own rules; this is a general sizing guide.</p><p><b>How do I help my pet accept it?</b><br>Leave it open at home with bedding and treats well before travel.</p>
+<p class="mut">General information only, not veterinary advice.</p>
+<h2>Related calculators</h2>
+<p><a href="aquarium-water-volume-calculator.html">Aquarium Water Volume Calculator</a></p>
+<p><a href="bird-cage-size-calculator.html">Bird Cage Size (Rough) Calculator</a></p>
+<p><a href="cat-age-human-years-calculator.html">Cat Age in Human Years Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>
