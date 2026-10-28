@@ -1,0 +1,71 @@
+name: Restructure site folders
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'buildcalc-omni-merged-472.zip'
+      - '.github/workflows/restructure-site.yml'
+permissions:
+  contents: write
+jobs:
+  restructure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack merged zip and fix folder structure
+        run: |
+          set -euo pipefail
+          ZIP="buildcalc-omni-merged-472.zip"
+          WF=".github/workflows/restructure-site.yml"
+          if [ ! -f "$ZIP" ]; then
+            echo "Zip not present; nothing to do."
+            exit 0
+          fi
+          rm -rf /tmp/merged && mkdir -p /tmp/merged
+          unzip -o -q "$ZIP" -d /tmp/merged
+          rm -rf /tmp/merged/__MACOSX
+          SRC=""
+          if [ -d /tmp/merged/calculators ]; then
+            SRC=/tmp/merged
+          else
+            CAND=$(find /tmp/merged -maxdepth 3 -type d -name calculators -print -quit)
+            if [ -n "${CAND:-}" ]; then SRC=$(dirname "$CAND"); fi
+          fi
+          if [ -z "$SRC" ] || [ ! -d "$SRC/calculators" ]; then
+            echo "ERROR: calculators/ not found in zip"
+            find /tmp/merged -maxdepth 3 | head -60
+            exit 1
+          fi
+          CALC_N=$(find "$SRC/calculators" -maxdepth 1 -name '*.html' | wc -l)
+          CAT_N=$(find "$SRC/categories" -maxdepth 1 -name '*.html' 2>/dev/null | wc -l)
+          echo "Zip contents: calculators html=$CALC_N categories html=$CAT_N"
+          ls -la "$SRC/assets" 2>/dev/null || true
+          if [ "$CALC_N" -lt 290 ]; then echo "ERROR: too few calculator files"; exit 1; fi
+          if [ "$CAT_N" -lt 8 ]; then echo "ERROR: too few category files"; exit 1; fi
+          if [ ! -f "$SRC/assets/style.css" ]; then echo "ERROR: assets/style.css missing"; exit 1; fi
+          rm -rf calculators categories assets
+          mkdir -p calculators categories assets
+          cp -r "$SRC/calculators/." calculators/
+          cp -r "$SRC/categories/." categories/
+          cp "$SRC/assets/style.css" assets/style.css
+          echo "Copied: $(find calculators -name '*.html' | wc -l) calculators, $(find categories -name '*.html' | wc -l) categories"
+          shopt -s nullglob
+          DELETED=0
+          for f in calculators/*.html; do
+            b=$(basename "$f")
+            if [ -f "$b" ]; then
+              git rm -q "$b"
+              DELETED=$((DELETED + 1))
+            fi
+          done
+          echo "Deleted flat root duplicates of new calculators: $DELETED"
+          git rm -q "$ZIP"
+          git rm -q "$WF"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git -c user.name="bilalmughal465" -c user.email="bilalmughal465@users.noreply.github.com" commit -m "Restructure: calculators/ (300), categories/ (10), assets/style.css; remove flat root duplicates"
+          git push origin main
+          echo "Pushed restructure commit"
