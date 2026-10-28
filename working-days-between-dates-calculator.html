@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Working Days Between Dates Calculator - BuildCalc</title><meta name="description" content="Count Monday-to-Friday working days between two dates, excluding weekends.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/working-days-between-dates-calculator.html">
+<meta property="og:title" content="Working Days Between Dates Calculator - BuildCalc">
+<meta property="og:description" content="Count Monday-to-Friday working days between two dates, excluding weekends.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/working-days-between-dates-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Working Days Between Dates Calculator", "description": "Count Monday-to-Friday working days between two dates, excluding weekends.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are public holidays excluded?", "acceptedAnswer": {"@type": "Answer", "text": "No. Only weekends are excluded; holidays vary by place, so subtract any holidays in your period manually."}}, {"@type": "Question", "name": "Is the count inclusive?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both the start and end dates count if they are weekdays."}}, {"@type": "Question", "name": "What if the range is a single weekend day?", "acceptedAnswer": {"@type": "Answer", "text": "The result is 0, since no weekday falls in the range."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Time & Date</p><h1>Working Days Between Dates Calculator</h1><p class="mut">Count Monday-to-Friday working days between two dates, excluding weekends.</p>
+<div class="card"><label>Start date<input id="a" type="date" value="2026-10-26"></label><label>End date<input id="b" type="date" value="2026-10-30"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=document.getElementById('a').value,b=document.getElementById('b').value; if(!a||!b){document.getElementById('out').textContent='Please pick both dates.'; return;} let d1=new Date(a),d2=new Date(b); if(d2<d1){const t=d1;d1=d2;d2=t;} let n=0; for(let d=new Date(d1); d<=d2; d.setDate(d.getDate()+1)){const w=d.getDay(); if(w!==0&&w!==6) n++;} document.getElementById('out').textContent='Working days (inclusive): '+n;}
+['a','b'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Working days = count of dates from start to end inclusive whose weekday is Monday to Friday. Saturdays and Sundays are skipped.</p><h2>How it works</h2><p>Pick the start and end dates. The calculator walks day by day and counts only Monday-to-Friday dates, inclusive of both ends. Public holidays are not excluded, because they vary by country and region.</p>
+<h2>FAQs</h2><p><b>Are public holidays excluded?</b><br>No. Only weekends are excluded; holidays vary by place, so subtract any holidays in your period manually.</p><p><b>Is the count inclusive?</b><br>Yes. Both the start and end dates count if they are weekdays.</p><p><b>What if the range is a single weekend day?</b><br>The result is 0, since no weekday falls in the range.</p>
+<h2>Related calculators</h2>
+<p><a href="add-days-to-date-calculator.html">Add Days to Date Calculator</a></p>
+<p><a href="age-calculator.html">Age Calculator</a></p>
+<p><a href="birthday-countdown-calculator.html">Birthday Countdown Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sleep Cycles Calculator - BuildCalc</title><meta name="description" content="Turn a sleep duration into 90-minute sleep cycles and nearby cycle-friendly durations.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/sleep-cycles-calculator.html">
+<meta property="og:title" content="Sleep Cycles Calculator - BuildCalc">
+<meta property="og:description" content="Turn a sleep duration into 90-minute sleep cycles and nearby cycle-friendly durations.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/sleep-cycles-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Sleep Cycles Calculator", "description": "Turn a sleep duration into 90-minute sleep cycles and nearby cycle-friendly durations.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is every cycle exactly 90 minutes?", "acceptedAnswer": {"@type": "Answer", "text": "No. Cycles vary from 70 to 120 minutes across the night."}}, {"@type": "Question", "name": "Is 5 cycles enough?", "acceptedAnswer": {"@type": "Answer", "text": "For many adults 5 cycles (7.5 hours) is a reasonable target."}}, {"@type": "Question", "name": "Does this diagnose sleep problems?", "acceptedAnswer": {"@type": "Answer", "text": "No. Persistent sleep trouble deserves proper advice."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Health &amp; Fitness</p><h1>Sleep Cycles Calculator</h1><p class="mut">Turn a sleep duration into 90-minute sleep cycles and nearby cycle-friendly durations.</p>
+<div class="card"><label>Sleep duration (hours)<input id="hrs" type="number" value="7.5"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const h=g('hrs'); if(h<=0) return bad(); const cyc=h/1.5; r='About '+cyc.toFixed(1)+' cycles of 90 minutes in '+h+' hours. Nearby whole-cycle totals: 5 cycles = 7.5 h, 6 cycles = 9 h, 4 cycles = 6 h.'; out.textContent=r;}
+document.getElementById('hrs').addEventListener('input',calc); document.getElementById('hrs').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Sleep cycles equal total sleep hours divided by 1.5, since one cycle averages about 90 minutes.</p><h2>How it works</h2><p>Total sleep is divided by the average cycle length. Whole numbers of cycles are often suggested as waking points, because waking mid-cycle can feel groggier than waking between cycles.</p>
+<h2>FAQs</h2><p><b>Is every cycle exactly 90 minutes?</b><br>No. Cycles vary from 70 to 120 minutes across the night.</p><p><b>Is 5 cycles enough?</b><br>For many adults 5 cycles (7.5 hours) is a reasonable target.</p><p><b>Does this diagnose sleep problems?</b><br>No. Persistent sleep trouble deserves proper advice.</p>
+<p class="mut">General information only, not medical advice.</p>
+<h2>Related calculators</h2>
+<p><a href="bedtime-calculator.html">Bedtime From Wake Time Calculator</a></p>
+<p><a href="bmi-calculator.html">BMI Calculator</a></p>
+<p><a href="bmi-prime-calculator.html">BMI Prime Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

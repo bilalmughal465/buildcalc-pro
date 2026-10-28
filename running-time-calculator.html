@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Running Time Calculator - BuildCalc</title><meta name="description" content="Predict how long a run will take from distance and target pace.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/running-time-calculator.html">
+<meta property="og:title" content="Running Time Calculator - BuildCalc">
+<meta property="og:description" content="Predict how long a run will take from distance and target pace.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/running-time-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Running Time Calculator", "description": "Predict how long a run will take from distance and target pace.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this a race prediction?", "acceptedAnswer": {"@type": "Answer", "text": "Only roughly. Even pace is hard to hold over long distances."}}, {"@type": "Question", "name": "What about walking breaks?", "acceptedAnswer": {"@type": "Answer", "text": "Add their minutes to the result if you plan breaks."}}, {"@type": "Question", "name": "How do I improve the estimate?", "acceptedAnswer": {"@type": "Answer", "text": "Use your actual pace from a recent run of similar distance."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Health &amp; Fitness</p><h1>Running Time Calculator</h1><p class="mut">Predict how long a run will take from distance and target pace.</p>
+<div class="card"><label>Distance (km)<input id="d" type="number" value="10"></label><label>Pace (minutes per km)<input id="pace" type="number" value="6"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const d=g('d'),p=g('pace'); if(d<=0||p<=0) return bad(); const tot=d*p, h=Math.floor(tot/60), m=Math.round(tot%60); r='Estimated time: '+tot.toFixed(0)+' minutes'+(h>0?' ('+h+'h '+String(m).padStart(2,'0')+'m)':'')+'.'; out.textContent=r;}
+document.getElementById('d').addEventListener('input',calc); document.getElementById('d').addEventListener('change',calc); document.getElementById('pace').addEventListener('input',calc); document.getElementById('pace').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Running time equals distance in kilometres multiplied by pace in minutes per kilometre.</p><h2>How it works</h2><p>Distance times pace gives total minutes, which the page also shows as hours and minutes for longer runs. Hills, heat and fatigue will make real times longer than this flat, even-pace estimate.</p>
+<h2>FAQs</h2><p><b>Is this a race prediction?</b><br>Only roughly. Even pace is hard to hold over long distances.</p><p><b>What about walking breaks?</b><br>Add their minutes to the result if you plan breaks.</p><p><b>How do I improve the estimate?</b><br>Use your actual pace from a recent run of similar distance.</p>
+<p class="mut">General information only, not medical advice.</p>
+<h2>Related calculators</h2>
+<p><a href="bedtime-calculator.html">Bedtime From Wake Time Calculator</a></p>
+<p><a href="bmi-calculator.html">BMI Calculator</a></p>
+<p><a href="bmi-prime-calculator.html">BMI Prime Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

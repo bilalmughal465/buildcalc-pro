@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waist-to-Hip Ratio Calculator - BuildCalc</title><meta name="description" content="Divide waist by hip measurement for a simple fat-distribution indicator.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/waist-to-hip-ratio-calculator.html">
+<meta property="og:title" content="Waist-to-Hip Ratio Calculator - BuildCalc">
+<meta property="og:description" content="Divide waist by hip measurement for a simple fat-distribution indicator.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/waist-to-hip-ratio-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Waist-to-Hip Ratio Calculator", "description": "Divide waist by hip measurement for a simple fat-distribution indicator.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a high ratio?", "acceptedAnswer": {"@type": "Answer", "text": "Rough guides are above 0.90 for men and 0.85 for women, but these are screening guides only."}}, {"@type": "Question", "name": "Does it replace BMI?", "acceptedAnswer": {"@type": "Answer", "text": "No. It adds distribution information that BMI misses."}}, {"@type": "Question", "name": "How should I measure?", "acceptedAnswer": {"@type": "Answer", "text": "Standing, relaxed, tape level and snug, not pulled tight."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Health &amp; Fitness</p><h1>Waist-to-Hip Ratio Calculator</h1><p class="mut">Divide waist by hip measurement for a simple fat-distribution indicator.</p>
+<div class="card"><label>Waist (cm)<input id="waist" type="number" value="85"></label><label>Hip (cm)<input id="hip" type="number" value="100"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const wa=g('waist'),hi=g('hip'); if(wa<=0||hi<=0) return bad(); r='Waist-to-hip ratio: '+(wa/hi).toFixed(2)+' (waist '+wa+' cm ÷ hip '+hi+' cm).'; out.textContent=r;}
+document.getElementById('waist').addEventListener('input',calc); document.getElementById('waist').addEventListener('change',calc); document.getElementById('hip').addEventListener('input',calc); document.getElementById('hip').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Waist-to-hip ratio equals waist circumference divided by hip circumference.</p><h2>How it works</h2><p>Measure waist at the navel and hip at the widest point, then divide. A higher ratio means more weight carried around the waist relative to the hips.</p>
+<h2>FAQs</h2><p><b>What is a high ratio?</b><br>Rough guides are above 0.90 for men and 0.85 for women, but these are screening guides only.</p><p><b>Does it replace BMI?</b><br>No. It adds distribution information that BMI misses.</p><p><b>How should I measure?</b><br>Standing, relaxed, tape level and snug, not pulled tight.</p>
+<p class="mut">General information only, not medical advice.</p>
+<h2>Related calculators</h2>
+<p><a href="bedtime-calculator.html">Bedtime From Wake Time Calculator</a></p>
+<p><a href="bmi-calculator.html">BMI Calculator</a></p>
+<p><a href="bmi-prime-calculator.html">BMI Prime Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

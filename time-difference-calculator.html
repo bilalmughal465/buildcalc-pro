@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Time Difference Calculator - BuildCalc</title><meta name="description" content="Find the difference between two times in hours and minutes.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/time-difference-calculator.html">
+<meta property="og:title" content="Time Difference Calculator - BuildCalc">
+<meta property="og:description" content="Find the difference between two times in hours and minutes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/time-difference-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Time Difference Calculator", "description": "Find the difference between two times in hours and minutes.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What if the end time is earlier than the start?", "acceptedAnswer": {"@type": "Answer", "text": "It is treated as the next day, so 22:00 to 06:00 is 8 hours, not −16 hours."}}, {"@type": "Question", "name": "Does it handle seconds?", "acceptedAnswer": {"@type": "Answer", "text": "No. This calculator works to the minute, which suits shifts, travel, and schedules."}}, {"@type": "Question", "name": "Can the difference exceed 24 hours?", "acceptedAnswer": {"@type": "Answer", "text": "No. With times only and no dates, the maximum reported difference is under 24 hours."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Time & Date</p><h1>Time Difference Calculator</h1><p class="mut">Find the difference between two times in hours and minutes.</p>
+<div class="card"><label>Start time<input id="a" type="time" value="09:00"></label><label>End time<input id="b" type="time" value="17:30"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){function mins(v){const p=v.split(':'); return parseInt(p[0])*60+parseInt(p[1]);} const a=document.getElementById('a').value,b=document.getElementById('b').value; if(!a||!b){document.getElementById('out').textContent='Please pick both times.'; return;} let d=mins(b)-mins(a); if(d<0) d+=1440; document.getElementById('out').textContent='Difference: '+Math.floor(d/60)+' hours '+ (d%60) +' minutes';}
+['a','b'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Difference = end time minus start time, in minutes, converted back to hours and minutes. If the end time is earlier, it is treated as the next day.</p><h2>How it works</h2><p>Pick a start and end time. The calculator converts both to minutes since midnight, subtracts, and reports hours and minutes. An end time earlier than the start is read as overnight, not as a negative duration.</p>
+<h2>FAQs</h2><p><b>What if the end time is earlier than the start?</b><br>It is treated as the next day, so 22:00 to 06:00 is 8 hours, not −16 hours.</p><p><b>Does it handle seconds?</b><br>No. This calculator works to the minute, which suits shifts, travel, and schedules.</p><p><b>Can the difference exceed 24 hours?</b><br>No. With times only and no dates, the maximum reported difference is under 24 hours.</p>
+<h2>Related calculators</h2>
+<p><a href="add-days-to-date-calculator.html">Add Days to Date Calculator</a></p>
+<p><a href="age-calculator.html">Age Calculator</a></p>
+<p><a href="birthday-countdown-calculator.html">Birthday Countdown Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

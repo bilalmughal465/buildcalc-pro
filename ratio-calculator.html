@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ratio Calculator - BuildCalc</title><meta name="description" content="Simplify a ratio of two numbers to its smallest whole-number form.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/ratio-calculator.html">
+<meta property="og:title" content="Ratio Calculator - BuildCalc">
+<meta property="og:description" content="Simplify a ratio of two numbers to its smallest whole-number form.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/ratio-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Ratio Calculator", "description": "Simplify a ratio of two numbers to its smallest whole-number form.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the Ratio do?", "acceptedAnswer": {"@type": "Answer", "text": "It takes the values you enter and works out the ratio for you, showing the result straight away."}}, {"@type": "Question", "name": "What should I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Enter ordinary numbers in the boxes above. If a value does not make sense for this calculation, the page will ask you to check it instead of showing a wrong answer."}}, {"@type": "Question", "name": "Can I use the result for homework or everyday maths?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is a general-purpose maths helper; for exam or professional work, still check the steps against your own working."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Math</p><h1>Ratio Calculator</h1><p class="mut">Simplify a ratio of two numbers to its smallest whole-number form.</p>
+<div class="card"><label>First value <input id="a" type="number" value="24"></label> <label>Second value <input id="b" type="number" value="36"></label>  <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out');try{const a=Math.round(parseFloat(document.getElementById('a').value)),b=Math.round(parseFloat(document.getElementById('b').value));if(isNaN(a)||isNaN(b)||a===0||b===0){out.textContent='Please enter valid numbers.';return;}const g=(p,q)=>q===0?p:g(q,p%q);const gg=g(Math.abs(a),Math.abs(b));out.textContent='Result: Simplified ratio = '+(a/gg)+':'+(b/gg);}catch(e){out.textContent='Please enter valid numbers.';}}
+['a','b'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener('input',calc);});calc();</script>
+<h2>Formula</h2><p>Divide both parts of the ratio by their greatest common divisor to simplify it.</p><h2>How it works</h2><p>Enter two whole numbers. The calculator finds their greatest common divisor and divides both parts by it. For example, 24:36 simplifies to 2:3.</p>
+<h2>FAQs</h2><p><b>What does the Ratio do?</b><br>It takes the values you enter and works out the ratio for you, showing the result straight away.</p><p><b>What should I enter?</b><br>Enter ordinary numbers in the boxes above. If a value does not make sense for this calculation, the page will ask you to check it instead of showing a wrong answer.</p><p><b>Can I use the result for homework or everyday maths?</b><br>Yes. It is a general-purpose maths helper; for exam or professional work, still check the steps against your own working.</p>
+<h2>Related calculators</h2>
+<p><a href="absolute-value-calculator.html">Absolute Value Calculator</a></p>
+<p><a href="arithmetic-sequence-calculator.html">Arithmetic Sequence Calculator</a></p>
+<p><a href="circle-area-calculator.html">Circle Area Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sleep Time Calculator - BuildCalc</title><meta name="description" content="Find what time to go to bed, given a wake-up time and desired hours of sleep.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/sleep-time-calculator.html">
+<meta property="og:title" content="Sleep Time Calculator - BuildCalc">
+<meta property="og:description" content="Find what time to go to bed, given a wake-up time and desired hours of sleep.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/sleep-time-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Sleep Time Calculator", "description": "Find what time to go to bed, given a wake-up time and desired hours of sleep.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does it include time to fall asleep?", "acceptedAnswer": {"@type": "Answer", "text": "No. It counts sleep itself only; if you usually take time to fall asleep, go to bed that much earlier."}}, {"@type": "Question", "name": "What if I want 7.5 hours?", "acceptedAnswer": {"@type": "Answer", "text": "Fractional hours work: 7.5 hours is 7 hours 30 minutes."}}, {"@type": "Question", "name": "Is this medical advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a simple time calculation; sleep needs vary by person."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Time & Date</p><h1>Sleep Time Calculator</h1><p class="mut">Find what time to go to bed, given a wake-up time and desired hours of sleep.</p>
+<div class="card"><label>Wake-up time<input id="a" type="time" value="07:00"></label><label>Hours of sleep wanted<input id="b" type="number" value="8"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){function mins(v){const p=v.split(':'); return parseInt(p[0])*60+parseInt(p[1]);} const a=document.getElementById('a').value,b=parseFloat(document.getElementById('b').value); if(!a||isNaN(b)){document.getElementById('out').textContent='Please enter a wake time and sleep hours.'; return;} let m=(mins(a)-Math.round(b*60))%1440; if(m<0) m+=1440; const hh=String(Math.floor(m/60)).padStart(2,'0'),mm=String(m%60).padStart(2,'0'); document.getElementById('out').textContent='Go to bed at: '+hh+':'+mm+' (previous evening if after midnight wrap)';}
+['a','b'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Bedtime = wake-up time minus desired sleep duration, wrapped around the 24-hour clock.</p><h2>How it works</h2><p>Enter the time you must wake up and how many hours of sleep you want. The calculator subtracts the sleep duration and gives the bedtime, wrapping past midnight where needed.</p>
+<h2>FAQs</h2><p><b>Does it include time to fall asleep?</b><br>No. It counts sleep itself only; if you usually take time to fall asleep, go to bed that much earlier.</p><p><b>What if I want 7.5 hours?</b><br>Fractional hours work: 7.5 hours is 7 hours 30 minutes.</p><p><b>Is this medical advice?</b><br>No. It is a simple time calculation; sleep needs vary by person.</p>
+<h2>Related calculators</h2>
+<p><a href="add-days-to-date-calculator.html">Add Days to Date Calculator</a></p>
+<p><a href="age-calculator.html">Age Calculator</a></p>
+<p><a href="birthday-countdown-calculator.html">Birthday Countdown Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

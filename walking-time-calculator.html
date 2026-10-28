@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Walking Time Calculator - BuildCalc</title><meta name="description" content="Work out how long a walk will take from distance and walking speed.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/walking-time-calculator.html">
+<meta property="og:title" content="Walking Time Calculator - BuildCalc">
+<meta property="og:description" content="Work out how long a walk will take from distance and walking speed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/walking-time-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Walking Time Calculator", "description": "Work out how long a walk will take from distance and walking speed.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a normal walking speed?", "acceptedAnswer": {"@type": "Answer", "text": "About 5 km/h for a brisk adult walk; 4 km/h is leisurely."}}, {"@type": "Question", "name": "Does it include rests?", "acceptedAnswer": {"@type": "Answer", "text": "No. Add planned rest time separately."}}, {"@type": "Question", "name": "How do I estimate speed?", "acceptedAnswer": {"@type": "Answer", "text": "Time yourself over a known distance once."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Health &amp; Fitness</p><h1>Walking Time Calculator</h1><p class="mut">Work out how long a walk will take from distance and walking speed.</p>
+<div class="card"><label>Distance (km)<input id="d" type="number" value="5"></label><label>Walking speed (km/h)<input id="sp" type="number" value="5"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const d=g('d'),sp=g('sp'); if(d<=0||sp<=0) return bad(); const mins=d/sp*60, h=Math.floor(mins/60), m=Math.round(mins%60); r='Estimated walking time: '+Math.round(mins)+' minutes'+(h>0?' ('+h+'h '+String(m).padStart(2,'0')+'m)':'')+'.'; out.textContent=r;}
+document.getElementById('d').addEventListener('input',calc); document.getElementById('d').addEventListener('change',calc); document.getElementById('sp').addEventListener('input',calc); document.getElementById('sp').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Walking time equals distance divided by speed, converted from hours to minutes.</p><h2>How it works</h2><p>Distance divided by speed gives hours, multiplied by 60 for minutes. Breaks, crossings and hills are not included, so add time for those on a real route.</p>
+<h2>FAQs</h2><p><b>What is a normal walking speed?</b><br>About 5 km/h for a brisk adult walk; 4 km/h is leisurely.</p><p><b>Does it include rests?</b><br>No. Add planned rest time separately.</p><p><b>How do I estimate speed?</b><br>Time yourself over a known distance once.</p>
+<p class="mut">General information only, not medical advice.</p>
+<h2>Related calculators</h2>
+<p><a href="bedtime-calculator.html">Bedtime From Wake Time Calculator</a></p>
+<p><a href="bmi-calculator.html">BMI Calculator</a></p>
+<p><a href="bmi-prime-calculator.html">BMI Prime Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

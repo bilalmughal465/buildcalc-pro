@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Room Volume Calculator - BuildCalc</title><meta name="description" content="Calculate the volume of a rectangular room from length, width and height.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/room-volume-calculator.html">
+<meta property="og:title" content="Room Volume Calculator - BuildCalc">
+<meta property="og:description" content="Calculate the volume of a rectangular room from length, width and height.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/room-volume-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Room Volume Calculator", "description": "Calculate the volume of a rectangular room from length, width and height.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What if the room is L-shaped?", "acceptedAnswer": {"@type": "Answer", "text": "Split it into rectangles, calculate each volume, and add them together."}}, {"@type": "Question", "name": "Do I use internal dimensions?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, measure inside wall to inside wall for usable room volume."}}, {"@type": "Question", "name": "Why does volume matter?", "acceptedAnswer": {"@type": "Answer", "text": "Heating, cooling and fresh-air systems are sized on volume, not floor area alone."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Construction</p><h1>Room Volume Calculator</h1><p class="mut">Calculate the volume of a rectangular room from length, width and height.</p>
+<div class="card"><label>Room length (m) <input id="a" type="number" value="5"></label><br><label>Room width (m) <input id="b" type="number" value="4"></label><br><label>Room height (m) <input id="c" type="number" value="3"></label><br> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value)||0,b=parseFloat(document.getElementById('b').value)||0,c=parseFloat(document.getElementById('c').value)||0;document.getElementById('out').textContent='Room volume: '+(a*b*c).toFixed(2)+' cubic metres.';} document.getElementById('a').addEventListener('input',calc); document.getElementById('b').addEventListener('input',calc); document.getElementById('c').addEventListener('input',calc); calc();</script>
+<h2>Formula</h2><p>Room volume = length multiplied by width multiplied by height.</p><h2>How it works</h2><p>Multiply the three room dimensions to get cubic volume. Volume matters for heating, cooling, ventilation and acoustics, since a tall room needs more air handling than a low room of the same floor area.</p>
+<h2>FAQs</h2><p><b>What if the room is L-shaped?</b><br>Split it into rectangles, calculate each volume, and add them together.</p><p><b>Do I use internal dimensions?</b><br>Yes, measure inside wall to inside wall for usable room volume.</p><p><b>Why does volume matter?</b><br>Heating, cooling and fresh-air systems are sized on volume, not floor area alone.</p>
+<p class="mut">Rough estimate only — consult a licensed professional for structural work before building.</p>
+<h2>Related calculators</h2>
+<p><a href="air-changes-calculator.html">Air Changes Calculator</a></p>
+<p><a href="backfill-volume-calculator.html">Backfill Volume Calculator</a></p>
+<p><a href="beam-span-rough-calculator.html">Beam Span Rough Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seconds to Minutes Calculator - BuildCalc</title><meta name="description" content="Convert a number of seconds into minutes and seconds.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/seconds-to-minutes-calculator.html">
+<meta property="og:title" content="Seconds to Minutes Calculator - BuildCalc">
+<meta property="og:description" content="Convert a number of seconds into minutes and seconds.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/seconds-to-minutes-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Seconds to Minutes Calculator", "description": "Convert a number of seconds into minutes and seconds.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many seconds are in a minute?", "acceptedAnswer": {"@type": "Answer", "text": "Exactly 60 seconds."}}, {"@type": "Question", "name": "What about 90 seconds?", "acceptedAnswer": {"@type": "Answer", "text": "90 seconds equals 1 minute 30 seconds, or 1.50 minutes."}}, {"@type": "Question", "name": "Can I enter fractional seconds?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The result rounds the leftover seconds to the nearest whole second."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Time & Date</p><h1>Seconds to Minutes Calculator</h1><p class="mut">Convert a number of seconds into minutes and seconds.</p>
+<div class="card"><label>Seconds<input id="a" type="number" value="200"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value); if(isNaN(a)){document.getElementById('out').textContent='Please enter seconds.'; return;} const m=Math.floor(a/60),s=Math.round(a%60); document.getElementById('out').textContent=a+' seconds = '+m+' minutes '+s+' seconds ('+(a/60).toFixed(2)+' minutes)';}
+['a'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Minutes = whole seconds divided by 60, rounded down; remaining seconds = the remainder.</p><h2>How it works</h2><p>Enter total seconds. The calculator splits them into whole minutes plus leftover seconds, useful for race times, video lengths, and timed tasks.</p>
+<h2>FAQs</h2><p><b>How many seconds are in a minute?</b><br>Exactly 60 seconds.</p><p><b>What about 90 seconds?</b><br>90 seconds equals 1 minute 30 seconds, or 1.50 minutes.</p><p><b>Can I enter fractional seconds?</b><br>Yes. The result rounds the leftover seconds to the nearest whole second.</p>
+<h2>Related calculators</h2>
+<p><a href="add-days-to-date-calculator.html">Add Days to Date Calculator</a></p>
+<p><a href="age-calculator.html">Age Calculator</a></p>
+<p><a href="birthday-countdown-calculator.html">Birthday Countdown Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

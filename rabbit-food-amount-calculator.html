@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rabbit Food Amount Calculator - BuildCalc</title><meta name="description" content="Estimate daily pellets and vegetables for a rabbit from body weight, with unlimited hay.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/rabbit-food-amount-calculator.html">
+<meta property="og:title" content="Rabbit Food Amount Calculator - BuildCalc">
+<meta property="og:description" content="Estimate daily pellets and vegetables for a rabbit from body weight, with unlimited hay.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/rabbit-food-amount-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Rabbit Food Amount Calculator", "description": "Estimate daily pellets and vegetables for a rabbit from body weight, with unlimited hay.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the most important food?", "acceptedAnswer": {"@type": "Answer", "text": "Hay. It should make up most of the diet."}}, {"@type": "Question", "name": "Can rabbits eat unlimited pellets?", "acceptedAnswer": {"@type": "Answer", "text": "No. Too many pellets crowd out hay."}}, {"@type": "Question", "name": "Are all vegetables safe?", "acceptedAnswer": {"@type": "Answer", "text": "No. Some are unsuitable, so check each new vegetable first."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Pet</p><h1>Rabbit Food Amount Calculator</h1><p class="mut">Estimate daily pellets and vegetables for a rabbit from body weight, with unlimited hay.</p>
+<div class="card"><label>Rabbit weight (kg)<input id="w" type="number" value="2"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const w=g('w'); if(w<=0) return bad(); r='Pellets: about '+Math.round(w*12.5)+' g per day. Vegetables: about '+(w/2).toFixed(1)+' cups per day. Hay: unlimited, always available, plus fresh water.'; out.textContent=r;}
+document.getElementById('w').addEventListener('input',calc); document.getElementById('w').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Pellets are about 12.5 g per kilogram of body weight per day; vegetables about half a cup per kilogram.</p><h2>How it works</h2><p>Weight scales both pellets and vegetables, while hay stays unlimited because it drives digestion and dental wear. Introduce new vegetables gradually, one at a time.</p>
+<h2>FAQs</h2><p><b>What is the most important food?</b><br>Hay. It should make up most of the diet.</p><p><b>Can rabbits eat unlimited pellets?</b><br>No. Too many pellets crowd out hay.</p><p><b>Are all vegetables safe?</b><br>No. Some are unsuitable, so check each new vegetable first.</p>
+<p class="mut">General information only, not veterinary advice.</p>
+<h2>Related calculators</h2>
+<p><a href="aquarium-water-volume-calculator.html">Aquarium Water Volume Calculator</a></p>
+<p><a href="bird-cage-size-calculator.html">Bird Cage Size (Rough) Calculator</a></p>
+<p><a href="cat-age-human-years-calculator.html">Cat Age in Human Years Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

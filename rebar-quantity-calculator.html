@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rebar Quantity Calculator - BuildCalc</title><meta name="description" content="Count how many bars fit along a length at a given centre-to-centre spacing.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/rebar-quantity-calculator.html">
+<meta property="og:title" content="Rebar Quantity Calculator - BuildCalc">
+<meta property="og:description" content="Count how many bars fit along a length at a given centre-to-centre spacing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/rebar-quantity-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Rebar Quantity Calculator", "description": "Count how many bars fit along a length at a given centre-to-centre spacing.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why add one bar?", "acceptedAnswer": {"@type": "Answer", "text": "Without it, the last gap at the far end would have no bar. The plus-one rule is standard for a run of evenly spaced bars."}}, {"@type": "Question", "name": "What spacing should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Use the spacing shown on the structural drawings. Do not guess it from this calculator."}}, {"@type": "Question", "name": "Does this include stirrups or ties?", "acceptedAnswer": {"@type": "Answer", "text": "No, this counts main bars in one straight run only."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Construction</p><h1>Rebar Quantity Calculator</h1><p class="mut">Count how many bars fit along a length at a given centre-to-centre spacing.</p>
+<div class="card"><label>Length to cover (m) <input id="a" type="number" value="10"></label><br><label>Bar spacing (cm) <input id="b" type="number" value="15"></label><br> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value)||0,b=parseFloat(document.getElementById('b').value)||0;const o=document.getElementById('out');if(b<=0){o.textContent='Spacing must be above zero.';return;}o.textContent='Bars needed: '+Math.ceil(a*100/b+1)+' bars.';} document.getElementById('a').addEventListener('input',calc); document.getElementById('b').addEventListener('input',calc); calc();</script>
+<h2>Formula</h2><p>Number of bars = (length in centimetres divided by spacing in centimetres) plus one, rounded up. The extra bar closes the far end of the run.</p><h2>How it works</h2><p>Measure the length the bars must cover and the spacing between their centres. The calculator works out how many bars that spacing needs, including the closing bar at the end. Spacing itself must follow the structural design, not this count alone.</p>
+<h2>FAQs</h2><p><b>Why add one bar?</b><br>Without it, the last gap at the far end would have no bar. The plus-one rule is standard for a run of evenly spaced bars.</p><p><b>What spacing should I use?</b><br>Use the spacing shown on the structural drawings. Do not guess it from this calculator.</p><p><b>Does this include stirrups or ties?</b><br>No, this counts main bars in one straight run only.</p>
+<p class="mut">Rough estimate only — consult a licensed professional for structural work before building.</p>
+<h2>Related calculators</h2>
+<p><a href="air-changes-calculator.html">Air Changes Calculator</a></p>
+<p><a href="backfill-volume-calculator.html">Backfill Volume Calculator</a></p>
+<p><a href="beam-span-rough-calculator.html">Beam Span Rough Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

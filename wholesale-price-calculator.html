@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wholesale Price Calculator - BuildCalc</title><meta name="description" content="Derive a wholesale price from a retail price and the trade discount percentage.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/wholesale-price-calculator.html">
+<meta property="og:title" content="Wholesale Price Calculator - BuildCalc">
+<meta property="og:description" content="Derive a wholesale price from a retail price and the trade discount percentage.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/wholesale-price-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Wholesale Price Calculator", "description": "Derive a wholesale price from a retail price and the trade discount percentage.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does this include delivery?", "acceptedAnswer": {"@type": "Answer", "text": "No, delivery and payment terms are agreed on top of the wholesale price unless stated otherwise."}}, {"@type": "Question", "name": "What discount is typical?", "acceptedAnswer": {"@type": "Answer", "text": "It varies by trade, commonly around a third to a half of retail for many consumer goods, but always check your own market."}}, {"@type": "Question", "name": "Can I offer tiered pricing?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, run the calculation once per tier with that tier's discount to compare the prices."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Business</p><h1>Wholesale Price Calculator</h1><p class="mut">Derive a wholesale price from a retail price and the trade discount percentage.</p>
+<div class="card"><label>Retail price ($) <input id="a" type="number" value="100"></label><br><label>Wholesale discount (%) <input id="b" type="number" value="40"></label><br> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value)||0,b=parseFloat(document.getElementById('b').value)||0;document.getElementById('out').textContent='Wholesale price: $'+(a*(1-b/100)).toLocaleString(undefined,{maximumFractionDigits:2})+'.';} document.getElementById('a').addEventListener('input',calc); document.getElementById('b').addEventListener('input',calc); calc();</script>
+<h2>Formula</h2><p>Wholesale price = retail price multiplied by (1 minus wholesale discount as a decimal).</p><h2>How it works</h2><p>Start with the price the end customer pays and subtract the retailer's share. The result is what a retailer pays you per unit, before any volume deals or delivery charges you agree separately.</p>
+<h2>FAQs</h2><p><b>Does this include delivery?</b><br>No, delivery and payment terms are agreed on top of the wholesale price unless stated otherwise.</p><p><b>What discount is typical?</b><br>It varies by trade, commonly around a third to a half of retail for many consumer goods, but always check your own market.</p><p><b>Can I offer tiered pricing?</b><br>Yes, run the calculation once per tier with that tier's discount to compare the prices.</p>
+<p class="mut">Estimates only, not financial advice. Check your figures before making a business decision.</p>
+<h2>Related calculators</h2>
+<p><a href="ad-spend-roas-calculator.html">Ad Spend ROAS Calculator</a></p>
+<p><a href="annual-recurring-revenue-calculator.html">Annual Recurring Revenue Calculator</a></p>
+<p><a href="break-even-units-calculator.html">Break-Even Units Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>
