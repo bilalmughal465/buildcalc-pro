@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heart Rate Zones Calculator - BuildCalc</title><meta name="description" content="Split exercise intensity into five heart-rate zones from age-based maximum heart rate.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/heart-rate-zones-calculator.html">
+<meta property="og:title" content="Heart Rate Zones Calculator - BuildCalc">
+<meta property="og:description" content="Split exercise intensity into five heart-rate zones from age-based maximum heart rate.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/heart-rate-zones-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Heart Rate Zones Calculator", "description": "Split exercise intensity into five heart-rate zones from age-based maximum heart rate.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are zones exact for me?", "acceptedAnswer": {"@type": "Answer", "text": "No. Real maximum varies by person, so zones are guides."}}, {"@type": "Question", "name": "What is zone 2 good for?", "acceptedAnswer": {"@type": "Answer", "text": "Long, easy aerobic sessions where you can still talk."}}, {"@type": "Question", "name": "Do I need a heart-rate monitor?", "acceptedAnswer": {"@type": "Answer", "text": "A watch or chest strap helps; pulse counting works roughly too."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Health &amp; Fitness</p><h1>Heart Rate Zones Calculator</h1><p class="mut">Split exercise intensity into five heart-rate zones from age-based maximum heart rate.</p>
+<div class="card"><label>Age (years)<input id="age" type="number" value="30"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const a=g('age'); if(a<=0||a>110) return bad(); const mx=220-a; const z=(lo,hi)=>Math.round(mx*lo)+'-'+Math.round(mx*hi); r='Max about '+mx+' bpm. Zone 1 (50-60%): '+z(.5,.6)+' | Zone 2 (60-70%): '+z(.6,.7)+' | Zone 3 (70-80%): '+z(.7,.8)+' | Zone 4 (80-90%): '+z(.8,.9)+' | Zone 5 (90-100%): '+z(.9,1)+' bpm.'; out.textContent=r;}
+document.getElementById('age').addEventListener('input',calc); document.getElementById('age').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Maximum heart rate is estimated as 220 minus age, and each zone is a percentage band of that maximum.</p><h2>How it works</h2><p>Age gives an estimated maximum, then the page multiplies it by 50–60%, 60–70%, and so on up to 90–100%. Zone 2 is typically easy conversational effort; zone 5 is near-maximal and only sustainable briefly.</p>
+<h2>FAQs</h2><p><b>Are zones exact for me?</b><br>No. Real maximum varies by person, so zones are guides.</p><p><b>What is zone 2 good for?</b><br>Long, easy aerobic sessions where you can still talk.</p><p><b>Do I need a heart-rate monitor?</b><br>A watch or chest strap helps; pulse counting works roughly too.</p>
+<p class="mut">General information only, not medical advice.</p>
+<h2>Related calculators</h2>
+<p><a href="bedtime-calculator.html">Bedtime From Wake Time Calculator</a></p>
+<p><a href="bmi-calculator.html">BMI Calculator</a></p>
+<p><a href="bmi-prime-calculator.html">BMI Prime Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

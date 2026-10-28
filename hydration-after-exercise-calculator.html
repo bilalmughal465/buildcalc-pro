@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hydration After Exercise Calculator - BuildCalc</title><meta name="description" content="Estimate fluid to drink after exercise from weight lost during the session.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/hydration-after-exercise-calculator.html">
+<meta property="og:title" content="Hydration After Exercise Calculator - BuildCalc">
+<meta property="og:description" content="Estimate fluid to drink after exercise from weight lost during the session.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/hydration-after-exercise-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Hydration After Exercise Calculator", "description": "Estimate fluid to drink after exercise from weight lost during the session.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why 1.5 and not 1.0?", "acceptedAnswer": {"@type": "Answer", "text": "Because you keep losing fluid after exercise, so replacing exactly what was lost is not quite enough."}}, {"@type": "Question", "name": "Do I need sports drinks?", "acceptedAnswer": {"@type": "Answer", "text": "For sessions over about an hour, or heavy sweating, electrolytes help; water suits shorter sessions."}}, {"@type": "Question", "name": "Should I drink it all at once?", "acceptedAnswer": {"@type": "Answer", "text": "No. Spread it over a few hours."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Health &amp; Fitness</p><h1>Hydration After Exercise Calculator</h1><p class="mut">Estimate fluid to drink after exercise from weight lost during the session.</p>
+<div class="card"><label>Weight lost during exercise (kg)<input id="loss" type="number" value="1"></label><label>Exercise duration (minutes)<input id="dur" type="number" value="60"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const l=g('loss'),du=g('dur'); if(l<0||du<=0) return bad(); const fluid=l*1.5; r='Drink about '+fluid.toFixed(2)+' litres after this session (1.5 litres per kilogram lost), spread over the next few hours, plus food and salt as normal.'; out.textContent=r;}
+document.getElementById('loss').addEventListener('input',calc); document.getElementById('loss').addEventListener('change',calc); document.getElementById('dur').addEventListener('input',calc); document.getElementById('dur').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Post-exercise fluid is about 1.5 litres for each kilogram of body weight lost during exercise.</p><h2>How it works</h2><p>Weight lost is mostly sweat, and the 1.5 multiplier allows for continued sweating and urine losses after you stop. Weighing before and after gives the loss figure.</p>
+<h2>FAQs</h2><p><b>Why 1.5 and not 1.0?</b><br>Because you keep losing fluid after exercise, so replacing exactly what was lost is not quite enough.</p><p><b>Do I need sports drinks?</b><br>For sessions over about an hour, or heavy sweating, electrolytes help; water suits shorter sessions.</p><p><b>Should I drink it all at once?</b><br>No. Spread it over a few hours.</p>
+<p class="mut">General information only, not medical advice.</p>
+<h2>Related calculators</h2>
+<p><a href="bedtime-calculator.html">Bedtime From Wake Time Calculator</a></p>
+<p><a href="bmi-calculator.html">BMI Calculator</a></p>
+<p><a href="bmi-prime-calculator.html">BMI Prime Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

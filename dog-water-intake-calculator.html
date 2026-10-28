@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dog Water Intake Calculator - BuildCalc</title><meta name="description" content="Estimate a dog's daily water range from body weight.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/dog-water-intake-calculator.html">
+<meta property="og:title" content="Dog Water Intake Calculator - BuildCalc">
+<meta property="og:description" content="Estimate a dog&#x27;s daily water range from body weight.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/dog-water-intake-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Dog Water Intake Calculator", "description": "Estimate a dog's daily water range from body weight.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does wet food change it?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Wet food supplies water, so drinking from a bowl drops."}}, {"@type": "Question", "name": "Is more water always better?", "acceptedAnswer": {"@type": "Answer", "text": "No. Very high intake can signal a problem."}}, {"@type": "Question", "name": "How do I measure it?", "acceptedAnswer": {"@type": "Answer", "text": "Fill a measured bowl and note how much is gone in 24 hours."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Pet</p><h1>Dog Water Intake Calculator</h1><p class="mut">Estimate a dog's daily water range from body weight.</p>
+<div class="card"><label>Dog weight (kg)<input id="w" type="number" value="20"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const w=g('w'); if(w<=0) return bad(); r='Estimated daily water: about '+(w*40)+'–'+(w*60)+' ml ('+((w*50)/1000).toFixed(2)+' litres typical). Hot weather and exercise push needs higher.'; out.textContent=r;}
+document.getElementById('w').addEventListener('input',calc); document.getElementById('w').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Daily water is roughly 40 to 60 ml per kilogram of body weight, with 50 ml per kilogram as a typical midpoint.</p><h2>How it works</h2><p>Weight is multiplied by the low and high ends of the range to give a daily band. Fresh water should always be available, and a sudden large change in drinking deserves attention.</p>
+<h2>FAQs</h2><p><b>Does wet food change it?</b><br>Yes. Wet food supplies water, so drinking from a bowl drops.</p><p><b>Is more water always better?</b><br>No. Very high intake can signal a problem.</p><p><b>How do I measure it?</b><br>Fill a measured bowl and note how much is gone in 24 hours.</p>
+<p class="mut">General information only, not veterinary advice.</p>
+<h2>Related calculators</h2>
+<p><a href="aquarium-water-volume-calculator.html">Aquarium Water Volume Calculator</a></p>
+<p><a href="bird-cage-size-calculator.html">Bird Cage Size (Rough) Calculator</a></p>
+<p><a href="cat-age-human-years-calculator.html">Cat Age in Human Years Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

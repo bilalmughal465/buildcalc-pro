@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Email Open Rate Calculator - BuildCalc</title><meta name="description" content="Estimate how many delivered emails were opened as a percentage of those sent.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/email-open-rate-calculator.html">
+<meta property="og:title" content="Email Open Rate Calculator - BuildCalc">
+<meta property="og:description" content="Estimate how many delivered emails were opened as a percentage of those sent.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/email-open-rate-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Email Open Rate Calculator", "description": "Estimate how many delivered emails were opened as a percentage of those sent.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is open rate only rough?", "acceptedAnswer": {"@type": "Answer", "text": "Some email apps block tracking images, so real opens can be higher than the recorded figure."}}, {"@type": "Question", "name": "Should bounced emails count?", "acceptedAnswer": {"@type": "Answer", "text": "Ideally divide by delivered emails, not sent ones. Using sent emails gives a slightly lower, conservative rate."}}, {"@type": "Question", "name": "What improves open rates?", "acceptedAnswer": {"@type": "Answer", "text": "Clear subject lines, a clean list, sensible send times and content people actually want."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Business</p><h1>Email Open Rate Calculator</h1><p class="mut">Estimate how many delivered emails were opened as a percentage of those sent.</p>
+<div class="card"><label>Emails sent <input id="a" type="number" value="1000"></label><br><label>Emails opened <input id="b" type="number" value="250"></label><br> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value)||0,b=parseFloat(document.getElementById('b').value)||0;const o=document.getElementById('out');if(a<=0){o.textContent='Emails sent must be above zero.';return;}o.textContent='Open rate: '+(b/a*100).toFixed(1)+'%.';} document.getElementById('a').addEventListener('input',calc); document.getElementById('b').addEventListener('input',calc); calc();</script>
+<h2>Formula</h2><p>Open rate = emails opened divided by emails sent, multiplied by 100. This is a rough guide, since some opens are not tracked.</p><h2>How it works</h2><p>Enter how many emails went out and how many were recorded as opened. The percentage hints at subject-line strength and list quality. Very low rates often point to stale lists or subject lines that do not earn the open.</p>
+<h2>FAQs</h2><p><b>Why is open rate only rough?</b><br>Some email apps block tracking images, so real opens can be higher than the recorded figure.</p><p><b>Should bounced emails count?</b><br>Ideally divide by delivered emails, not sent ones. Using sent emails gives a slightly lower, conservative rate.</p><p><b>What improves open rates?</b><br>Clear subject lines, a clean list, sensible send times and content people actually want.</p>
+<p class="mut">Estimates only, not financial advice. Check your figures before making a business decision.</p>
+<h2>Related calculators</h2>
+<p><a href="ad-spend-roas-calculator.html">Ad Spend ROAS Calculator</a></p>
+<p><a href="annual-recurring-revenue-calculator.html">Annual Recurring Revenue Calculator</a></p>
+<p><a href="break-even-units-calculator.html">Break-Even Units Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

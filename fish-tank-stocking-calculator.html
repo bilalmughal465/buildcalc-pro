@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fish Tank Stocking (Rough) Calculator - BuildCalc</title><meta name="description" content="Roughly estimate total fish length a tank can support using the inch-per-gallon guide.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/fish-tank-stocking-calculator.html">
+<meta property="og:title" content="Fish Tank Stocking (Rough) Calculator - BuildCalc">
+<meta property="og:description" content="Roughly estimate total fish length a tank can support using the inch-per-gallon guide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/fish-tank-stocking-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Fish Tank Stocking (Rough) Calculator", "description": "Roughly estimate total fish length a tank can support using the inch-per-gallon guide.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should I stock to this limit?", "acceptedAnswer": {"@type": "Answer", "text": "Stay below it, especially as a beginner; filtration and maintenance matter."}}, {"@type": "Question", "name": "Does adult size count?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Always use adult size, not the size at purchase."}}, {"@type": "Question", "name": "Do plants change it?", "acceptedAnswer": {"@type": "Answer", "text": "Plants help water quality but do not make the rule exact."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Pet</p><h1>Fish Tank Stocking (Rough) Calculator</h1><p class="mut">Roughly estimate total fish length a tank can support using the inch-per-gallon guide.</p>
+<div class="card"><label>Tank volume (litres)<input id="lit" type="number" value="100"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const li=g('lit'); if(li<=0) return bad(); const gal=li/3.785, cm=gal*2.54; r='Rough guide: about '+cm.toFixed(0)+' cm total adult fish length for '+li+' litres ('+gal.toFixed(1)+' US gallons), at 1 inch of fish per gallon. This is a crude rule, not a stocking plan.'; out.textContent=r;}
+document.getElementById('lit').addEventListener('input',calc); document.getElementById('lit').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Total fish length in centimetres equals US gallons multiplied by 2.54, from the one-inch-per-gallon rule.</p><h2>How it works</h2><p>Tank litres convert to US gallons, and each gallon is allowed one inch of adult fish length. The rule ignores species behaviour, waste, filtration and shape, so it is only a first sanity check.</p>
+<h2>FAQs</h2><p><b>Should I stock to this limit?</b><br>Stay below it, especially as a beginner; filtration and maintenance matter.</p><p><b>Does adult size count?</b><br>Yes. Always use adult size, not the size at purchase.</p><p><b>Do plants change it?</b><br>Plants help water quality but do not make the rule exact.</p>
+<p class="mut">General information only, not veterinary advice.</p>
+<h2>Related calculators</h2>
+<p><a href="aquarium-water-volume-calculator.html">Aquarium Water Volume Calculator</a></p>
+<p><a href="bird-cage-size-calculator.html">Bird Cage Size (Rough) Calculator</a></p>
+<p><a href="cat-age-human-years-calculator.html">Cat Age in Human Years Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

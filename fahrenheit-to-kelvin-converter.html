@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fahrenheit to Kelvin Converter - BuildCalc</title><meta name="description" content="Convert degrees Fahrenheit to kelvin instantly with a simple, free calculator.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/fahrenheit-to-kelvin-converter.html">
+<meta property="og:title" content="Fahrenheit to Kelvin Converter - BuildCalc">
+<meta property="og:description" content="Convert degrees Fahrenheit to kelvin instantly with a simple, free calculator.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/fahrenheit-to-kelvin-converter.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Fahrenheit to Kelvin Converter", "description": "Convert degrees Fahrenheit to kelvin instantly with a simple, free calculator.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Kelvin be negative?", "acceptedAnswer": {"@type": "Answer", "text": "No. Zero kelvin is absolute zero, the lowest possible temperature, so a real Kelvin reading is never negative."}}, {"@type": "Question", "name": "Why is Kelvin used instead of Celsius in science?", "acceptedAnswer": {"@type": "Answer", "text": "Kelvin starts at absolute zero and has no negative values, which makes formulas for gas laws and thermodynamics simpler and avoids sign errors."}}, {"@type": "Question", "name": "What is 32 °F in Kelvin?", "acceptedAnswer": {"@type": "Answer", "text": "32 °F is the freezing point of water, which equals 273.15 K."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Conversion</p><h1>Fahrenheit to Kelvin Converter</h1><p class="mut">Convert degrees Fahrenheit to kelvin instantly with a simple, free calculator.</p>
+<div class="card"><label>Degrees fahrenheit<input id="a" type="number" value="32"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value); if(isNaN(a)){document.getElementById('out').textContent='Please enter a temperature.'; return;} const r=(a-32)*5/9+273.15; document.getElementById('out').textContent=a+' °F = '+r.toFixed(2)+' K';}
+['a'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Kelvin = (Fahrenheit − 32) × 5/9 + 273.15. The 32 shift aligns the freezing point of water, the 5/9 scales Fahrenheit degrees to Celsius degrees, and 273.15 shifts Celsius to Kelvin.</p><h2>How it works</h2><p>Enter a Fahrenheit temperature and the calculator converts it to Kelvin, the absolute temperature scale used in science. Results below absolute zero cannot occur in reality, so a very low input that gives a negative Kelvin value indicates an impossible temperature.</p>
+<h2>FAQs</h2><p><b>Can Kelvin be negative?</b><br>No. Zero kelvin is absolute zero, the lowest possible temperature, so a real Kelvin reading is never negative.</p><p><b>Why is Kelvin used instead of Celsius in science?</b><br>Kelvin starts at absolute zero and has no negative values, which makes formulas for gas laws and thermodynamics simpler and avoids sign errors.</p><p><b>What is 32 °F in Kelvin?</b><br>32 °F is the freezing point of water, which equals 273.15 K.</p>
+<h2>Related calculators</h2>
+<p><a href="acres-to-hectares-converter.html">Acres to Hectares Converter</a></p>
+<p><a href="calories-to-kilojoules-converter.html">Calories to Kilojoules Converter</a></p>
+<p><a href="celsius-to-fahrenheit-converter.html">Celsius to Fahrenheit Converter</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dog Ideal Weight Range (Rough) Calculator - BuildCalc</title><meta name="description" content="Show a rough maintenance weight band around a dog's current weight as a starting point for discussion.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/dog-ideal-weight-range-calculator.html">
+<meta property="og:title" content="Dog Ideal Weight Range (Rough) Calculator - BuildCalc">
+<meta property="og:description" content="Show a rough maintenance weight band around a dog&#x27;s current weight as a starting point for discussion.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/dog-ideal-weight-range-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Dog Ideal Weight Range (Rough) Calculator", "description": "Show a rough maintenance weight band around a dog's current weight as a starting point for discussion.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is my dog's ideal weight in this band?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily. The band is around the current weight, not a breed ideal."}}, {"@type": "Question", "name": "What decides ideal weight?", "acceptedAnswer": {"@type": "Answer", "text": "Breed, frame, muscle and body condition, assessed in person."}}, {"@type": "Question", "name": "Should I aim for the middle?", "acceptedAnswer": {"@type": "Answer", "text": "No. Use this only as a rough reference."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Pet</p><h1>Dog Ideal Weight Range (Rough) Calculator</h1><p class="mut">Show a rough maintenance weight band around a dog's current weight as a starting point for discussion.</p>
+<div class="card"><label>Dog current weight (kg)<input id="w" type="number" value="20"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const w=g('w'); if(w<=0) return bad(); r='Rough maintenance band: '+(w*0.9).toFixed(1)+'–'+(w*1.1).toFixed(1)+' kg around '+w+' kg. This is NOT a target: breed, frame and body condition decide the right weight.'; out.textContent=r;}
+document.getElementById('w').addEventListener('input',calc); document.getElementById('w').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>The rough band is current weight minus 10% to plus 10%.</p><h2>How it works</h2><p>A ±10% band is drawn around the entered weight to show how much normal variation matters. It cannot tell you whether the current weight itself is right — body condition scoring and breed norms do that.</p>
+<h2>FAQs</h2><p><b>Is my dog's ideal weight in this band?</b><br>Not necessarily. The band is around the current weight, not a breed ideal.</p><p><b>What decides ideal weight?</b><br>Breed, frame, muscle and body condition, assessed in person.</p><p><b>Should I aim for the middle?</b><br>No. Use this only as a rough reference.</p>
+<p class="mut">General information only, not veterinary advice.</p>
+<h2>Related calculators</h2>
+<p><a href="aquarium-water-volume-calculator.html">Aquarium Water Volume Calculator</a></p>
+<p><a href="bird-cage-size-calculator.html">Bird Cage Size (Rough) Calculator</a></p>
+<p><a href="cat-age-human-years-calculator.html">Cat Age in Human Years Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

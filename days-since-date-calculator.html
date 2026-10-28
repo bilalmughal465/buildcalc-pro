@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Days Since Date Calculator - BuildCalc</title><meta name="description" content="Find how many days have passed since a past date.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/days-since-date-calculator.html">
+<meta property="og:title" content="Days Since Date Calculator - BuildCalc">
+<meta property="og:description" content="Find how many days have passed since a past date.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/days-since-date-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Days Since Date Calculator", "description": "Find how many days have passed since a past date.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the past date itself counted?", "acceptedAnswer": {"@type": "Answer", "text": "No. The gap is measured from that date, so the next day is 1 day since."}}, {"@type": "Question", "name": "Can I measure up to today?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Set the second date to today and the result is the days elapsed so far."}}, {"@type": "Question", "name": "What about future dates?", "acceptedAnswer": {"@type": "Answer", "text": "If the first date is after the second, the calculator notes that it lies in the future."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Time & Date</p><h1>Days Since Date Calculator</h1><p class="mut">Find how many days have passed since a past date.</p>
+<div class="card"><label>Past date<input id="a" type="date" value="2026-01-01"></label><label>Up to date<input id="b" type="date" value="2026-10-28"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=document.getElementById('a').value,b=document.getElementById('b').value; if(!a||!b){document.getElementById('out').textContent='Please pick both dates.'; return;} const d=Math.round((new Date(b)-new Date(a))/86400000); document.getElementById('out').textContent=d<0?'That date is in the future.':'Days since: '+d+' days';}
+['a','b'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Days since = later date minus the earlier date, in whole days.</p><h2>How it works</h2><p>Enter the past date and the date to measure up to. The calculator reports whole days elapsed, useful for tracking how long ago an event, purchase, or milestone happened.</p>
+<h2>FAQs</h2><p><b>Is the past date itself counted?</b><br>No. The gap is measured from that date, so the next day is 1 day since.</p><p><b>Can I measure up to today?</b><br>Yes. Set the second date to today and the result is the days elapsed so far.</p><p><b>What about future dates?</b><br>If the first date is after the second, the calculator notes that it lies in the future.</p>
+<h2>Related calculators</h2>
+<p><a href="add-days-to-date-calculator.html">Add Days to Date Calculator</a></p>
+<p><a href="age-calculator.html">Age Calculator</a></p>
+<p><a href="birthday-countdown-calculator.html">Birthday Countdown Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

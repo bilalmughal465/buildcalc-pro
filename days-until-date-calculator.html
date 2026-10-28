@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Days Until Date Calculator - BuildCalc</title><meta name="description" content="Count how many days remain until a future date, including a countdown in days.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/days-until-date-calculator.html">
+<meta property="og:title" content="Days Until Date Calculator - BuildCalc">
+<meta property="og:description" content="Count how many days remain until a future date, including a countdown in days.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/days-until-date-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Days Until Date Calculator", "description": "Count how many days remain until a future date, including a countdown in days.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is today counted as day 0 or day 1?", "acceptedAnswer": {"@type": "Answer", "text": "Today is day 0, so a target tomorrow is 1 day away. Add 1 if you prefer an inclusive count."}}, {"@type": "Question", "name": "What if the target date is in the past?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator says how many days ago it was, instead of showing a negative countdown."}}, {"@type": "Question", "name": "Does it account for leap years?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, because it uses real calendar dates."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Time & Date</p><h1>Days Until Date Calculator</h1><p class="mut">Count how many days remain until a future date, including a countdown in days.</p>
+<div class="card"><label>Target date<input id="a" type="date" value="2027-01-01"></label><label>From date<input id="b" type="date" value="2026-10-28"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=document.getElementById('a').value,b=document.getElementById('b').value; if(!a||!b){document.getElementById('out').textContent='Please pick both dates.'; return;} const d=Math.round((new Date(a)-new Date(b))/86400000); document.getElementById('out').textContent=d<0?('That date was '+(-d)+' days ago.'):d===0?'That date is today.':'Days remaining: '+d+' days';}
+['a','b'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Days remaining = target date minus the starting date, in whole days. A negative result means the date has already passed.</p><h2>How it works</h2><p>Pick the target date and the date to count from. The calculator subtracts and reports whole days remaining, which also serves as a simple day countdown for deadlines, holidays, and events.</p>
+<h2>FAQs</h2><p><b>Is today counted as day 0 or day 1?</b><br>Today is day 0, so a target tomorrow is 1 day away. Add 1 if you prefer an inclusive count.</p><p><b>What if the target date is in the past?</b><br>The calculator says how many days ago it was, instead of showing a negative countdown.</p><p><b>Does it account for leap years?</b><br>Yes, because it uses real calendar dates.</p>
+<h2>Related calculators</h2>
+<p><a href="add-days-to-date-calculator.html">Add Days to Date Calculator</a></p>
+<p><a href="age-calculator.html">Age Calculator</a></p>
+<p><a href="birthday-countdown-calculator.html">Birthday Countdown Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

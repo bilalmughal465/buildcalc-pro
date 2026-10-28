@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dog Walking Distance and Time Calculator - BuildCalc</title><meta name="description" content="Work out walking time for a dog walk from distance and walking speed.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/dog-walking-distance-time-calculator.html">
+<meta property="og:title" content="Dog Walking Distance and Time Calculator - BuildCalc">
+<meta property="og:description" content="Work out walking time for a dog walk from distance and walking speed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/dog-walking-distance-time-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Dog Walking Distance and Time Calculator", "description": "Work out walking time for a dog walk from distance and walking speed.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What speed should I use?", "acceptedAnswer": {"@type": "Answer", "text": "About 4 km/h for a relaxed dog walk; faster for an energetic dog."}}, {"@type": "Question", "name": "Does breed change it?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Small, old or brachycephalic dogs walk slower and tire sooner."}}, {"@type": "Question", "name": "Should puppies walk this far?", "acceptedAnswer": {"@type": "Answer", "text": "Puppies need shorter, gentler walks; this is a time calculation, not a recommendation."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Pet</p><h1>Dog Walking Distance and Time Calculator</h1><p class="mut">Work out walking time for a dog walk from distance and walking speed.</p>
+<div class="card"><label>Walk distance (km)<input id="d" type="number" value="3"></label><label>Walking speed (km/h)<input id="sp" type="number" value="4"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const d=g('d'),sp=g('sp'); if(d<=0||sp<=0) return bad(); const mins=d/sp*60; r='Walking time: about '+Math.round(mins)+' minutes for '+d+' km at '+sp+' km/h, before sniff stops and play breaks.'; out.textContent=r;}
+document.getElementById('d').addEventListener('input',calc); document.getElementById('d').addEventListener('change',calc); document.getElementById('sp').addEventListener('input',calc); document.getElementById('sp').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Walking time equals distance divided by speed, converted to minutes.</p><h2>How it works</h2><p>Distance divided by speed gives the moving time. Dogs add sniffing, marking and play stops, so real walk time is usually longer — add a buffer for a leisurely walk.</p>
+<h2>FAQs</h2><p><b>What speed should I use?</b><br>About 4 km/h for a relaxed dog walk; faster for an energetic dog.</p><p><b>Does breed change it?</b><br>Yes. Small, old or brachycephalic dogs walk slower and tire sooner.</p><p><b>Should puppies walk this far?</b><br>Puppies need shorter, gentler walks; this is a time calculation, not a recommendation.</p>
+<p class="mut">General information only, not veterinary advice.</p>
+<h2>Related calculators</h2>
+<p><a href="aquarium-water-volume-calculator.html">Aquarium Water Volume Calculator</a></p>
+<p><a href="bird-cage-size-calculator.html">Bird Cage Size (Rough) Calculator</a></p>
+<p><a href="cat-age-human-years-calculator.html">Cat Age in Human Years Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>
