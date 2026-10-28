@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crate Size Calculator - BuildCalc</title><meta name="description" content="Work out a minimum crate size from a dog's length and height, with room to stand and turn.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/crate-size-calculator.html">
+<meta property="og:title" content="Crate Size Calculator - BuildCalc">
+<meta property="og:description" content="Work out a minimum crate size from a dog&#x27;s length and height, with room to stand and turn.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/crate-size-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Crate Size Calculator", "description": "Work out a minimum crate size from a dog's length and height, with room to stand and turn.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should I buy bigger for growth?", "acceptedAnswer": {"@type": "Answer", "text": "For a puppy, buy the adult size with a divider."}}, {"@type": "Question", "name": "Does the dog need to stretch fully?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, lying stretched out is part of the sizing check."}}, {"@type": "Question", "name": "Is a crate a punishment?", "acceptedAnswer": {"@type": "Answer", "text": "No. It should be a safe resting place, never long-term confinement."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Pet</p><h1>Crate Size Calculator</h1><p class="mut">Work out a minimum crate size from a dog's length and height, with room to stand and turn.</p>
+<div class="card"><label>Dog length, nose to tail base (cm)<input id="len" type="number" value="80"></label><label>Dog height at shoulder (cm)<input id="ht" type="number" value="60"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const l=g('len'),h=g('ht'); if(l<=0||h<=0) return bad(); r='Minimum crate size: about '+(l+15)+' cm long × '+(h+10)+' cm high (depth about '+(Math.round(h*0.8))+' cm or more). Your dog should stand, turn and lie stretched out.'; out.textContent=r;}
+document.getElementById('len').addEventListener('input',calc); document.getElementById('len').addEventListener('change',calc); document.getElementById('ht').addEventListener('input',calc); document.getElementById('ht').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Crate length is dog length plus about 15 cm; crate height is shoulder height plus about 10 cm.</p><h2>How it works</h2><p>Extra length lets the dog lie stretched, and extra height lets it stand without crouching. A crate much larger than this can feel less den-like for housetraining, so bigger is not always better.</p>
+<h2>FAQs</h2><p><b>Should I buy bigger for growth?</b><br>For a puppy, buy the adult size with a divider.</p><p><b>Does the dog need to stretch fully?</b><br>Yes, lying stretched out is part of the sizing check.</p><p><b>Is a crate a punishment?</b><br>No. It should be a safe resting place, never long-term confinement.</p>
+<p class="mut">General information only, not veterinary advice.</p>
+<h2>Related calculators</h2>
+<p><a href="aquarium-water-volume-calculator.html">Aquarium Water Volume Calculator</a></p>
+<p><a href="bird-cage-size-calculator.html">Bird Cage Size (Rough) Calculator</a></p>
+<p><a href="cat-age-human-years-calculator.html">Cat Age in Human Years Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

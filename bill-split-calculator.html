@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bill Split Calculator - BuildCalc</title><meta name="description" content="Split a bill evenly between a group of people.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/bill-split-calculator.html">
+<meta property="og:title" content="Bill Split Calculator - BuildCalc">
+<meta property="og:description" content="Split a bill evenly between a group of people.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/bill-split-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Bill Split Calculator", "description": "Split a bill evenly between a group of people.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What if the split does not divide evenly?", "acceptedAnswer": {"@type": "Answer", "text": "Round each share to the nearest cent and let one person cover the odd cent, or round up slightly."}}, {"@type": "Question", "name": "Should tax be included before splitting?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — split the final total everyone actually owes, including tax, so nothing is left unpaid."}}, {"@type": "Question", "name": "What if someone did not eat?", "acceptedAnswer": {"@type": "Answer", "text": "Then an even split is unfair. Split only among those who shared the meal, or split by what each ordered."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Everyday Life</p><h1>Bill Split Calculator</h1><p class="mut">Divide the total bill by the number of people to see what each person owes.</p>
+<div class="card"><label>Total bill ($)<input id="a" type="number" step="any" value="120"></label> <label>Number of people<input id="b" type="number" step="any" value="4"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){function v(id){return parseFloat(document.getElementById(id).value)||0;}const a=v('a'),b=v('b');if(a<0||b<=0){document.getElementById('out').textContent='Please enter values greater than zero.';return;}document.getElementById('out').textContent='Each person pays: $'+(a/b).toFixed(2)+'.';} ['a','b'].forEach(id=>{const el=document.getElementById(id);el.addEventListener('input',calc);el.addEventListener('change',calc);}); calc();</script>
+<h2>Formula</h2><p>Each share = total bill / number of people.</p><h2>How it works</h2><p>Even splits are simplest when everyone ordered similarly. If one person ordered far more, a fairer split accounts for that separately.</p><p>Rounding each share up to the nearest dollar leaves a small buffer for tax or a tip if those were not included.</p>
+<h2>FAQs</h2><p><b>What if the split does not divide evenly?</b><br>Round each share to the nearest cent and let one person cover the odd cent, or round up slightly.</p><p><b>Should tax be included before splitting?</b><br>Yes — split the final total everyone actually owes, including tax, so nothing is left unpaid.</p><p><b>What if someone did not eat?</b><br>Then an even split is unfair. Split only among those who shared the meal, or split by what each ordered.</p>
+<h2>Related calculators</h2>
+<p><a href="book-reading-time-calculator.html">Book Reading Time Calculator</a></p>
+<p><a href="car-trip-time-calculator.html">Car Trip Time Calculator</a></p>
+<p><a href="chore-time-split-calculator.html">Chore Time Split Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

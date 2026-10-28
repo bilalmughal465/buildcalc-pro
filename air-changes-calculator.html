@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Air Changes Calculator - BuildCalc</title><meta name="description" content="Work out air changes per hour from room volume and ventilation airflow.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/air-changes-calculator.html">
+<meta property="og:title" content="Air Changes Calculator - BuildCalc">
+<meta property="og:description" content="Work out air changes per hour from room volume and ventilation airflow.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/air-changes-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Air Changes Calculator", "description": "Work out air changes per hour from room volume and ventilation airflow.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a typical ACH?", "acceptedAnswer": {"@type": "Answer", "text": "Living spaces often sit around 0.5 to 1, while kitchens and bathrooms need several changes per hour."}}, {"@type": "Question", "name": "Is higher always better?", "acceptedAnswer": {"@type": "Answer", "text": "More fresh air helps air quality but costs more to heat or cool, so balance comfort, health and energy."}}, {"@type": "Question", "name": "Does opening a window count?", "acceptedAnswer": {"@type": "Answer", "text": "Natural ventilation varies with wind and temperature, so this calculation suits mechanical airflow figures best."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Construction</p><h1>Air Changes Calculator</h1><p class="mut">Work out air changes per hour from room volume and ventilation airflow.</p>
+<div class="card"><label>Room volume (cubic m) <input id="a" type="number" value="60"></label><br><label>Airflow (cubic m per hour) <input id="b" type="number" value="120"></label><br> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value)||0,b=parseFloat(document.getElementById('b').value)||0;const o=document.getElementById('out');if(a<=0){o.textContent='Room volume must be above zero.';return;}o.textContent='Air changes per hour: '+(b/a).toFixed(2)+' ACH.';} document.getElementById('a').addEventListener('input',calc); document.getElementById('b').addEventListener('input',calc); calc();</script>
+<h2>Formula</h2><p>Air changes per hour = airflow in cubic metres per hour divided by room volume in cubic metres.</p><h2>How it works</h2><p>Divide the ventilation system's hourly airflow by the room's volume. The result says how many times the room's air is replaced each hour. Kitchens and bathrooms usually need more changes than bedrooms or living rooms.</p>
+<h2>FAQs</h2><p><b>What is a typical ACH?</b><br>Living spaces often sit around 0.5 to 1, while kitchens and bathrooms need several changes per hour.</p><p><b>Is higher always better?</b><br>More fresh air helps air quality but costs more to heat or cool, so balance comfort, health and energy.</p><p><b>Does opening a window count?</b><br>Natural ventilation varies with wind and temperature, so this calculation suits mechanical airflow figures best.</p>
+<p class="mut">Rough estimate only — consult a licensed professional for structural work before building.</p>
+<h2>Related calculators</h2>
+<p><a href="backfill-volume-calculator.html">Backfill Volume Calculator</a></p>
+<p><a href="beam-span-rough-calculator.html">Beam Span Rough Calculator</a></p>
+<p><a href="ceiling-area-calculator.html">Ceiling Area Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

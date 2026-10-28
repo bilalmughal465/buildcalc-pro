@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Annual Recurring Revenue Calculator - BuildCalc</title><meta name="description" content="Turn monthly recurring revenue into an annualised recurring revenue figure.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/annual-recurring-revenue-calculator.html">
+<meta property="og:title" content="Annual Recurring Revenue Calculator - BuildCalc">
+<meta property="og:description" content="Turn monthly recurring revenue into an annualised recurring revenue figure.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/annual-recurring-revenue-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Annual Recurring Revenue Calculator", "description": "Turn monthly recurring revenue into an annualised recurring revenue figure.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is ARR guaranteed income?", "acceptedAnswer": {"@type": "Answer", "text": "No, it is an annualised snapshot. Churn, downgrades and upgrades will change the real yearly total."}}, {"@type": "Question", "name": "How is ARR different from revenue?", "acceptedAnswer": {"@type": "Answer", "text": "ARR only counts recurring subscription income, while total revenue also includes one-off sales and services."}}, {"@type": "Question", "name": "When is ARR most useful?", "acceptedAnswer": {"@type": "Answer", "text": "For comparing growth between months and for planning, since it smooths one-off sales out of the picture."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Business</p><h1>Annual Recurring Revenue Calculator</h1><p class="mut">Turn monthly recurring revenue into an annualised recurring revenue figure.</p>
+<div class="card"><label>Monthly recurring revenue ($) <input id="a" type="number" value="2000"></label><br> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value)||0;document.getElementById('out').textContent='Annual recurring revenue: $'+(a*12).toLocaleString(undefined,{maximumFractionDigits:2})+' per year.';} document.getElementById('a').addEventListener('input',calc); calc();</script>
+<h2>Formula</h2><p>Annual recurring revenue = monthly recurring revenue multiplied by 12.</p><h2>How it works</h2><p>Multiply this month's recurring revenue by twelve to annualise it. The figure assumes the current subscriber base stays steady, so treat it as a run-rate snapshot rather than a guaranteed yearly total.</p>
+<h2>FAQs</h2><p><b>Is ARR guaranteed income?</b><br>No, it is an annualised snapshot. Churn, downgrades and upgrades will change the real yearly total.</p><p><b>How is ARR different from revenue?</b><br>ARR only counts recurring subscription income, while total revenue also includes one-off sales and services.</p><p><b>When is ARR most useful?</b><br>For comparing growth between months and for planning, since it smooths one-off sales out of the picture.</p>
+<p class="mut">Estimates only, not financial advice. Check your figures before making a business decision.</p>
+<h2>Related calculators</h2>
+<p><a href="ad-spend-roas-calculator.html">Ad Spend ROAS Calculator</a></p>
+<p><a href="break-even-units-calculator.html">Break-Even Units Calculator</a></p>
+<p><a href="business-profit-margin-calculator.html">Business Profit Margin Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

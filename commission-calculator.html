@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commission Calculator - BuildCalc</title><meta name="description" content="Work out commission earned from sales value and a commission rate percentage.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/commission-calculator.html">
+<meta property="og:title" content="Commission Calculator - BuildCalc">
+<meta property="og:description" content="Work out commission earned from sales value and a commission rate percentage.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/commission-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Commission Calculator", "description": "Work out commission earned from sales value and a commission rate percentage.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is commission paid on revenue or profit?", "acceptedAnswer": {"@type": "Answer", "text": "Usually revenue, but check the agreement: some deals pay on collected cash or on profit instead."}}, {"@type": "Question", "name": "What about returns?", "acceptedAnswer": {"@type": "Answer", "text": "Returned sales are often clawed back, so confirm whether commission is adjusted when a sale is refunded."}}, {"@type": "Question", "name": "Can rates be tiered?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Calculate each tier separately and add the results for the total."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Business</p><h1>Commission Calculator</h1><p class="mut">Work out commission earned from sales value and a commission rate percentage.</p>
+<div class="card"><label>Sales value ($) <input id="a" type="number" value="20000"></label><br><label>Commission rate (%) <input id="b" type="number" value="5"></label><br> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value)||0,b=parseFloat(document.getElementById('b').value)||0;document.getElementById('out').textContent='Commission: $'+(a*b/100).toLocaleString(undefined,{maximumFractionDigits:2})+'.';} document.getElementById('a').addEventListener('input',calc); document.getElementById('b').addEventListener('input',calc); calc();</script>
+<h2>Formula</h2><p>Commission = sales value multiplied by commission rate divided by 100.</p><h2>How it works</h2><p>Multiply the value of sales closed by the agreed commission percentage. Tiered or capped deals need a separate calculation per tier, but this flat-rate version covers most simple agreements.</p>
+<h2>FAQs</h2><p><b>Is commission paid on revenue or profit?</b><br>Usually revenue, but check the agreement: some deals pay on collected cash or on profit instead.</p><p><b>What about returns?</b><br>Returned sales are often clawed back, so confirm whether commission is adjusted when a sale is refunded.</p><p><b>Can rates be tiered?</b><br>Yes. Calculate each tier separately and add the results for the total.</p>
+<p class="mut">Estimates only, not financial advice. Check your figures before making a business decision.</p>
+<h2>Related calculators</h2>
+<p><a href="ad-spend-roas-calculator.html">Ad Spend ROAS Calculator</a></p>
+<p><a href="annual-recurring-revenue-calculator.html">Annual Recurring Revenue Calculator</a></p>
+<p><a href="break-even-units-calculator.html">Break-Even Units Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

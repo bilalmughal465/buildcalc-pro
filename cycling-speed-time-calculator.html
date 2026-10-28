@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cycling Speed and Time Calculator - BuildCalc</title><meta name="description" content="Convert between cycling distance, time and average speed in one step.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/cycling-speed-time-calculator.html">
+<meta property="og:title" content="Cycling Speed and Time Calculator - BuildCalc">
+<meta property="og:description" content="Convert between cycling distance, time and average speed in one step.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/cycling-speed-time-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Cycling Speed and Time Calculator", "description": "Convert between cycling distance, time and average speed in one step.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is my average lower than my cruising speed?", "acceptedAnswer": {"@type": "Answer", "text": "Stops, junctions and hills all drag the average down."}}, {"@type": "Question", "name": "Does wind matter?", "acceptedAnswer": {"@type": "Answer", "text": "A lot. Headwinds cost more time than tailwinds save."}}, {"@type": "Question", "name": "Can I use miles?", "acceptedAnswer": {"@type": "Answer", "text": "Convert miles to kilometres first (1 mile = 1.609 km)."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Health &amp; Fitness</p><h1>Cycling Speed and Time Calculator</h1><p class="mut">Convert between cycling distance, time and average speed in one step.</p>
+<div class="card"><label>Distance (km)<input id="d" type="number" value="20"></label><label>Time (minutes)<input id="t" type="number" value="60"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const d=g('d'),t=g('t'); if(d<=0||t<=0) return bad(); r='Average speed: '+(d/(t/60)).toFixed(1)+' km/h for '+d+' km in '+t+' minutes.'; out.textContent=r;}
+document.getElementById('d').addEventListener('input',calc); document.getElementById('d').addEventListener('change',calc); document.getElementById('t').addEventListener('input',calc); document.getElementById('t').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Average speed equals distance divided by time in hours.</p><h2>How it works</h2><p>Distance divided by time gives the average, including any slower sections. It says nothing about top speed or effort on hills.</p>
+<h2>FAQs</h2><p><b>Why is my average lower than my cruising speed?</b><br>Stops, junctions and hills all drag the average down.</p><p><b>Does wind matter?</b><br>A lot. Headwinds cost more time than tailwinds save.</p><p><b>Can I use miles?</b><br>Convert miles to kilometres first (1 mile = 1.609 km).</p>
+<p class="mut">General information only, not medical advice.</p>
+<h2>Related calculators</h2>
+<p><a href="bedtime-calculator.html">Bedtime From Wake Time Calculator</a></p>
+<p><a href="bmi-calculator.html">BMI Calculator</a></p>
+<p><a href="bmi-prime-calculator.html">BMI Prime Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Circle Circumference Calculator - BuildCalc</title><meta name="description" content="Find the distance around a circle from its radius.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/circle-circumference-calculator.html">
+<meta property="og:title" content="Circle Circumference Calculator - BuildCalc">
+<meta property="og:description" content="Find the distance around a circle from its radius.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/circle-circumference-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Circle Circumference Calculator", "description": "Find the distance around a circle from its radius.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the Circle Circumference do?", "acceptedAnswer": {"@type": "Answer", "text": "It takes the values you enter and works out the circle circumference for you, showing the result straight away."}}, {"@type": "Question", "name": "What should I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Enter ordinary numbers in the boxes above. If a value does not make sense for this calculation, the page will ask you to check it instead of showing a wrong answer."}}, {"@type": "Question", "name": "Can I use the result for homework or everyday maths?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is a general-purpose maths helper; for exam or professional work, still check the steps against your own working."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Math</p><h1>Circle Circumference Calculator</h1><p class="mut">Find the distance around a circle from its radius.</p>
+<div class="card"><label>Radius <input id="a" type="number" value="5"></label>  <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out');try{const r=parseFloat(document.getElementById('a').value);if(isNaN(r)||r<0){out.textContent='Please enter valid numbers.';return;}out.textContent='Result: Circumference = '+(2*Math.PI*r).toFixed(4)+' units';}catch(e){out.textContent='Please enter valid numbers.';}}
+['a'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener('input',calc);});calc();</script>
+<h2>Formula</h2><p>Circumference = 2 × π × radius.</p><h2>How it works</h2><p>Enter the radius. The calculator multiplies it by 2 and by pi to give the length around the circle.</p>
+<h2>FAQs</h2><p><b>What does the Circle Circumference do?</b><br>It takes the values you enter and works out the circle circumference for you, showing the result straight away.</p><p><b>What should I enter?</b><br>Enter ordinary numbers in the boxes above. If a value does not make sense for this calculation, the page will ask you to check it instead of showing a wrong answer.</p><p><b>Can I use the result for homework or everyday maths?</b><br>Yes. It is a general-purpose maths helper; for exam or professional work, still check the steps against your own working.</p>
+<h2>Related calculators</h2>
+<p><a href="absolute-value-calculator.html">Absolute Value Calculator</a></p>
+<p><a href="arithmetic-sequence-calculator.html">Arithmetic Sequence Calculator</a></p>
+<p><a href="circle-area-calculator.html">Circle Area Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Celsius to Fahrenheit Converter - BuildCalc</title><meta name="description" content="Convert Celsius to Fahrenheit instantly with a simple, free calculator.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/celsius-to-fahrenheit-converter.html">
+<meta property="og:title" content="Celsius to Fahrenheit Converter - BuildCalc">
+<meta property="og:description" content="Convert Celsius to Fahrenheit instantly with a simple, free calculator.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/celsius-to-fahrenheit-converter.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Celsius to Fahrenheit Converter", "description": "Convert Celsius to Fahrenheit instantly with a simple, free calculator.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is 0 °C in Fahrenheit?", "acceptedAnswer": {"@type": "Answer", "text": "0 °C equals 32 °F, the freezing point of water."}}, {"@type": "Question", "name": "Why add 32?", "acceptedAnswer": {"@type": "Answer", "text": "The Fahrenheit scale sets the freezing point of water at 32 instead of 0, so the 32 shift aligns the two scales before scaling the degree size."}}, {"@type": "Question", "name": "Is −40 the same in both scales?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. −40 °C equals −40 °F, the one temperature where the two scales agree."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Conversion</p><h1>Celsius to Fahrenheit Converter</h1><p class="mut">Convert Celsius to Fahrenheit instantly with a simple, free calculator.</p>
+<div class="card"><label>Celsius<input id="a" type="number" value="20"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value); if(isNaN(a)){document.getElementById('out').textContent='Please enter a temperature.'; return;} const r=a*9/5+32; document.getElementById('out').textContent=a+' °C = '+r.toFixed(2)+' °F';}
+['a'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Fahrenheit = Celsius × 9/5 + 32. Multiply by 9, divide by 5, then add 32.</p><h2>How it works</h2><p>Enter a Celsius temperature. The calculator applies the standard scale shift and scaling and shows the Fahrenheit equivalent. Water freezes at 0 °C (32 °F) and boils at 100 °C (212 °F) at standard pressure.</p>
+<h2>FAQs</h2><p><b>What is 0 °C in Fahrenheit?</b><br>0 °C equals 32 °F, the freezing point of water.</p><p><b>Why add 32?</b><br>The Fahrenheit scale sets the freezing point of water at 32 instead of 0, so the 32 shift aligns the two scales before scaling the degree size.</p><p><b>Is −40 the same in both scales?</b><br>Yes. −40 °C equals −40 °F, the one temperature where the two scales agree.</p>
+<h2>Related calculators</h2>
+<p><a href="acres-to-hectares-converter.html">Acres to Hectares Converter</a></p>
+<p><a href="calories-to-kilojoules-converter.html">Calories to Kilojoules Converter</a></p>
+<p><a href="celsius-to-kelvin-converter.html">Celsius to Kelvin Converter</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

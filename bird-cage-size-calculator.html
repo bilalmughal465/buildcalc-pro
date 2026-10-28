@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bird Cage Size (Rough) Calculator - BuildCalc</title><meta name="description" content="Estimate minimum cage dimensions from a bird's wingspan, as a rough welfare guide.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/bird-cage-size-calculator.html">
+<meta property="og:title" content="Bird Cage Size (Rough) Calculator - BuildCalc">
+<meta property="og:description" content="Estimate minimum cage dimensions from a bird&#x27;s wingspan, as a rough welfare guide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/bird-cage-size-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Bird Cage Size (Rough) Calculator", "description": "Estimate minimum cage dimensions from a bird's wingspan, as a rough welfare guide.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is bigger always better?", "acceptedAnswer": {"@type": "Answer", "text": "Generally yes, as long as bar spacing stays safe for the species."}}, {"@type": "Question", "name": "Does height matter more than width?", "acceptedAnswer": {"@type": "Answer", "text": "Width matters most for flight; height matters for long tails and climbing."}}, {"@type": "Question", "name": "What about out-of-cage time?", "acceptedAnswer": {"@type": "Answer", "text": "Daily supervised time outside helps, but does not excuse a tiny cage."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Pet</p><h1>Bird Cage Size (Rough) Calculator</h1><p class="mut">Estimate minimum cage dimensions from a bird's wingspan, as a rough welfare guide.</p>
+<div class="card"><label>Wingspan (cm)<input id="ws" type="number" value="30"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const ws=g('ws'); if(ws<=0) return bad(); r='Minimum cage size (rough): about '+(ws*1.5)+' cm wide × '+ws+' cm deep × '+(ws*2)+' cm high. Larger is better, and bar spacing must suit the species.'; out.textContent=r;}
+document.getElementById('ws').addEventListener('input',calc); document.getElementById('ws').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Minimum cage width is about 1.5 times wingspan, depth about one wingspan, and height about twice wingspan.</p><h2>How it works</h2><p>Wingspan sets the scale so the bird can spread its wings and move. These are minimums, not ideals, and long-tailed species need extra height while active species need extra width.</p>
+<h2>FAQs</h2><p><b>Is bigger always better?</b><br>Generally yes, as long as bar spacing stays safe for the species.</p><p><b>Does height matter more than width?</b><br>Width matters most for flight; height matters for long tails and climbing.</p><p><b>What about out-of-cage time?</b><br>Daily supervised time outside helps, but does not excuse a tiny cage.</p>
+<p class="mut">General information only, not veterinary advice.</p>
+<h2>Related calculators</h2>
+<p><a href="aquarium-water-volume-calculator.html">Aquarium Water Volume Calculator</a></p>
+<p><a href="cat-age-human-years-calculator.html">Cat Age in Human Years Calculator</a></p>
+<p><a href="cat-food-cups-calculator.html">Cat Food Cups Per Day Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Add Days to Date Calculator - BuildCalc</title><meta name="description" content="Add a number of days to a date and get the resulting calendar date.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/add-days-to-date-calculator.html">
+<meta property="og:title" content="Add Days to Date Calculator - BuildCalc">
+<meta property="og:description" content="Add a number of days to a date and get the resulting calendar date.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/add-days-to-date-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Add Days to Date Calculator", "description": "Add a number of days to a date and get the resulting calendar date.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I add a negative number?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Adding a negative number subtracts days, giving an earlier date."}}, {"@type": "Question", "name": "Does it skip weekends?", "acceptedAnswer": {"@type": "Answer", "text": "No. This adds calendar days, including weekends. Use the working-days calculator if weekends must be skipped."}}, {"@type": "Question", "name": "Does it handle leap years?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Real calendar arithmetic includes 29 February in leap years."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Time & Date</p><h1>Add Days to Date Calculator</h1><p class="mut">Add a number of days to a date and get the resulting calendar date.</p>
+<div class="card"><label>Start date<input id="a" type="date" value="2026-10-28"></label><label>Days to add<input id="b" type="number" value="30"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=document.getElementById('a').value,b=parseFloat(document.getElementById('b').value); if(!a||isNaN(b)){document.getElementById('out').textContent='Please pick a date and enter days.'; return;} const d=new Date(a); d.setDate(d.getDate()+b); document.getElementById('out').textContent='Result: '+d.toISOString().slice(0,10)+' ('+d.toLocaleDateString('en-GB',{weekday:'long'})+')';}
+['a','b'].forEach(id=>{const el=document.getElementById(id); if(el) el.addEventListener('input',calc);}); calc();</script>
+<h2>Formula</h2><p>Result date = start date plus the number of days, with month and year rollover handled by the calendar, including leap years.</p><h2>How it works</h2><p>Pick a start date and enter how many days to add. The calculator rolls across month and year boundaries automatically, so adding 30 days to late October lands in late November, not on a non-existent October 58th.</p>
+<h2>FAQs</h2><p><b>Can I add a negative number?</b><br>Yes. Adding a negative number subtracts days, giving an earlier date.</p><p><b>Does it skip weekends?</b><br>No. This adds calendar days, including weekends. Use the working-days calculator if weekends must be skipped.</p><p><b>Does it handle leap years?</b><br>Yes. Real calendar arithmetic includes 29 February in leap years.</p>
+<h2>Related calculators</h2>
+<p><a href="age-calculator.html">Age Calculator</a></p>
+<p><a href="birthday-countdown-calculator.html">Birthday Countdown Calculator</a></p>
+<p><a href="date-difference-calculator.html">Date Difference Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

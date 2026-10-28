@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ceiling Area Calculator - BuildCalc</title><meta name="description" content="Calculate ceiling area from room length and width for boards, paint or panels.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/ceiling-area-calculator.html">
+<meta property="og:title" content="Ceiling Area Calculator - BuildCalc">
+<meta property="og:description" content="Calculate ceiling area from room length and width for boards, paint or panels.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/ceiling-area-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Ceiling Area Calculator", "description": "Calculate ceiling area from room length and width for boards, paint or panels.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What if the ceiling is sloped?", "acceptedAnswer": {"@type": "Answer", "text": "Measure each sloped plane separately using its true length and width, then add the planes together."}}, {"@type": "Question", "name": "Do I subtract light fittings?", "acceptedAnswer": {"@type": "Answer", "text": "For material ordering, usually not: the small saving is absorbed by cutting waste."}}, {"@type": "Question", "name": "How much waste for boards?", "acceptedAnswer": {"@type": "Answer", "text": "Around ten percent is a common allowance, more for rooms with many corners."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Construction</p><h1>Ceiling Area Calculator</h1><p class="mut">Calculate ceiling area from room length and width for boards, paint or panels.</p>
+<div class="card"><label>Room length (m) <input id="a" type="number" value="5"></label><br><label>Room width (m) <input id="b" type="number" value="4"></label><br> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const a=parseFloat(document.getElementById('a').value)||0,b=parseFloat(document.getElementById('b').value)||0;document.getElementById('out').textContent='Ceiling area: '+(a*b).toFixed(2)+' sq m.';} document.getElementById('a').addEventListener('input',calc); document.getElementById('b').addEventListener('input',calc); calc();</script>
+<h2>Formula</h2><p>Ceiling area = room length multiplied by room width, for a rectangular ceiling.</p><h2>How it works</h2><p>Measure the room at floor level, since ceilings usually match the floor footprint. The area gives a base figure for plasterboard, paint or ceiling panels. Add a waste allowance for cutting when ordering materials.</p>
+<h2>FAQs</h2><p><b>What if the ceiling is sloped?</b><br>Measure each sloped plane separately using its true length and width, then add the planes together.</p><p><b>Do I subtract light fittings?</b><br>For material ordering, usually not: the small saving is absorbed by cutting waste.</p><p><b>How much waste for boards?</b><br>Around ten percent is a common allowance, more for rooms with many corners.</p>
+<p class="mut">Rough estimate only — consult a licensed professional for structural work before building.</p>
+<h2>Related calculators</h2>
+<p><a href="air-changes-calculator.html">Air Changes Calculator</a></p>
+<p><a href="backfill-volume-calculator.html">Backfill Volume Calculator</a></p>
+<p><a href="beam-span-rough-calculator.html">Beam Span Rough Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

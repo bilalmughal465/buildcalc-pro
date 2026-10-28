@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calories Burned Running Calculator - BuildCalc</title><meta name="description" content="Estimate running energy use from weight, time and running intensity.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/calories-burned-running-calculator.html">
+<meta property="og:title" content="Calories Burned Running Calculator - BuildCalc">
+<meta property="og:description" content="Estimate running energy use from weight, time and running intensity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/calories-burned-running-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Calories Burned Running Calculator", "description": "Estimate running energy use from weight, time and running intensity.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does weight matter so much?", "acceptedAnswer": {"@type": "Answer", "text": "Moving more mass costs more energy, step for step."}}, {"@type": "Question", "name": "Does speed matter beyond MET?", "acceptedAnswer": {"@type": "Answer", "text": "Speed is already inside the MET choice; pick the closest band."}}, {"@type": "Question", "name": "Are watch numbers better?", "acceptedAnswer": {"@type": "Answer", "text": "Watches add heart rate, but they are still estimates."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Health &amp; Fitness</p><h1>Calories Burned Running Calculator</h1><p class="mut">Estimate running energy use from weight, time and running intensity.</p>
+<div class="card"><label>Weight (kg)<input id="w" type="number" value="70"></label><label>Time (minutes)<input id="t" type="number" value="30"></label><label>Intensity<select id="met"><option value="8.0">Easy jog</option><option value="9.8" selected>Steady run</option><option value="11.5">Fast run</option><option value="13.0">Very fast run</option></select></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const w=g('w'),t=g('t'),met=g('met'); if(w<=0||t<=0) return bad(); r='About '+Math.round(met*w*(t/60))+' kcal for '+t+' minutes of running (MET '+met+').'; out.textContent=r;}
+document.getElementById('w').addEventListener('input',calc); document.getElementById('w').addEventListener('change',calc); document.getElementById('t').addEventListener('input',calc); document.getElementById('t').addEventListener('change',calc); document.getElementById('met').addEventListener('input',calc); document.getElementById('met').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Calories equal MET value × weight in kilograms × hours of running.</p><h2>How it works</h2><p>The intensity band sets the MET value, time is converted to hours, and weight scales the result. Heavier runners burn more for the same run, which is why weight is in the formula.</p>
+<h2>FAQs</h2><p><b>Why does weight matter so much?</b><br>Moving more mass costs more energy, step for step.</p><p><b>Does speed matter beyond MET?</b><br>Speed is already inside the MET choice; pick the closest band.</p><p><b>Are watch numbers better?</b><br>Watches add heart rate, but they are still estimates.</p>
+<p class="mut">General information only, not medical advice.</p>
+<h2>Related calculators</h2>
+<p><a href="bedtime-calculator.html">Bedtime From Wake Time Calculator</a></p>
+<p><a href="bmi-calculator.html">BMI Calculator</a></p>
+<p><a href="bmi-prime-calculator.html">BMI Prime Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calories Burned Walking Calculator - BuildCalc</title><meta name="description" content="Estimate walking energy use from weight, distance and walking speed.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/calories-burned-walking-calculator.html">
+<meta property="og:title" content="Calories Burned Walking Calculator - BuildCalc">
+<meta property="og:description" content="Estimate walking energy use from weight, distance and walking speed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/calories-burned-walking-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Calories Burned Walking Calculator", "description": "Estimate walking energy use from weight, distance and walking speed.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a MET?", "acceptedAnswer": {"@type": "Answer", "text": "One MET is resting energy use; walking at 5 km/h is about 3.5 times that."}}, {"@type": "Question", "name": "Does faster walking burn much more?", "acceptedAnswer": {"@type": "Answer", "text": "Yes per minute, but a fixed distance at higher speed takes less time, so totals are closer."}}, {"@type": "Question", "name": "Is this exact?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a standard estimate, not a measurement."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Health &amp; Fitness</p><h1>Calories Burned Walking Calculator</h1><p class="mut">Estimate walking energy use from weight, distance and walking speed.</p>
+<div class="card"><label>Weight (kg)<input id="w" type="number" value="70"></label><label>Distance (km)<input id="d" type="number" value="5"></label><label>Speed (km/h)<input id="sp" type="number" value="5"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const w=g('w'),d=g('d'),sp=g('sp'); if(w<=0||d<=0||sp<=0) return bad(); const met=sp<4?2.8:sp<5.5?3.5:4.3, hrs=d/sp, kcal=met*w*hrs; r='About '+Math.round(kcal)+' kcal for '+d+' km at '+sp+' km/h (about '+Math.round(hrs*60)+' minutes, MET '+met+').'; out.textContent=r;}
+document.getElementById('w').addEventListener('input',calc); document.getElementById('w').addEventListener('change',calc); document.getElementById('d').addEventListener('input',calc); document.getElementById('d').addEventListener('change',calc); document.getElementById('sp').addEventListener('input',calc); document.getElementById('sp').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Calories equal MET value × weight in kilograms × hours, with MET chosen by walking speed.</p><h2>How it works</h2><p>Speed picks a MET band for walking effort, time comes from distance divided by speed, and the three multiply together. Hills, load carried and terrain raise real burn above this flat-ground figure.</p>
+<h2>FAQs</h2><p><b>What is a MET?</b><br>One MET is resting energy use; walking at 5 km/h is about 3.5 times that.</p><p><b>Does faster walking burn much more?</b><br>Yes per minute, but a fixed distance at higher speed takes less time, so totals are closer.</p><p><b>Is this exact?</b><br>No. It is a standard estimate, not a measurement.</p>
+<p class="mut">General information only, not medical advice.</p>
+<h2>Related calculators</h2>
+<p><a href="bedtime-calculator.html">Bedtime From Wake Time Calculator</a></p>
+<p><a href="bmi-calculator.html">BMI Calculator</a></p>
+<p><a href="bmi-prime-calculator.html">BMI Prime Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>

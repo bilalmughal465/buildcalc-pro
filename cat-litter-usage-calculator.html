@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cat Litter Usage Calculator - BuildCalc</title><meta name="description" content="Estimate monthly litter use and litter boxes from the number of cats.">
+<link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><link rel="canonical" href="https://buildcalc-pro.pages.dev/calculators/cat-litter-usage-calculator.html">
+<meta property="og:title" content="Cat Litter Usage Calculator - BuildCalc">
+<meta property="og:description" content="Estimate monthly litter use and litter boxes from the number of cats.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buildcalc-pro.pages.dev/calculators/cat-litter-usage-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Cat Litter Usage Calculator", "description": "Estimate monthly litter use and litter boxes from the number of cats.", "applicationCategory": "CalculatorApplication", "operatingSystem": "Web"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why one extra box?", "acceptedAnswer": {"@type": "Answer", "text": "Cats may avoid a box another cat just used, so a spare helps."}}, {"@type": "Question", "name": "Does clumping litter last longer?", "acceptedAnswer": {"@type": "Answer", "text": "Often yes, because only soiled litter is removed."}}, {"@type": "Question", "name": "How often should I scoop?", "acceptedAnswer": {"@type": "Answer", "text": "Daily scooping keeps use lower and cats happier."}}]}]}</script>
+</head>
+<body><header><div class="wrap"><a class="logo" href="../index.html">Build<span>Calc</span></a><a href="../index.html">All calculators</a></div></header>
+<main class="wrap"><p class="cat">Pet</p><h1>Cat Litter Usage Calculator</h1><p class="mut">Estimate monthly litter use and litter boxes from the number of cats.</p>
+<div class="card"><label>Number of cats<input id="cats" type="number" value="2"></label><label>Litter per cat per month (kg)<input id="kg" type="number" value="7"></label> <button onclick="calc()">Calculate</button><div class="result" id="out">—</div></div>
+<script>function calc(){const out=document.getElementById('out'); const g=id=>parseFloat(document.getElementById(id).value)||0; const v=id=>document.getElementById(id).value; function bad(){out.textContent='Please enter valid positive values.'; return;} let r=''; const c=g('cats'),k=g('kg'); if(c<=0||k<=0) return bad(); r='Estimated litter: about '+(c*k).toFixed(0)+' kg per month for '+c+' cat(s). Litter boxes needed: '+(c+1)+' (one per cat, plus one extra).'; out.textContent=r;}
+document.getElementById('cats').addEventListener('input',calc); document.getElementById('cats').addEventListener('change',calc); document.getElementById('kg').addEventListener('input',calc); document.getElementById('kg').addEventListener('change',calc); calc();</script>
+<h2>Formula</h2><p>Monthly litter equals cats multiplied by litter per cat per month; boxes equal cats plus one.</p><h2>How it works</h2><p>Each cat adds a similar amount of litter use, while the box rule adds one spare box to reduce competition and accidents. Litter type and scooping frequency shift real use.</p>
+<h2>FAQs</h2><p><b>Why one extra box?</b><br>Cats may avoid a box another cat just used, so a spare helps.</p><p><b>Does clumping litter last longer?</b><br>Often yes, because only soiled litter is removed.</p><p><b>How often should I scoop?</b><br>Daily scooping keeps use lower and cats happier.</p>
+<p class="mut">General information only, not veterinary advice.</p>
+<h2>Related calculators</h2>
+<p><a href="aquarium-water-volume-calculator.html">Aquarium Water Volume Calculator</a></p>
+<p><a href="bird-cage-size-calculator.html">Bird Cage Size (Rough) Calculator</a></p>
+<p><a href="cat-age-human-years-calculator.html">Cat Age in Human Years Calculator</a></p>
+</main><footer><div class="wrap">BuildCalc — free calculators. <a href="../index.html">Home</a> | <a href="../privacy-policy.html">Privacy</a> | <a href="../terms.html">Terms</a> | <a href="../contact.html">Contact</a></div></footer></body></html>
