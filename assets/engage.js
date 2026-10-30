@@ -17,8 +17,14 @@
   var main = document.querySelector('main');
   if(main && !isHome && !document.querySelector('.bc-toolbar')){
     var tb = document.createElement('div'); tb.className='bc-toolbar';
-    tb.innerHTML = '<button id="bcFav">★ Favourite</button> <button id="bcShare">Share</button> <button id="bcPrint">Print result</button>';
+    tb.innerHTML = '<button id="bcBack" aria-label="Go back">← Back</button> <button id="bcFav">★ Favourite</button> <button id="bcShare">Share</button> <button id="bcPrint">Print result</button>';
     main.insertBefore(tb, main.firstChild);
+    document.getElementById('bcBack').onclick = function(){
+      try{
+        if(window.history.length > 1){ window.history.back(); }
+        else { window.location.href = prefix + 'index.html'; }
+      }catch(e){ window.location.href = prefix + 'index.html'; }
+    };
     var favBtn = document.getElementById('bcFav');
     try{
       var favs = JSON.parse(localStorage.getItem('bc_fav')||'[]');
