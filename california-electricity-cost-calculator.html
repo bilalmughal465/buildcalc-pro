@@ -71,7 +71,7 @@ footer a{margin-right:14px}
 <script>try{document.documentElement.dataset.theme=localStorage.getItem('buildcalc-theme')||'light'}catch(e){}</script><style>html{background:#F7F9FC}body{background-color:#F7F9FC}</style></head>
 <body>
 <header><div class="wrap nav-classic"><a class="logo" href="index.html"><span class="mix">BuildCalc</span></a><nav class="nav-links"><a href="index.html"><span class="mix">Home</span></a><a href="index.html#all"><span class="mix">Categories</span></a><a href="blog.html"><span class="mix">Blog</span></a><a href="faq.html"><span class="mix">FAQ</span></a><a href="contact.html"><span class="mix">Contact</span></a></nav></div></header>
-<main><div class="wrap"><nav class="bc" aria-label="Breadcrumb"><a href="/">Home</a> / Home Energy</nav>
+<main class="wrap"><div><nav class="bc" aria-label="Breadcrumb"><a href="/">Home</a> / Home Energy</nav>
 <h1>California Electricity Cost Calculator</h1>
 <p class="intro">Estimate what an appliance costs per month in California. The rate is preloaded with the 2024 EIA average residential price of 31.97 cents per kWh. Change it to match your own bill.</p>
 <section class="tool" aria-label="Calculator">
@@ -82,6 +82,7 @@ footer a{margin-right:14px}
 <div class="f"><label for="rate">Your California electricity rate per kWh</label><div class="in"><i>$</i><input id="rate" type="number" inputmode="decimal" step="any" min="0" max="10" value="0.3197"></div></div>
 </div>
 <div id="res" class="res" aria-live="polite"></div>
+<p>This result is your estimated monthly electricity bill for the appliance at your California rate, with the monthly kilowatt-hours shown beside it, so a higher number means the appliance costs more to run each month.</p>
 <div class="acts"><button type="button" id="copy">Copy result</button><button type="button" id="share">Copy link</button><button type="button" id="print">Print result</button><button type="button" id="download">Download result</button><button type="button" id="shareWA">Share on WhatsApp</button><button type="button" id="shareFB">Share on Facebook</button></div>
 </section>
 <section><h2>California electricity rates and bills (2024)</h2><p>The average California household paid 31.97 cents per kWh, which is 94% above the U.S. average of 16.48. It ranked number 2 out of 51 (50 states plus DC) from highest price. Customers used 503 kWh a month and paid $160.86, against 863 kWh and $142.26 nationally. In California, mild coastal climates and efficient housing keep use low even though the price is high. Source: <a href="https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf" rel="noopener">EIA Table 5A, 2024 Average Monthly Bill, Residential</a>.</p><p>Many California customers are billed on tiered or time-of-use rates, where an hour of use costs more at the evening peak than overnight, so the statewide average understates what an appliance costs at peak hours. Check your utility's rate plan page and whether you qualify for a discount program such as CARE.</p></section>
@@ -120,6 +121,6 @@ update();
 })();
 </script>
 </div></main>
-<footer><div class="wrap footer-grid"><div><b>BuildCalc</b><p>Free calculators. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="about.html">About</a></div><div><b>Categories</b><a href="categories/finance.html">Finance</a><a href="categories/construction.html">Construction</a><a href="categories/math.html">Math</a><a href="categories/health-fitness.html">Health</a></div><div><b>Legal</b><a href="methodology.html">Methodology</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div></footer>
+<footer><div class="wrap footer-grid"><div><b>BuildCalc</b><p>Free calculators. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="about.html">About</a><a href="saved-calculators.html">Saved calculators</a></div><div><b>Categories</b><a href="categories/finance.html">Finance</a><a href="categories/construction.html">Construction</a><a href="categories/math.html">Math</a><a href="categories/health-fitness.html">Health</a></div><div><b>Legal</b><a href="methodology.html">Methodology</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div></footer>
 <script src="chatbot.js" defer></script><script src="assets/theme.js" defer></script><script src="assets/engage.js"></script></body>
 </html>

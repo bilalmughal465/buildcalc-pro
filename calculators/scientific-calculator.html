@@ -28,14 +28,14 @@
 :root{--navy:#0B2447;--navy2:#12335F;--steel:#2E5E8C;--tert:#E4EDF8;--gold:#E8B44A;--bg:#F7F9FC;--dark:#071A33;--line:#DCE5F0;--txt:#1F2A3A;--mut:#55657A}
 .crumb{font-size:13px;color:var(--mut);padding:12px 0 0}.crumb a{color:var(--steel)}
 h1{font-size:28px;color:var(--navy);margin:10px 0 16px;line-height:1.25}
-.panel{width:360px;max-width:calc(100vw - 32px);margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 6px 22px rgba(11,36,71,.08);padding:16px}
+.panel{width:360px;max-width:calc(100vw - 32px);margin:0 auto;background:#0B2447;border:1px solid var(--line);border-radius:16px;box-shadow:0 6px 22px rgba(11,36,71,.08);padding:16px;box-sizing:border-box}
 .disp-head{display:flex;justify-content:flex-end;margin-bottom:8px}
 .deg-btn{background:var(--tert);border:1px solid #BCD0E8;color:var(--navy);border-radius:999px;padding:4px 12px;font:600 13px Sora,sans-serif;cursor:pointer}
-.display{background:var(--tert);border:1px solid #BCD0E8;border-left:4px solid var(--steel);border-radius:12px;height:80px;padding:10px 12px;text-align:right;overflow:hidden;margin-bottom:12px}
+.display{width:100%;box-sizing:border-box;background:var(--tert);border:1px solid #BCD0E8;border-left:4px solid var(--steel);border-radius:12px;height:80px;padding:10px 12px;text-align:right;overflow:hidden;margin-bottom:12px}
 .expr{min-height:20px;color:var(--mut);font-size:16px;white-space:nowrap;overflow-x:auto}
 .out{font-size:32px;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums;white-space:nowrap;overflow-x:auto;line-height:1.1}
 .keys{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
-.keys button{height:42px;border-radius:10px;font:600 18px Sora,sans-serif;cursor:pointer}
+.keys button{min-width:0;height:42px;border-radius:10px;font:600 18px Sora,sans-serif;cursor:pointer}
 .keys button:active{filter:brightness(.95)}
 .k-num{background:#fff;border:1px solid var(--line);color:var(--txt)}
 .k-fn{background:var(--tert);border:1px solid #BCD0E8;color:var(--navy)}
@@ -57,6 +57,7 @@ summary{cursor:pointer;font-weight:600;color:var(--navy)}details p{margin:8px 0 
 <div class="panel">
 <div class="disp-head"><button class="deg-btn" id="degBtn">DEG</button></div>
 <div class="display"><div class="expr" id="sciExpr"></div><div class="out" id="sciOut">0</div></div>
+<p>The display has two lines: the upper line shows the expression you typed, and the large lower line shows its answer, so the number in the lower line is the result of the calculation shown above it, rounded to 10 decimal places.</p>
 <div class="keys"><button class="k-fn" data-ins="sin(">sin</button><button class="k-fn" data-ins="cos(">cos</button><button class="k-fn" data-ins="tan(">tan</button><button class="k-fn" data-ins="log(">log</button><button class="k-fn" data-ins="ln(">ln</button><button class="k-fn" data-ins="^2">x²</button><button class="k-fn" data-ins="^">xʸ</button><button class="k-fn" data-ins="sqrt(">√</button><button class="k-fn" data-ins="(">(</button><button class="k-fn" data-ins=")">)</button><button class="k-num" data-ins="7">7</button><button class="k-num" data-ins="8">8</button><button class="k-num" data-ins="9">9</button><button class="k-op" data-ins="/">÷</button><button class="k-fn" data-ins="clear">AC</button><button class="k-num" data-ins="4">4</button><button class="k-num" data-ins="5">5</button><button class="k-num" data-ins="6">6</button><button class="k-op" data-ins="*">×</button><button class="k-fn" data-ins="back">⌫</button><button class="k-num" data-ins="1">1</button><button class="k-num" data-ins="2">2</button><button class="k-num" data-ins="3">3</button><button class="k-op" data-ins="-">−</button><button class="k-fn" data-ins="pi">π</button><button class="k-num" data-ins="0">0</button><button class="k-num" data-ins=".">.</button><button class="k-fn" data-ins="neg">±</button><button class="k-op" data-ins="+">+</button><button class="k-eq" data-ins="eq">=</button></div>
 </div>
 <div class="info">
@@ -74,13 +75,13 @@ summary{cursor:pointer;font-weight:600;color:var(--navy)}details p{margin:8px 0 
 <details><summary>Should I use DEG or RAD mode?</summary><p>Use DEG for most school and everyday angle problems, where a full circle is 360 degrees. Use RAD when your maths or physics problem gives angles in radians.</p></details>
 <details><summary>Are the results exact?</summary><p>Results are estimates shown rounded to 10 decimal places, which is enough for homework, exams and everyday calculations.</p></details>
 <h2>Worked examples</h2>
-<p><b>Example 1 — sin(30°) = 0.5.</b> DEG mode me sin dabao, 30 likho, ) band karo, = dabao. Jawab 0.5 aayega.</p>
-<p><b>Example 2 — 2<sup>10</sup> = 1024.</b> 2 dabao, xʸ dabao, 10 likho, = dabao. Jawab 1024 aayega.</p>
+<p><b>Example 1 — sin(30°) = 0.5.</b> In DEG mode, press sin, type 30, press ) to close, then press =. The answer is 0.5.</p>
+<p><b>Example 2 — 2<sup>10</sup> = 1024.</b> Press 2, press xʸ, type 10, then press =. The answer is 1024.</p>
 <h2>Related calculators</h2>
 <p><a href="percentage-calculator.html">Percentage Calculator</a> &middot; <a href="bmi-calculator.html">BMI Calculator</a> &middot; <a href="mortgage-payment-calculator.html">Mortgage Payment Calculator</a> &middot; <a href="scientific-notation-converter.html">Scientific Notation Converter</a></p>
 </div>
 </main>
-<footer><div class="wrap footer-grid"><div><b>BuildCalc</b><p>Free calculators. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../blog.html">Blog</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a><a href="../about.html">About</a></div><div><b>Categories</b><a href="../categories/finance.html">Finance</a><a href="../categories/construction.html">Construction</a><a href="../categories/math.html">Math</a><a href="../categories/health-fitness.html">Health</a></div><div><b>Legal</b><a href="../methodology.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
+<footer><div class="wrap footer-grid"><div><b>BuildCalc</b><p>Free calculators. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="../index.html">Home</a><a href="../blog.html">Blog</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a><a href="../about.html">About</a><a href="../saved-calculators.html">Saved calculators</a></div><div><b>Categories</b><a href="../categories/finance.html">Finance</a><a href="../categories/construction.html">Construction</a><a href="../categories/math.html">Math</a><a href="../categories/health-fitness.html">Health</a></div><div><b>Legal</b><a href="../methodology.html">Methodology</a><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div></footer>
 <script>
 var sciExpr='', sciAns=0, sciDeg=true, sciDone=false;
 var exprEl=document.getElementById('sciExpr'), outEl=document.getElementById('sciOut');
