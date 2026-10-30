@@ -58,8 +58,8 @@ jobs:
           git ls-files -z | grep -zv '^\.github/' | xargs -0 -r git rm -q
           echo "Copying V47 files to repo root..."
           cp -r "$SRC/." .
-          echo "Removing zip and temporary workflow..."
-          git rm -q "$ZIP" "$WF"
+          echo "Removing temporary workflow file (zip was already removed with old files)..."
+          git rm -q "$WF"
           git add -A
           if git diff --cached --quiet; then
             echo "Nothing to commit"
