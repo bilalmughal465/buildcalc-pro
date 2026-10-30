@@ -45,6 +45,7 @@
       else { window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+url), '_blank'); }
     };
     document.getElementById('bcPrint').onclick = function(){ window.print(); };
+    if(!document.querySelector('.result')){document.getElementById('bcPrint').textContent='Print page';}
   }
   // Home sections
   if(isHome){
@@ -71,6 +72,18 @@
       var d = new Date(); var idx = (d.getFullYear()*366 + d.getMonth()*31 + d.getDate()) % tools.length;
       tod.innerHTML = 'Tool of the Day: <a href="'+tools[idx][0]+'">'+tools[idx][1]+'</a>';
     }
+  }
+
+  // Back to top on every page (category pages already have their own button)
+  if(!document.getElementById('topBtn')){
+    var topBtn = document.createElement('button');
+    topBtn.id = 'topBtn'; topBtn.type = 'button'; topBtn.textContent = '↑ Back to top';
+    document.body.appendChild(topBtn);
+    window.addEventListener('scroll', function(){ topBtn.classList.toggle('show', window.scrollY > 400); });
+    topBtn.addEventListener('click', function(){
+      var r = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({top:0, behavior: r ? 'auto' : 'smooth'});
+    });
   }
 
   // Return-visitor extras: Tip of Day, Continue, Progress
