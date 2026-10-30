@@ -66,7 +66,7 @@ jobs:
           # rm -f + --ignore-unmatch avoids failing if either is already gone.
           rm -f buildcalc-ga-update.zip .github/workflows/temp-ga-deploy.yml
           git rm -q --ignore-unmatch buildcalc-ga-update.zip .github/workflows/temp-ga-deploy.yml
-          git status --short | head -10
+          git status --short | head -n 10 || true
           git commit -m "Deploy BuildCalc GA update (V48): unpack GA zip to root replacing old site, remove zip and temp workflow"
           git push origin HEAD:main
           echo "Pushed."
