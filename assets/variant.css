@@ -1,0 +1,72 @@
+body{background:linear-gradient(165deg,#052e16 0%,#15803d 55%,#22c55e 100%)!important;background-attachment:fixed!important;color:#fff!important}
+html{background:#052e16!important}body{background-color:#052e16!important}
+button{background:#052e16!important;color:#fff!important}
+.cat-icon,.chip-icon,.cat-box-icon{background:#052e16!important;color:#fff!important}
+.hero-circle{background:radial-gradient(circle at 35% 30%,#22c55e,#15803d 65%,#052e16)!important}
+.cta-btn{background:#052e16!important;color:#fff!important}
+html[data-theme="red"] .cat-box b,html[data-theme="red"] .calc-card b{color:#fff!important}
+/* Clean colour: no scattered white boxes on home */
+.search{background:rgba(5,46,22,0.85)!important;color:#fff!important;border-color:rgba(255,255,255,0.5)!important}
+.search::placeholder{color:rgba(255,255,255,0.75)!important}
+.hero-card{background:rgba(5,46,22,0.75)!important;border-color:rgba(255,255,255,0.4)!important}
+.hero-card a{background:rgba(5,46,22,0.9)!important;border-color:rgba(255,255,255,0.4)!important;color:#fff!important}
+.cat-box,.feat-grid>div,.marquee,.cta-grad{background:rgba(5,46,22,0.6)!important}
+footer{background:rgba(5,46,22,0.7)!important}
+footer a,footer p{background:linear-gradient(90deg,#ffffff 0%,#ffffff 65%,#a7f3d0 85%,#4ade80 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.bc-home-box b,.bc-home-box#bcTod,.bc-home-box#bcTip{background:linear-gradient(90deg,#ffffff 0%,#ffffff 65%,#a7f3d0 85%,#4ade80 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.flicker i{background:linear-gradient(90deg,#ffffff,#a7f3d0,#4ade80)!important}
+
+h1,h2,h3{background:linear-gradient(90deg,#ffffff 0%,#ffffff 65%,#a7f3d0 85%,#4ade80 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important}
+.tool h1,.tool h2,.card h1,.card h2{background:linear-gradient(90deg,#ffffff 0%,#ffffff 65%,#a7f3d0 85%,#4ade80 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important}
+header{transition:top .3s ease!important}
+header.bc-hide{top:-120px!important;transform:translateY(-110%)!important;animation:none!important}
+
+.card label,.tool label{color:#052e16!important}
+.card h1,.card h2,.card h3,.tool h1,.tool h2,.tool h3{background:linear-gradient(90deg,#ffffff 0%,#ffffff 65%,#a7f3d0 85%,#4ade80 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+
+/* V38: headings green-mix, body text white, tool boxes visible */
+.calc-box{display:block!important;background:rgba(5,46,22,0.6)!important;border:1px solid rgba(255,255,255,0.4)!important;border-radius:16px!important;padding:20px!important}
+.calc-box label{display:block!important;color:#fff!important;margin-bottom:14px!important}
+.calc-box input{display:block!important;width:100%!important;background:#fff!important;color:#111!important;margin-top:6px!important}
+.calc-box button{margin-top:12px!important}
+.calc-box #out,#out{color:#fff!important;font-weight:700!important}
+
+.tool-grid .tool,.calc-card{background:rgba(5,46,22,0.6)!important;color:#fff!important;border:1px solid rgba(255,255,255,0.4)!important}
+.tool-grid .tool p,.calc-card span,main p,section p,main li{color:#fff!important}
+main,body{color:#fff!important}
+input,select,textarea{color:#111!important}
+
+.tool-grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:14px!important}
+.tool-grid .tool{min-width:0!important}
+.tool-grid .tool b,.tool-grid .tool p{overflow-wrap:break-word!important}
+@media(max-width:900px){.tool-grid{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:600px){.tool-grid{grid-template-columns:1fr!important}}
+
+.bg-stars{position:fixed;inset:0;z-index:4;pointer-events:none;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#fff 1.2px,transparent 1.2px),radial-gradient(#a7f3d0 0.8px,transparent 0.8px);background-size:100px 100px,175px 175px,140px 140px;background-position:0 0,60px 90px,30px 40px;opacity:.6;animation:starTwinkle 2.5s ease-in-out infinite alternate, starMove 6s ease-in-out infinite alternate}
+@keyframes starMove{from{background-position:0 0,60px 90px,30px 40px}to{background-position:50px 50px,110px 140px,80px 90px}}
+
+.calc-box *{box-sizing:border-box!important}
+@media(max-width:600px){.feat-grid{grid-template-columns:1fr!important}main.wrap{padding-left:16px!important;padding-right:16px!important}.calc-box{padding:16px!important}}
+
+/* V42 fixes */
+.card label{color:#fff!important}
+#bg3d,.bg-stars{z-index:0!important}
+main,footer{position:relative;z-index:1}
+.nav-links{display:flex;gap:22px;flex-wrap:wrap}
+section.tool h2,section.tool h3,section.tool .gt{background:linear-gradient(90deg,#052e16 0%,#15803d 70%,#22c55e 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important}
+.menu-btn{display:none}
+@media(max-width:700px){
+.menu-btn{display:inline-block;padding:8px 14px!important;border:1px solid rgba(255,255,255,.5);border-radius:8px;font-weight:700;cursor:pointer}
+header .wrap{flex-wrap:wrap}
+.nav-links{display:none!important}
+.nav-links.open{display:flex!important;flex-direction:column;gap:10px;width:100%;order:3;padding:8px 0 10px}
+}
+header{position:sticky!important;top:0;z-index:20!important}
+html{overflow-x:clip}
+
+/* Universe background (V45): canvas behind content, old bg divs off */
+#universe-canvas{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none}
+header,main,footer{position:relative;z-index:1}
+.bg-stars,.bg-lighting{display:none!important}

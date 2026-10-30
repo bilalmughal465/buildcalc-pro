@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="en">
-<head>
+<html data-theme="green" lang="en">
+<head><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Deck Board Calculator: How Many Boards? (Free)</title>
-<meta name="description" content="Free deck board calculator. Enter deck size, board width and gap to get the boards needed and an estimated cost.">
-<link rel="canonical" href="https://buildcalc-pro.pages.dev/deck-calculator">
+<meta name="description" content="Deck Board Calculator: How Many Boards? (Free) - free online calculator. Deck boards run side by side across the deck width. Convert the deck width to.">
+<link rel="canonical" href="https://buildcalc-pro.pages.dev/deck-calculator.html">
 <meta property="og:title" content="Deck Board Calculator: How Many Boards? (Free)"><meta property="og:description" content="Free deck board calculator. Enter deck size, board width and gap to get the boards needed and an estimated cost."><meta property="og:type" content="website"><meta property="og:url" content="https://buildcalc-pro.pages.dev/deck-calculator">
 <meta name="theme-color" content="#1c2226">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6542834138060275" crossorigin="anonymous"></script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ffd60a'/%3E%3Cpath d='M6 24V8h6l4 8 4-8h6v16' fill='none' stroke='%231c2226' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="icon" href="favicon.svg">
 <style>
 :root{--bg:#f2f2ef;--ink:#1c2226;--mut:#59636a;--line:#d3d4cf;--acc:#1f5fbf;--tape:#ffd60a}
 *{box-sizing:border-box}
@@ -46,8 +46,8 @@ h2{font-size:21px;line-height:1.25;margin:28px 0 8px}
 .row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;border-bottom:1px solid var(--line)}
 .row b{font-variant-numeric:tabular-nums;white-space:nowrap}
 .empty{background:#fff4f2;border:1px solid #e8b4ab;padding:10px;border-radius:6px;margin:0}
-.acts{display:flex;gap:8px;margin-top:14px}
-.acts button{flex:1;padding:10px;border:2px solid var(--ink);background:#fff;border-radius:6px;font:inherit;font-weight:600;cursor:pointer}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.acts button{flex:1 1 130px;padding:10px;border:2px solid var(--ink);background:#fff;border-radius:6px;font:inherit;font-weight:600;cursor:pointer}
 button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 .dg{margin:18px 0 0;text-align:center}.dg svg{max-width:320px;width:100%;height:auto}
 .tw{overflow-x:auto}
@@ -73,14 +73,14 @@ footer a{margin-right:14px}
 .chatlog{max-height:220px;overflow-y:auto;margin:10px 0}.chatmsg{margin:8px 0;font-size:15px}
 .chatbody input{width:calc(100% - 70px);padding:10px;border:2px solid #9aa3a8;border-radius:6px}
 @media print{header,footer,.acts,.chatbtn,.chatpanel,section:not(.tool){display:none!important}main section.tool{display:block!important}}
-</style>
+</style><link rel="stylesheet" href="assets/theme.css"><link rel="stylesheet" href="assets/variant.css">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Deck Board Calculator","url":"https://buildcalc-pro.pages.dev/deck-calculator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many deck boards do I need for a 16x12 deck?","acceptedAnswer":{"@type":"Answer","text":"A 16 ft by 12 ft deck with 6 inch boards and a quarter-inch gap needs 24 boards, if the boards span the full 16 ft length."}},{"@type":"Question","name":"What gap should I leave between deck boards?","acceptedAnswer":{"@type":"Answer","text":"About a quarter inch for wood boards, so water drains and boards can expand. Composite boards follow the maker's gap guide."}},{"@type":"Question","name":"Which way should deck boards run?","acceptedAnswer":{"@type":"Answer","text":"Boards usually run along the long side of the deck. This calculator assumes boards span the full deck length."}},{"@type":"Question","name":"What if my boards are shorter than the deck?","acceptedAnswer":{"@type":"Answer","text":"Then you need joints, and offcuts add waste. Buy 10% extra boards in that case."}},{"@type":"Question","name":"Does this include joists and screws?","acceptedAnswer":{"@type":"Answer","text":"No, this counts deck boards only. Joists, screws, posts and rails are extra."}},{"@type":"Question","name":"Are the prices accurate?","acceptedAnswer":{"@type":"Answer","text":"Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://buildcalc-pro.pages.dev/"},{"@type":"ListItem","position":2,"name":"Deck Board Calculator","item":"https://buildcalc-pro.pages.dev/deck-calculator"}]}]}</script>
-</head>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Deck Board Calculator (How Many Boards?)","url":"https://buildcalc-pro.pages.dev/deck-calculator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many deck boards do I need for a 16x12 deck?","acceptedAnswer":{"@type":"Answer","text":"A 16 ft by 12 ft deck with 6 inch boards and a quarter-inch gap needs 24 boards, if the boards span the full 16 ft length."}},{"@type":"Question","name":"What gap should I leave between deck boards?","acceptedAnswer":{"@type":"Answer","text":"About a quarter inch for wood boards, so water drains and boards can expand. Composite boards follow the maker's gap guide."}},{"@type":"Question","name":"Which way should deck boards run?","acceptedAnswer":{"@type":"Answer","text":"Boards usually run along the long side of the deck. This calculator assumes boards span the full deck length."}},{"@type":"Question","name":"What if my boards are shorter than the deck?","acceptedAnswer":{"@type":"Answer","text":"Then you need joints, and offcuts add waste. Buy 10% extra boards in that case."}},{"@type":"Question","name":"Does this include joists and screws?","acceptedAnswer":{"@type":"Answer","text":"No, this counts deck boards only. Joists, screws, posts and rails are extra."}},{"@type":"Question","name":"Are the prices accurate?","acceptedAnswer":{"@type":"Answer","text":"Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://buildcalc-pro.pages.dev/"},{"@type":"ListItem","position":2,"name":"Deck Board Calculator (How Many Boards?)","item":"https://buildcalc-pro.pages.dev/deck-calculator"}]}]}</script>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('buildcalc-theme')||'green'}catch(e){}</script></head>
 <body>
-<header><div class="wrap"><a href="/">BuildCalc</a><span>Free calculators</span></div></header>
+<header><div class="wrap nav-classic"><a class="logo" href="index.html"><span class="mix">BuildCalc</span></a><nav class="nav-links"><a href="index.html"><span class="mix">Home</span></a><a href="index.html#all"><span class="mix">Categories</span></a><a href="blog.html"><span class="mix">Blog</span></a><a href="faq.html"><span class="mix">FAQ</span></a><a href="contact.html"><span class="mix">Contact</span></a></nav></div></header>
 <main><div class="wrap"><nav class="bc" aria-label="Breadcrumb"><a href="/">Home</a> / Outdoor</nav>
-<h1>Deck Board Calculator</h1>
+<h1>Deck Board Calculator (How Many Boards?)</h1>
 <p class="intro">Enter your deck size to get the boards you need, plus an estimated cost.</p>
 <section class="tool" aria-label="Calculator">
 <div class="seg" role="group" aria-label="Units"><button type="button" data-u="imp" aria-pressed="true">Feet / inches</button><button type="button" data-u="met" aria-pressed="false">Metres / cm</button></div>
@@ -93,10 +93,42 @@ footer a{margin-right:14px}
 
 <section><h2>Cost tips</h2><p>Prices on this page are editable estimates, not quotes. Get 2 to 3 local quotes before you buy, and ask if delivery is included. Delivery, tax and waste can change the total a lot. Order a little extra for cuts and breakage, and confirm final quantities with your supplier or a qualified professional.</p></section><section><h2>Related calculators</h2><ul class="rel"><li><a href="/fence-calculator">Fence Calculator - panels, posts and concrete</a></li><li><a href="/pier-calculator">Concrete Pier Calculator - sonotube volume and bags</a></li><li><a href="/fence-stain-calculator">Fence Stain Calculator - gallons needed</a></li></ul></section><section><h2>Frequently asked questions</h2><details><summary>How many deck boards do I need for a 16x12 deck?</summary><p>A 16 ft by 12 ft deck with 6 inch boards and a quarter-inch gap needs 24 boards, if the boards span the full 16 ft length.</p></details><details><summary>What gap should I leave between deck boards?</summary><p>About a quarter inch for wood boards, so water drains and boards can expand. Composite boards follow the maker's gap guide.</p></details><details><summary>Which way should deck boards run?</summary><p>Boards usually run along the long side of the deck. This calculator assumes boards span the full deck length.</p></details><details><summary>What if my boards are shorter than the deck?</summary><p>Then you need joints, and offcuts add waste. Buy 10% extra boards in that case.</p></details><details><summary>Does this include joists and screws?</summary><p>No, this counts deck boards only. Joists, screws, posts and rails are extra.</p></details><details><summary>Are the prices accurate?</summary><p>Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower.</p></details></section>
 
-<p class="meta">Last updated 2026-10-26. Formulas checked by Bilal Mughal.</p>
+<p class="meta">Last updated 2026-10-26. Each page shows the formula it uses, so you can check the result yourself.</p>
 <script type="application/json" id="cfg">{"slug":"deck-calculator","category":"Outdoor","categoryName":"Outdoor","title":"Deck Board Calculator: How Many Boards? (Free)","h1":"Deck Board Calculator","metaDesc":"Free deck board calculator. Enter deck size, board width and gap to get the boards needed and an estimated cost.","intro":"Enter your deck size to get the boards you need, plus an estimated cost.","updated":"2026-10-26","dims":{"len":{"imp":{"f":1,"label":"ft"},"met":{"f":3.28084,"label":"m"}},"thk":{"imp":{"f":1,"label":"in"},"met":{"f":0.393701,"label":"cm"}}},"fields":[{"id":"length","label":"Deck length (board direction)","dim":"len","default":16,"min":0.01,"group":"Deck size"},{"id":"width","label":"Deck width","dim":"len","default":12,"min":0.01,"group":"Deck size"},{"id":"boardW","label":"Board width","dim":"thk","default":6,"min":0.01,"group":"Boards"},{"id":"gap","label":"Gap between boards","dim":"thk","default":0.25,"min":0,"group":"Boards"},{"id":"priceBoard","label":"Price per board","prefix":"$","default":12,"min":0,"group":"Boards"}],"calc":[{"id":"boards","expr":"Math.ceil(+((width * 12) / (boardW + gap)).toFixed(6))"},{"id":"cost","expr":"boards * priceBoard"}],"groups":[{"title":"Boards needed","results":[{"id":"boards","label":"Buy this many boards","unit":"boards","dec":0,"primary":true}]},{"title":"Estimated cost","results":[{"id":"cost","label":"Board cost","prefix":"$","dec":0}]}],"emptyMsg":"Enter values greater than zero.","diagram":"\u003csvg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\">\u003crect x=\"40\" y=\"25\" width=\"240\" height=\"130\" fill=\"#fff\" stroke=\"#1c2226\" stroke-width=\"2\"/>\u003cline x1=\"100\" y1=\"25\" x2=\"100\" y2=\"155\" stroke=\"#1c2226\" stroke-width=\"1\"/>\u003cline x1=\"160\" y1=\"25\" x2=\"160\" y2=\"155\" stroke=\"#1c2226\" stroke-width=\"1\"/>\u003cline x1=\"220\" y1=\"25\" x2=\"220\" y2=\"155\" stroke=\"#1c2226\" stroke-width=\"1\"/>\u003ctext x=\"160\" y=\"95\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1c2226\">Boards\u003c/text>\u003c/svg>","article":"\u003csection>\u003ch2>How to calculate deck boards\u003c/h2>\u003cp>Deck boards run side by side across the deck width. Convert the deck width to inches, then divide by one board's width plus the gap. Round up, because you cannot buy part of a board.\u003c/p>\u003cp>\u003cb>Formula:\u003c/b> boards = deck width (in) ÷ (board width + gap), rounded up\u003c/p>\u003ch2>Worked example: 16 ft × 12 ft deck, 6 in boards, quarter-inch gap\u003c/h2>\u003cp>Deck width = 12 ft = \u003cb>144 in\u003c/b>. One board plus gap = 6.25 in. Boards: 144 ÷ 6.25 = 23.04, rounded up to \u003cb>24 boards\u003c/b>.\u003c/p>\u003ch2>Board direction\u003c/h2>\u003cp>This calculator assumes boards span the full deck length. If your boards are shorter than the deck, you need joints, and you should buy about 10% extra for offcuts.\u003c/p>\u003ch2>Gap size\u003c/h2>\u003cp>A quarter-inch gap is standard for wood boards, so water drains and boards can expand. Composite boards follow the maker's gap guide, which can be different.\u003c/p>\u003c/section>","faq":[{"q":"How many deck boards do I need for a 16x12 deck?","a":"A 16 ft by 12 ft deck with 6 inch boards and a quarter-inch gap needs 24 boards, if the boards span the full 16 ft length."},{"q":"What gap should I leave between deck boards?","a":"About a quarter inch for wood boards, so water drains and boards can expand. Composite boards follow the maker's gap guide."},{"q":"Which way should deck boards run?","a":"Boards usually run along the long side of the deck. This calculator assumes boards span the full deck length."},{"q":"What if my boards are shorter than the deck?","a":"Then you need joints, and offcuts add waste. Buy 10% extra boards in that case."},{"q":"Does this include joists and screws?","a":"No, this counts deck boards only. Joists, screws, posts and rails are extra."},{"q":"Are the prices accurate?","a":"Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower."}],"related":["fence-calculator","roofing-calculator","mulch-calculator"],"table":{"title":"Common deck sizes","columns":["Deck","Boards","Cost est."],"rows":[["12 × 10 ft","20","$240"],["16 × 12 ft","24","$288"],["20 × 12 ft","24","$288"],["16 × 16 ft","31","$372"],["12 × 12 ft","24","$288"],["20 × 16 ft","31","$372"]],"note":"6 inch boards, quarter-inch gap. Boards span the full deck length. Cost uses $12 per board."}}</script>
 <script>
 (function(){
+function safeEval(src, env) {
+  var s = String(src), i = 0;
+  function ws() { while (s.charAt(i) === ' ') i++; }
+  function peek() { ws(); return s.charAt(i); }
+  function ident() { var m = /^[A-Za-z_$][\w$]*/.exec(s.slice(i)); if (!m) throw new Error('bad expr'); i += m[0].length; return m[0]; }
+  function args() { var a = []; ws(); if (s.charAt(i) !== '(') throw new Error('bad expr'); i++; if (peek() === ')') { i++; return a; } for (;;) { a.push(add()); if (peek() === ',') { i++; continue; } if (peek() === ')') { i++; return a; } throw new Error('bad expr'); } }
+  function primary() {
+    var c = peek(), v;
+    if (c === '(') { i++; v = add(); if (peek() !== ')') throw new Error('bad expr'); i++; return v; }
+    var m = /^(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?/.exec(s.slice(i));
+    if (m) { i += m[0].length; return parseFloat(m[0]); }
+    var id = ident();
+    if (id === 'Math') {
+      if (s.charAt(i) !== '.') throw new Error('bad expr'); i++;
+      var fn = ident(), a = args();
+      if (fn === 'ceil' || fn === 'floor' || fn === 'round' || fn === 'abs' || fn === 'sqrt' || fn === 'pow' || fn === 'min' || fn === 'max') return Math[fn].apply(null, a);
+      throw new Error('bad expr');
+    }
+    if (!Object.prototype.hasOwnProperty.call(env, id)) throw new Error('bad expr');
+    return env[id];
+  }
+  function postfix() {
+    var v = primary();
+    while (s.charAt(i) === '.') { i++; var name = ident(), a = args(); if (name === 'toFixed') v = Number(v).toFixed(a[0]); else throw new Error('bad expr'); }
+    return v;
+  }
+  function unary() { var c = peek(); if (c === '-') { i++; return -unary(); } if (c === '+') { i++; return +unary(); } return postfix(); }
+  function mul() { var v = unary(); for (;;) { var c = peek(); if (c === '*') { i++; v = v * unary(); } else if (c === '/') { i++; v = v / unary(); } else if (c === '%') { i++; v = v % unary(); } else return v; } }
+  function add() { var v = mul(); for (;;) { var c = peek(); if (c === '+') { i++; v = v + mul(); } else if (c === '-') { i++; v = v - mul(); } else return v; } }
+  var out = add(); if (peek() !== '') throw new Error('bad expr'); return out;
+}
+
 function run(cfg, v, u) {
   var env = {};
   cfg.fields.forEach(function (f) {
@@ -105,7 +137,7 @@ function run(cfg, v, u) {
   });
   cfg.calc.forEach(function (s) {
     var k = Object.keys(env);
-    env[s.id] = Function.apply(null, k.concat('return ' + s.expr)).apply(null, k.map(function (n) { return env[n]; }));
+    env[s.id] = safeEval(s.expr, env);
   });
   return env;
 }
@@ -149,6 +181,6 @@ renderTable();update();
 })();
 </script>
 </div></main>
-<footer><div class="wrap"><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy-policy">Privacy</a><a href="/terms">Terms</a><p>Estimates only. Always confirm quantities with your supplier or a qualified professional.</p></div></footer>
-<script src="chatbot.js" defer></script></body>
+<footer><div class="wrap footer-grid"><div><b>BuildCalc</b><p>Free calculators. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="about.html">About</a></div><div><b>Categories</b><a href="categories/finance.html">Finance</a><a href="categories/construction.html">Construction</a><a href="categories/math.html">Math</a><a href="categories/health-fitness.html">Health</a></div><div><b>Legal</b><a href="methodology.html">Methodology</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div></footer>
+<script src="chatbot.js" defer></script><script src="assets/theme.js" defer></script><script src="assets/engage.js"></script></body>
 </html>

@@ -1,0 +1,70 @@
+# BuildCalc
+
+> Free calculators and tools across 50 categories, including Finance, Construction, Math, Health and Fitness, Cooking and Kitchen, Business, Travel, Education, Sports, Technology, Real Estate, Energy and Environment, Food and Nutrition, Baby and Family, Automotive, Career, Shopping, Games, Music, Weather, Conversion, Everyday Life, Science, Pet, Time and Date, and many tool categories. Every calculator page shows its formula, and many show a worked example. Results are estimates and general information only, not financial, legal, tax or medical advice.
+
+## Main pages
+
+- [Home](https://buildcalc-pro.pages.dev/)
+- [About](https://buildcalc-pro.pages.dev/about.html)
+- [Methodology](https://buildcalc-pro.pages.dev/methodology.html)
+- [FAQ](https://buildcalc-pro.pages.dev/faq.html)
+- [Blog](https://buildcalc-pro.pages.dev/blog.html)
+- [Contact](https://buildcalc-pro.pages.dev/contact.html)
+
+## Categories
+
+- [Finance](https://buildcalc-pro.pages.dev/categories/finance.html)
+- [Business](https://buildcalc-pro.pages.dev/categories/business.html)
+- [Construction](https://buildcalc-pro.pages.dev/categories/construction.html)
+- [Health & Fitness](https://buildcalc-pro.pages.dev/categories/health-fitness.html)
+- [Math](https://buildcalc-pro.pages.dev/categories/math.html)
+- [Conversion](https://buildcalc-pro.pages.dev/categories/conversion.html)
+- [Everyday Life](https://buildcalc-pro.pages.dev/categories/everyday-life.html)
+- [Cooking & Kitchen](https://buildcalc-pro.pages.dev/categories/cooking-kitchen.html)
+- [Education](https://buildcalc-pro.pages.dev/categories/education.html)
+- [Technology](https://buildcalc-pro.pages.dev/categories/technology.html)
+- [Sports](https://buildcalc-pro.pages.dev/categories/sports.html)
+- [Travel](https://buildcalc-pro.pages.dev/categories/travel.html)
+- [Real Estate](https://buildcalc-pro.pages.dev/categories/real-estate.html)
+- [Pet](https://buildcalc-pro.pages.dev/categories/pet.html)
+- [Automotive](https://buildcalc-pro.pages.dev/categories/automotive.html)
+- [Career](https://buildcalc-pro.pages.dev/categories/career.html)
+- [Shopping](https://buildcalc-pro.pages.dev/categories/shopping.html)
+- [Games](https://buildcalc-pro.pages.dev/categories/games.html)
+- [Music](https://buildcalc-pro.pages.dev/categories/music.html)
+- [Weather](https://buildcalc-pro.pages.dev/categories/weather.html)
+- [Science](https://buildcalc-pro.pages.dev/categories/science.html)
+- [Food & Nutrition](https://buildcalc-pro.pages.dev/categories/food-nutrition.html)
+- [Baby & Family](https://buildcalc-pro.pages.dev/categories/baby-family.html)
+- [Energy & Environment](https://buildcalc-pro.pages.dev/categories/energy-environment.html)
+- [Time & Date](https://buildcalc-pro.pages.dev/categories/time-date.html)
+- [AI Tools](https://buildcalc-pro.pages.dev/categories/ai-tools.html)
+- [Developer Tools](https://buildcalc-pro.pages.dev/categories/developer-tools.html)
+- [Social Media Tools](https://buildcalc-pro.pages.dev/categories/social-media-tools.html)
+- [SEO and Marketing Tools](https://buildcalc-pro.pages.dev/categories/seo-marketing-tools.html)
+- [Writing Tools](https://buildcalc-pro.pages.dev/categories/writing-tools.html)
+- [Design Tools](https://buildcalc-pro.pages.dev/categories/design-tools.html)
+- [Legal and Documents Tools](https://buildcalc-pro.pages.dev/categories/legal-documents-tools.html)
+- [Home and Garden Tools](https://buildcalc-pro.pages.dev/categories/home-garden-tools.html)
+- [Photography Tools](https://buildcalc-pro.pages.dev/categories/photography-tools.html)
+- [Video Tools](https://buildcalc-pro.pages.dev/categories/video-tools.html)
+- [Audio Tools](https://buildcalc-pro.pages.dev/categories/audio-tools.html)
+- [Crypto Tools](https://buildcalc-pro.pages.dev/categories/crypto-tools.html)
+- [E-commerce Tools](https://buildcalc-pro.pages.dev/categories/ecommerce-tools.html)
+- [Kids and School Tools](https://buildcalc-pro.pages.dev/categories/school-tools.html)
+- [Prayer and Islamic Tools](https://buildcalc-pro.pages.dev/categories/prayer-tools.html)
+- [Medical Tools](https://buildcalc-pro.pages.dev/categories/medical-tools.html)
+- [Advanced Legal Tools](https://buildcalc-pro.pages.dev/categories/legal-advanced-tools.html)
+- [Advanced Real Estate Tools](https://buildcalc-pro.pages.dev/categories/real-estate-advanced-tools.html)
+- [Loans & Mortgages](https://buildcalc-pro.pages.dev/categories/loans-mortgages.html)
+- [Savings & Investment](https://buildcalc-pro.pages.dev/categories/savings-investment.html)
+- [Budget & Everyday Money](https://buildcalc-pro.pages.dev/categories/budget-money.html)
+- [Tax & Salary](https://buildcalc-pro.pages.dev/categories/tax-salary.html)
+- [Business Finance](https://buildcalc-pro.pages.dev/categories/business-finance.html)
+- [Goals & Retirement](https://buildcalc-pro.pages.dev/categories/goals-retirement.html)
+- [Personal Banking & Cards](https://buildcalc-pro.pages.dev/categories/personal-banking.html)
+
+## Notes
+
+- All calculators and tools are free, no sign-up, no download.
+- See the full sitemap at https://buildcalc-pro.pages.dev/sitemap.xml for every calculator and tool URL.

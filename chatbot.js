@@ -9,7 +9,7 @@ var Q=[
 ["use","How do I use a calculator?","Enter your measurements and the result updates instantly. Use Copy result to copy it, Print to print it, and Download to save it as a text file."],
 ];
 function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!==undefined)e.innerHTML=h;return e;}
-var btn=el("button","chatbtn","Ask BuildCalc");
+var btn=el("button","chatbtn","BuildCalc Bot");
 var panel=el("div","chatpanel"); panel.style.display="none";
 panel.appendChild(el("div","chathead","BuildCalc Help <span>FAQ bot, not AI chat. Nothing you type leaves your browser</span>"));
 var body=el("div","chatbody"); var quick=el("div","chatquick");
@@ -17,12 +17,12 @@ Q.forEach(function(q){var b=el("button",null,q[1]); b.type="button"; b.onclick=f
 body.appendChild(quick); var log=el("div","chatlog"); body.appendChild(log);
 var inp=el("input"); inp.placeholder="Type your question..."; inp.setAttribute("aria-label","Type your question");
 var send=el("button",null,"Send"); send.type="button";
-function say(who,txt){var d=el("div","chatmsg"); d.innerHTML="<b>"+who+":</b> "+txt; log.appendChild(d); log.scrollTop=log.scrollHeight;}
+function say(who,txt){var d=el("div","chatmsg"); var b=document.createElement("b"); b.textContent=who+": "; d.appendChild(b); d.appendChild(document.createTextNode(txt)); log.appendChild(d); log.scrollTop=log.scrollHeight;}
 function ask(q){say("You",q[1]); say("Bot",q[2]+"<br><em>These are estimates, not professional advice.</em>");}
 function answerFree(t){
   t=t.toLowerCase();
   for(var i=0;i<Q.length;i++){ if(t.indexOf(Q[i][0])>-1){ ask(Q[i]); return; } }
-  if(t.indexOf("hello")>-1||t.indexOf("salam")>-1){ say("You",inp.value); say("Bot","Hello! Pick a question from the list above."); return; }
+  if(t.indexOf("hello")>-1){ say("You",inp.value); say("Bot","Hello! Pick a question from the list above."); return; }
   say("You",inp.value); say("Bot","This question is not covered by the FAQ bot. Try typing brick, concrete, paint, waste, price, contact or use, or email us from the Contact page.");
 }
 send.onclick=function(){ if(!inp.value.trim()) return; answerFree(inp.value); inp.value=""; };

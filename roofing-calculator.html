@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="en">
-<head>
+<html data-theme="green" lang="en">
+<head><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Roofing Shingle Calculator: Squares, Bundles and Cost (Free)</title>
-<meta name="description" content="Free roofing shingle calculator. Enter roof size to get squares, bundles and an estimated cost.">
-<link rel="canonical" href="https://buildcalc-pro.pages.dev/roofing-calculator">
+<meta name="description" content="Roofing Shingle Calculator: Squares, Bundles and Cost (Free) - free online calculator. Roofers measure in squares, and one square is 100 sq ft. Find.">
+<link rel="canonical" href="https://buildcalc-pro.pages.dev/roofing-calculator.html">
 <meta property="og:title" content="Roofing Shingle Calculator: Squares, Bundles and Cost (Free)"><meta property="og:description" content="Free roofing shingle calculator. Enter roof size to get squares, bundles and an estimated cost."><meta property="og:type" content="website"><meta property="og:url" content="https://buildcalc-pro.pages.dev/roofing-calculator">
 <meta name="theme-color" content="#1c2226">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6542834138060275" crossorigin="anonymous"></script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ffd60a'/%3E%3Cpath d='M6 24V8h6l4 8 4-8h6v16' fill='none' stroke='%231c2226' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="icon" href="favicon.svg">
 <style>
 :root{--bg:#f2f2ef;--ink:#1c2226;--mut:#59636a;--line:#d3d4cf;--acc:#1f5fbf;--tape:#ffd60a}
 *{box-sizing:border-box}
@@ -46,8 +46,8 @@ h2{font-size:21px;line-height:1.25;margin:28px 0 8px}
 .row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;border-bottom:1px solid var(--line)}
 .row b{font-variant-numeric:tabular-nums;white-space:nowrap}
 .empty{background:#fff4f2;border:1px solid #e8b4ab;padding:10px;border-radius:6px;margin:0}
-.acts{display:flex;gap:8px;margin-top:14px}
-.acts button{flex:1;padding:10px;border:2px solid var(--ink);background:#fff;border-radius:6px;font:inherit;font-weight:600;cursor:pointer}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.acts button{flex:1 1 130px;padding:10px;border:2px solid var(--ink);background:#fff;border-radius:6px;font:inherit;font-weight:600;cursor:pointer}
 button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 .dg{margin:18px 0 0;text-align:center}.dg svg{max-width:320px;width:100%;height:auto}
 .tw{overflow-x:auto}
@@ -73,12 +73,12 @@ footer a{margin-right:14px}
 .chatlog{max-height:220px;overflow-y:auto;margin:10px 0}.chatmsg{margin:8px 0;font-size:15px}
 .chatbody input{width:calc(100% - 70px);padding:10px;border:2px solid #9aa3a8;border-radius:6px}
 @media print{header,footer,.acts,.chatbtn,.chatpanel,section:not(.tool){display:none!important}main section.tool{display:block!important}}
-</style>
+</style><link rel="stylesheet" href="assets/theme.css"><link rel="stylesheet" href="assets/variant.css">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Roofing Calculator","url":"https://buildcalc-pro.pages.dev/roofing-calculator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many bundles do I need for a 40x30 roof?","acceptedAnswer":{"@type":"Answer","text":"A 40 ft by 30 ft roof needs 13.2 squares with 10% waste, which is 40 bundles at 3 bundles per square."}},{"@type":"Question","name":"What is a roofing square?","acceptedAnswer":{"@type":"Answer","text":"One square is 100 sq ft of roof area. Shingles are sold by the square, and usually 3 bundles make one square."}},{"@type":"Question","name":"How much waste should I add?","acceptedAnswer":{"@type":"Answer","text":"Add 10% for simple roofs and 15% or more for roofs with hips, valleys and dormers."}},{"@type":"Question","name":"Does this work for a pitched roof?","acceptedAnswer":{"@type":"Answer","text":"Measure the slope length, not the flat footprint. For a pitched roof, use the sloped width instead of the ground width."}},{"@type":"Question","name":"Does this include underlayment and ridge caps?","acceptedAnswer":{"@type":"Answer","text":"No, this counts shingle bundles only. Underlayment, ridge caps, flashing and nails are extra."}},{"@type":"Question","name":"Are the prices accurate?","acceptedAnswer":{"@type":"Answer","text":"Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://buildcalc-pro.pages.dev/"},{"@type":"ListItem","position":2,"name":"Roofing Calculator","item":"https://buildcalc-pro.pages.dev/roofing-calculator"}]}]}</script>
-</head>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('buildcalc-theme')||'green'}catch(e){}</script></head>
 <body>
-<header><div class="wrap"><a href="/">BuildCalc</a><span>Free calculators</span></div></header>
+<header><div class="wrap nav-classic"><a class="logo" href="index.html"><span class="mix">BuildCalc</span></a><nav class="nav-links"><a href="index.html"><span class="mix">Home</span></a><a href="index.html#all"><span class="mix">Categories</span></a><a href="blog.html"><span class="mix">Blog</span></a><a href="faq.html"><span class="mix">FAQ</span></a><a href="contact.html"><span class="mix">Contact</span></a></nav></div></header>
 <main><div class="wrap"><nav class="bc" aria-label="Breadcrumb"><a href="/">Home</a> / Roofing</nav>
 <h1>Roofing Calculator</h1>
 <p class="intro">Enter your roof size to get the shingles you need in squares and bundles, plus an estimated cost. Waste is included.</p>
@@ -93,10 +93,42 @@ footer a{margin-right:14px}
 
 <section><h2>Cost tips</h2><p>Prices on this page are editable estimates, not quotes. Get 2 to 3 local quotes before you buy, and ask if delivery is included. Delivery, tax and waste can change the total a lot. Order a little extra for cuts and breakage, and confirm final quantities with your supplier or a qualified professional.</p></section><section><h2>Related calculators</h2><ul class="rel"><li><a href="/gutter-calculator">Gutter Calculator - length and downspouts</a></li><li><a href="/siding-calculator">Siding Calculator - squares and boxes</a></li><li><a href="/sheathing-calculator">Plywood Sheathing Calculator - sheets needed</a></li></ul></section><section><h2>Frequently asked questions</h2><details><summary>How many bundles do I need for a 40x30 roof?</summary><p>A 40 ft by 30 ft roof needs 13.2 squares with 10% waste, which is 40 bundles at 3 bundles per square.</p></details><details><summary>What is a roofing square?</summary><p>One square is 100 sq ft of roof area. Shingles are sold by the square, and usually 3 bundles make one square.</p></details><details><summary>How much waste should I add?</summary><p>Add 10% for simple roofs and 15% or more for roofs with hips, valleys and dormers.</p></details><details><summary>Does this work for a pitched roof?</summary><p>Measure the slope length, not the flat footprint. For a pitched roof, use the sloped width instead of the ground width.</p></details><details><summary>Does this include underlayment and ridge caps?</summary><p>No, this counts shingle bundles only. Underlayment, ridge caps, flashing and nails are extra.</p></details><details><summary>Are the prices accurate?</summary><p>Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower.</p></details></section>
 
-<p class="meta">Last updated 2026-10-26. Formulas checked by Bilal Mughal.</p>
+<p class="meta">Last updated 2026-10-26. Each page shows the formula it uses, so you can check the result yourself.</p>
 <script type="application/json" id="cfg">{"slug":"roofing-calculator","category":"Roofing","categoryName":"Roofing","title":"Roofing Shingle Calculator: Squares, Bundles and Cost (Free)","h1":"Roofing Calculator","metaDesc":"Free roofing shingle calculator. Enter roof size to get squares, bundles and an estimated cost.","intro":"Enter your roof size to get the shingles you need in squares and bundles, plus an estimated cost. Waste is included.","updated":"2026-10-26","dims":{"len":{"imp":{"f":1,"label":"ft"},"met":{"f":3.28084,"label":"m"}},"thk":{"imp":{"f":1,"label":"in"},"met":{"f":0.393701,"label":"cm"}}},"fields":[{"id":"length","label":"Roof length","dim":"len","default":40,"min":0.01,"group":"Roof size"},{"id":"width","label":"Roof width","dim":"len","default":30,"min":0.01,"group":"Roof size"},{"id":"waste","label":"Extra for waste (%)","default":10,"min":0,"group":"Waste and price (optional)"},{"id":"priceBundle","label":"Price per bundle","prefix":"$","default":35,"min":0,"group":"Waste and price (optional)"}],"calc":[{"id":"area","expr":"length * width"},{"id":"areaW","expr":"area * (1 + waste / 100)"},{"id":"squares","expr":"areaW / 100"},{"id":"bundles","expr":"Math.ceil(+(squares * 3).toFixed(6))"},{"id":"cost","expr":"bundles * priceBundle"}],"groups":[{"title":"Shingles needed","results":[{"id":"squares","label":"Roofing squares","unit":"squares","dec":1,"primary":true},{"id":"bundles","label":"Bundles","unit":"bundles","dec":0},{"id":"area","label":"Roof area","unit":"sq ft","dec":0},{"id":"areaW","label":"Area with waste","unit":"sq ft","dec":0}]},{"title":"Estimated cost","results":[{"id":"cost","label":"Shingle cost","prefix":"$","dec":0}]}],"emptyMsg":"Enter values greater than zero.","diagram":"\u003csvg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\">\u003cpolygon points=\"40,140 160,40 280,140\" fill=\"#fff\" stroke=\"#1c2226\" stroke-width=\"2\"/>\u003cline x1=\"100\" y1=\"90\" x2=\"220\" y2=\"90\" stroke=\"#1c2226\" stroke-width=\"1\"/>\u003cline x1=\"130\" y1=\"65\" x2=\"190\" y2=\"65\" stroke=\"#1c2226\" stroke-width=\"1\"/>\u003ctext x=\"160\" y=\"165\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1c2226\">Roof slope\u003c/text>\u003c/svg>","article":"\u003csection>\u003ch2>How to calculate roofing shingles\u003c/h2>\u003cp>Roofers measure in squares, and one square is 100 sq ft. Find the roof area, add waste, divide by 100 for squares, then multiply by 3 for bundles, since 3 bundles normally make one square.\u003c/p>\u003cp>\u003cb>Formula:\u003c/b> squares = roof area (sq ft) × (1 + waste %) ÷ 100, and bundles = squares × 3, rounded up\u003c/p>\u003ch2>Worked example: 40 ft × 30 ft roof\u003c/h2>\u003cp>Roof area = 40 × 30 = \u003cb>1,200 sq ft\u003c/b>. Add 10% waste: 1,320 sq ft. Divide by 100: \u003cb>13.2 squares\u003c/b>. Bundles: 13.2 × 3 = 39.6, rounded up to \u003cb>40 bundles\u003c/b>.\u003c/p>\u003ch2>Flat or sloped?\u003c/h2>\u003cp>Measure the slope length for a pitched roof, not the flat footprint on the ground. A steep roof can be much larger than its footprint.\u003c/p>\u003ch2>How much waste?\u003c/h2>\u003cp>Simple gable roofs need about 10% extra. Roofs with hips, valleys and dormers need 15% or more, because every cut wastes a shingle.\u003c/p>\u003c/section>","faq":[{"q":"How many bundles do I need for a 40x30 roof?","a":"A 40 ft by 30 ft roof needs 13.2 squares with 10% waste, which is 40 bundles at 3 bundles per square."},{"q":"What is a roofing square?","a":"One square is 100 sq ft of roof area. Shingles are sold by the square, and usually 3 bundles make one square."},{"q":"How much waste should I add?","a":"Add 10% for simple roofs and 15% or more for roofs with hips, valleys and dormers."},{"q":"Does this work for a pitched roof?","a":"Measure the slope length, not the flat footprint. For a pitched roof, use the sloped width instead of the ground width."},{"q":"Does this include underlayment and ridge caps?","a":"No, this counts shingle bundles only. Underlayment, ridge caps, flashing and nails are extra."},{"q":"Are the prices accurate?","a":"Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower."}],"related":["deck-calculator","fence-calculator","concrete-slab-calculator"],"table":{"title":"Common roof sizes","columns":["Roof","Squares","Bundles","Cost est."],"rows":[["30 × 20 ft","6.6","20","$700"],["40 × 30 ft","13.2","40","$1,400"],["50 × 30 ft","16.5","50","$1,750"],["40 × 40 ft","17.6","53","$1,855"],["60 × 30 ft","19.8","60","$2,100"],["30 × 30 ft","9.9","30","$1,050"]],"note":"Includes 10% waste. 3 bundles per square. Cost uses $35 per bundle."}}</script>
 <script>
 (function(){
+function safeEval(src, env) {
+  var s = String(src), i = 0;
+  function ws() { while (s.charAt(i) === ' ') i++; }
+  function peek() { ws(); return s.charAt(i); }
+  function ident() { var m = /^[A-Za-z_$][\w$]*/.exec(s.slice(i)); if (!m) throw new Error('bad expr'); i += m[0].length; return m[0]; }
+  function args() { var a = []; ws(); if (s.charAt(i) !== '(') throw new Error('bad expr'); i++; if (peek() === ')') { i++; return a; } for (;;) { a.push(add()); if (peek() === ',') { i++; continue; } if (peek() === ')') { i++; return a; } throw new Error('bad expr'); } }
+  function primary() {
+    var c = peek(), v;
+    if (c === '(') { i++; v = add(); if (peek() !== ')') throw new Error('bad expr'); i++; return v; }
+    var m = /^(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?/.exec(s.slice(i));
+    if (m) { i += m[0].length; return parseFloat(m[0]); }
+    var id = ident();
+    if (id === 'Math') {
+      if (s.charAt(i) !== '.') throw new Error('bad expr'); i++;
+      var fn = ident(), a = args();
+      if (fn === 'ceil' || fn === 'floor' || fn === 'round' || fn === 'abs' || fn === 'sqrt' || fn === 'pow' || fn === 'min' || fn === 'max') return Math[fn].apply(null, a);
+      throw new Error('bad expr');
+    }
+    if (!Object.prototype.hasOwnProperty.call(env, id)) throw new Error('bad expr');
+    return env[id];
+  }
+  function postfix() {
+    var v = primary();
+    while (s.charAt(i) === '.') { i++; var name = ident(), a = args(); if (name === 'toFixed') v = Number(v).toFixed(a[0]); else throw new Error('bad expr'); }
+    return v;
+  }
+  function unary() { var c = peek(); if (c === '-') { i++; return -unary(); } if (c === '+') { i++; return +unary(); } return postfix(); }
+  function mul() { var v = unary(); for (;;) { var c = peek(); if (c === '*') { i++; v = v * unary(); } else if (c === '/') { i++; v = v / unary(); } else if (c === '%') { i++; v = v % unary(); } else return v; } }
+  function add() { var v = mul(); for (;;) { var c = peek(); if (c === '+') { i++; v = v + mul(); } else if (c === '-') { i++; v = v - mul(); } else return v; } }
+  var out = add(); if (peek() !== '') throw new Error('bad expr'); return out;
+}
+
 function run(cfg, v, u) {
   var env = {};
   cfg.fields.forEach(function (f) {
@@ -105,7 +137,7 @@ function run(cfg, v, u) {
   });
   cfg.calc.forEach(function (s) {
     var k = Object.keys(env);
-    env[s.id] = Function.apply(null, k.concat('return ' + s.expr)).apply(null, k.map(function (n) { return env[n]; }));
+    env[s.id] = safeEval(s.expr, env);
   });
   return env;
 }
@@ -149,6 +181,6 @@ renderTable();update();
 })();
 </script>
 </div></main>
-<footer><div class="wrap"><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy-policy">Privacy</a><a href="/terms">Terms</a><p>Estimates only. Always confirm quantities with your supplier or a qualified professional.</p></div></footer>
-<script src="chatbot.js" defer></script></body>
+<footer><div class="wrap footer-grid"><div><b>BuildCalc</b><p>Free calculators. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="about.html">About</a></div><div><b>Categories</b><a href="categories/finance.html">Finance</a><a href="categories/construction.html">Construction</a><a href="categories/math.html">Math</a><a href="categories/health-fitness.html">Health</a></div><div><b>Legal</b><a href="methodology.html">Methodology</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div></footer>
+<script src="chatbot.js" defer></script><script src="assets/theme.js" defer></script><script src="assets/engage.js"></script></body>
 </html>

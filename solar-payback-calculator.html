@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="en">
-<head>
+<html data-theme="green" lang="en">
+<head><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Solar Payback Calculator: Free Payback Estimate (2026)</title>
-<meta name="description" content="Free solar payback calculator. All prices are editable estimates, your local rates may differ.">
-<link rel="canonical" href="https://buildcalc-pro.pages.dev/solar-payback-calculator">
+<meta name="description" content="Solar Payback Calculator: Free Payback Estimate (2026) - free online calculator. Production per kW depends on your roof, direction, shading and local.">
+<link rel="canonical" href="https://buildcalc-pro.pages.dev/solar-payback-calculator.html">
 <meta property="og:title" content="Solar Payback Calculator: Free Payback Estimate (2026)"><meta property="og:description" content="Free solar payback calculator. All prices are editable estimates, your local rates may differ."><meta property="og:type" content="website"><meta property="og:url" content="https://buildcalc-pro.pages.dev/solar-payback-calculator">
 <meta name="theme-color" content="#1c2226">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6542834138060275" crossorigin="anonymous"></script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ffd60a'/%3E%3Cpath d='M6 24V8h6l4 8 4-8h6v16' fill='none' stroke='%231c2226' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="icon" href="favicon.svg">
 <style>
 :root{--bg:#f2f2ef;--ink:#1c2226;--mut:#59636a;--line:#d3d4cf;--acc:#1f5fbf;--tape:#ffd60a}
 *{box-sizing:border-box}
@@ -44,7 +44,7 @@ h2{font-size:21px;line-height:1.25;margin:28px 0 8px}
 .row b{font-variant-numeric:tabular-nums;white-space:nowrap}
 .empty{background:#fff4f2;border:1px solid #e8b4ab;padding:10px;border-radius:6px;margin:0}
 .acts{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
-.acts button{flex:1;padding:10px;border:2px solid var(--ink);background:#fff;border-radius:6px;font:inherit;font-weight:600;cursor:pointer}
+.acts button{flex:1 1 130px;padding:10px;border:2px solid var(--ink);background:#fff;border-radius:6px;font:inherit;font-weight:600;cursor:pointer}
 button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 details{background:#fff;border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:8px 0}
 summary{cursor:pointer;font-weight:600}
@@ -56,11 +56,11 @@ footer{border-top:1px solid var(--line);padding:18px 0 30px;font-size:14px;color
 footer a{margin-right:14px}
 @media(min-width:600px){h1{font-size:36px}}
 @media print{header,footer,.acts,section:not(.tool){display:none!important}main section.tool{display:block!important}}
-</style>
+</style><link rel="stylesheet" href="assets/theme.css"><link rel="stylesheet" href="assets/variant.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Solar Payback Calculator","url":"https://buildcalc-pro.pages.dev/solar-payback-calculator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "Are the prices accurate?", "acceptedAnswer": {"@type": "Answer", "text": "Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://buildcalc-pro.pages.dev/"},{"@type":"ListItem","position":2,"name":"Solar Payback Calculator","item":"https://buildcalc-pro.pages.dev/solar-payback-calculator"}]}]}</script>
-</head>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('buildcalc-theme')||'green'}catch(e){}</script></head>
 <body>
-<header><div class="wrap"><a href="/">BuildCalc</a><span>Free calculators</span></div></header>
+<header><div class="wrap nav-classic"><a class="logo" href="index.html"><span class="mix">BuildCalc</span></a><nav class="nav-links"><a href="index.html"><span class="mix">Home</span></a><a href="index.html#all"><span class="mix">Categories</span></a><a href="blog.html"><span class="mix">Blog</span></a><a href="faq.html"><span class="mix">FAQ</span></a><a href="contact.html"><span class="mix">Contact</span></a></nav></div></header>
 <main><div class="wrap"><nav class="bc" aria-label="Breadcrumb"><a href="/">Home</a> / Home Energy</nav>
 <h1>Solar Payback Calculator</h1>
 <p class="intro">Free solar payback calculator. All prices are editable estimates, your local rates may differ.</p>
@@ -85,7 +85,7 @@ footer a{margin-right:14px}
 <section><h2>Frequently asked questions</h2>
 <details><summary>Are the prices accurate?</summary><p>Prices are editable estimates. The defaults are typical US figures, and your local price can be higher or lower.</p></details>
 </section>
-<p class="meta">Last updated 2026-10-27. Formulas checked by Bilal Mughal.</p>
+<p class="meta">Last updated 2026-10-27. Each page shows the formula it uses, so you can check the result yourself.</p>
 <script>
 (function(){
 var $=function(i){return document.getElementById(i)};
@@ -114,6 +114,6 @@ update();
 })();
 </script>
 </div></main>
-<footer><div class="wrap"><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy-policy">Privacy</a><a href="/terms">Terms</a><p>Estimates only. Always confirm quantities with your supplier or a qualified professional.</p></div></footer>
-<script src="chatbot.js" defer></script></body>
+<footer><div class="wrap footer-grid"><div><b>BuildCalc</b><p>Free calculators. Results are estimates and general information only.</p></div><div><b>Pages</b><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="about.html">About</a></div><div><b>Categories</b><a href="categories/finance.html">Finance</a><a href="categories/construction.html">Construction</a><a href="categories/math.html">Math</a><a href="categories/health-fitness.html">Health</a></div><div><b>Legal</b><a href="methodology.html">Methodology</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div></footer>
+<script src="chatbot.js" defer></script><script src="assets/theme.js" defer></script><script src="assets/engage.js"></script></body>
 </html>
