@@ -38,8 +38,12 @@ jobs:
             echo "ERROR: assets/universe.js missing from zip"
             exit 1
           fi
-          N=$(find "$SRC" -maxdepth 1 -name '*.html' | wc -l)
-          echo "Root HTML files in zip: $N"
+          N=$(find "$SRC" -name '*.html' | wc -l)
+          echo "HTML files in zip (recursive): $N"
+          echo "Top-level entries:"
+          ls "$SRC" | head -30
+          echo "Subdirectories:"
+          find "$SRC" -maxdepth 2 -type d | head -40
           if [ "$N" -lt 4000 ]; then
             echo "ERROR: expected about 4425 html pages, found $N"
             exit 1
