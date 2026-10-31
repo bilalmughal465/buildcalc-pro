@@ -1,0 +1,90 @@
+name: Temp deploy - paint guide + trust page
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check deploy ZIP is present
+        id: gate
+        run: |
+          ZIP="buildcalc-v49-navy-gold-ux-batch-fixes-paint-guide-trust-page.zip"
+          if [ -f "$ZIP" ]; then
+            echo "run=yes" >> "$GITHUB_OUTPUT"
+            echo "Deploy ZIP found."
+          else
+            echo "run=no" >> "$GITHUB_OUTPUT"
+            echo "Deploy ZIP not present; skipping deploy."
+          fi
+
+      - name: Unzip new site
+        if: steps.gate.outputs.run == 'yes'
+        run: |
+          set -euo pipefail
+          ZIP="buildcalc-v49-navy-gold-ux-batch-fixes-paint-guide-trust-page.zip"
+          rm -rf /tmp/newsite
+          mkdir -p /tmp/newsite
+          unzip -q "$ZIP" -d /tmp/newsite
+          # Resolve the actual site root (the ZIP may wrap files in one folder)
+          SITE_ROOT="/tmp/newsite"
+          if [ ! -f "$SITE_ROOT/index.html" ]; then
+            CANDIDATE="$(find /tmp/newsite -maxdepth 2 -name 'index.html' -print | head -n 1 || true)"
+            if [ -n "$CANDIDATE" ]; then
+              SITE_ROOT="$(dirname "$CANDIDATE")"
+            fi
+          fi
+          echo "SITE_ROOT=$SITE_ROOT" >> "$GITHUB_ENV"
+          ls "$SITE_ROOT" | head -n 20
+
+      - name: Guards - sanity check the new site
+        if: steps.gate.outputs.run == 'yes'
+        run: |
+          set -euo pipefail
+          cd "$SITE_ROOT"
+          test -f index.html || { echo "GUARD FAIL: index.html missing"; exit 1; }
+          grep -q 'mini-sci' index.html || { echo "GUARD FAIL: index.html does not contain mini-sci"; exit 1; }
+          COUNT="$(find . -name '*.html' | wc -l)"
+          echo "HTML page count: $COUNT"
+          [ "$COUNT" -ge 4000 ] || { echo "GUARD FAIL: fewer than 4000 HTML pages ($COUNT)"; exit 1; }
+          for f in llms.txt robots.txt sitemap.xml; do
+            test -f "$f" || { echo "GUARD FAIL: $f missing"; exit 1; }
+          done
+          echo "All guards passed."
+
+      - name: Replace old site with new site
+        if: steps.gate.outputs.run == 'yes'
+        run: |
+          set -euo pipefail
+          ZIP="buildcalc-v49-navy-gold-ux-batch-fixes-paint-guide-trust-page.zip"
+          # Remove all old root files except .git, .github and the ZIP
+          find . -maxdepth 1 \
+            ! -name '.' \
+            ! -name '.git' \
+            ! -name '.github' \
+            ! -name "$ZIP" \
+            -exec rm -rf {} +
+          # Copy the new site to root
+          cp -a "$SITE_ROOT"/. .
+          # Delete this temporary workflow and the ZIP
+          rm -f .github/workflows/deploy-paint-trust.yml "$ZIP"
+          echo "New root listing:"; ls -la | head -n 30
+
+      - name: Commit and push
+        if: steps.gate.outputs.run == 'yes'
+        run: |
+          set -euo pipefail
+          git config user.name "bilalmughal465"
+          git config user.email "bilalmughal465@users.noreply.github.com"
+          git add -A
+          git status --short | head -n 20
+          git commit -m "Deploy paint guide + trust page (v49 navy-gold UX batch fixes)"
+          git push
