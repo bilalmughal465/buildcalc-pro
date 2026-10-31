@@ -43,7 +43,9 @@ jobs:
             fi
           fi
           echo "SITE_ROOT=$SITE_ROOT" >> "$GITHUB_ENV"
-          ls "$SITE_ROOT" | head -n 20
+          # NOTE: no pipes to head under pipefail; redirect then head to avoid SIGPIPE
+          ls "$SITE_ROOT" > /tmp/site-root-listing.txt
+          head -n 20 /tmp/site-root-listing.txt
 
       - name: Guards - sanity check the new site
         if: steps.gate.outputs.run == 'yes'
@@ -76,7 +78,10 @@ jobs:
           cp -a "$SITE_ROOT"/. .
           # Delete this temporary workflow and the ZIP
           rm -f .github/workflows/deploy-paint-trust.yml "$ZIP"
-          echo "New root listing:"; ls -la | head -n 30
+          echo "New root listing:"
+          # NOTE: no pipes to head under pipefail; redirect then head to avoid SIGPIPE
+          ls -la > /tmp/new-root-listing.txt
+          head -n 30 /tmp/new-root-listing.txt
 
       - name: Commit and push
         if: steps.gate.outputs.run == 'yes'
@@ -85,6 +90,8 @@ jobs:
           git config user.name "bilalmughal465"
           git config user.email "bilalmughal465@users.noreply.github.com"
           git add -A
-          git status --short | head -n 20
+          # NOTE: no pipes to head under pipefail; redirect then head to avoid SIGPIPE
+          git status --short > /tmp/status.txt
+          head -n 20 /tmp/status.txt
           git commit -m "Deploy paint guide + trust page (v49 navy-gold UX batch fixes)"
           git push
