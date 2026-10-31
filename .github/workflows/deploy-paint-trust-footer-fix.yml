@@ -1,0 +1,76 @@
+name: Deploy paint guide + trust page footer fix
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check whether the deploy ZIP is present
+        id: zipcheck
+        run: |
+          set -euo pipefail
+          if [ -f "buildcalc-v49-navy-gold-ux-batch-fixes-paint-guide-trust-page-footer-fix.zip" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "Deploy ZIP is not present; nothing to deploy."
+          fi
+
+      - name: Unpack the new site build and run guards
+        if: steps.zipcheck.outputs.present == 'true'
+        run: |
+          set -euo pipefail
+          ZIP="buildcalc-v49-navy-gold-ux-batch-fixes-paint-guide-trust-page-footer-fix.zip"
+          WORK="_newsite_deploy"
+          rm -rf "$WORK"
+          mkdir -p "$WORK"
+          unzip -q "$ZIP" -d "$WORK"
+          echo "== Guards =="
+          test -f "$WORK/index.html" || { echo "index.html missing"; exit 1; }
+          grep -q 'mini-sci' "$WORK/index.html" || { echo "index.html does not contain mini-sci"; exit 1; }
+          test -f "$WORK/llms.txt" || { echo "llms.txt missing"; exit 1; }
+          test -f "$WORK/robots.txt" || { echo "robots.txt missing"; exit 1; }
+          test -f "$WORK/sitemap.xml" || { echo "sitemap.xml missing"; exit 1; }
+          find "$WORK" -name '*.html' -print > /tmp/html_pages.txt
+          COUNT=$(wc -l < /tmp/html_pages.txt)
+          echo "HTML pages found: $COUNT"
+          head /tmp/html_pages.txt
+          test "$COUNT" -ge 4000 || { echo "fewer than 4000 HTML pages"; exit 1; }
+          echo "All guards passed."
+
+      - name: Replace root files with the new build
+        if: steps.zipcheck.outputs.present == 'true'
+        run: |
+          set -euo pipefail
+          ZIP="buildcalc-v49-navy-gold-ux-batch-fixes-paint-guide-trust-page-footer-fix.zip"
+          WORK="_newsite_deploy"
+          find . -maxdepth 1 -mindepth 1 ! -name '.git' ! -name '.github' ! -name "$ZIP" ! -name "$WORK" -exec rm -rf -- {} +
+          cp -a "$WORK"/. .
+          rm -rf "$WORK"
+
+      - name: Delete this temporary workflow and the ZIP
+        if: steps.zipcheck.outputs.present == 'true'
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/deploy-paint-trust-footer-fix.yml
+          rm -f buildcalc-v49-navy-gold-ux-batch-fixes-paint-guide-trust-page-footer-fix.zip
+
+      - name: Commit and push the deploy
+        if: steps.zipcheck.outputs.present == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "bilalmughal465"
+          git config user.email "bilalmughal465@users.noreply.github.com"
+          git add -A
+          git commit -m "Deploy paint guide + trust page footer fix (remove leftover standalone footer style rule)" || echo "Nothing to commit"
+          git push
